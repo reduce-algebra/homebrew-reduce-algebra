@@ -1,4 +1,4 @@
-# Johnsonjh Reduce-algebra
+# Reduce-algebra [WIP]
 
 ## How do I install these formulae?
 
