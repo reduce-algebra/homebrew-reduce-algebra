@@ -257,8 +257,7 @@ class Reduce < Formula
       doc.install "reduce-manual.pdf"
     end
     share.mkpath
-    mkdir_p share/"contrib"
-    (share/"contrib").install "contrib"
+    share.install "contrib"
     man.mkpath
     cd "generic/breduce" do
       bin.install "breduce"
