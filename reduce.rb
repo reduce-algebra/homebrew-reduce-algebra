@@ -266,7 +266,6 @@ class Reduce < Formula
     cd "generic/breduce" do
       bin.install "breduce"
       (man/"man1").install "breduce.1"
-      ln_s man/"man1/breduce.1", man/"man1/bootstrapreduce.1"
       doc.install "breduce.pdf"
     end
     mkdir_p share/"casefold"
@@ -292,6 +291,8 @@ class Reduce < Formula
       (man/"man1").install "redcsl.1"
       (man/"man1").install "redpsl.1"
     end
+    ln_s man/"man1/redcsl.1", man/"man1/reduce.1"
+    ln_s man/"man1/redcsl.1", man/"man1/bootstrapreduce.1"
     (man/"man1").install "generic/newfront/redfront.1"
     ln_s man/"man1/redfront.1", man/"man1/rfcsl.1"
     ln_s man/"man1/redfront.1", man/"man1/rfpsl.1"
