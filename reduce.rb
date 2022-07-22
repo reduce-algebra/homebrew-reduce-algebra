@@ -209,6 +209,8 @@ class Reduce < Formula
     touch "doc.stamp"
 
     # TODO: Build and/or install libreduce, qreduce, rbench, rlsmt
+    # XXX: Need to fix breduce.1 man page - rewrite path in file
+    # XXX: Need to fix redpsl.1 man page  - references CSL but should be PSL
     touch ".stamp"
 
     # Installation: Create initial installation (excluding source archive and associated README)
@@ -249,6 +251,7 @@ class Reduce < Formula
         #!/usr/bin/env sh
         { cd "#{libexec}/psl" && exec ./rfpsl "${@}"; }
       EOS
+      ln_s bin/"rfpsl", bin/"redfront"
       (bin/"redpsl").write <<~EOS
         #!/usr/bin/env sh
         { cd "#{libexec}/psl" && exec ./redpsl "${@}"; }
@@ -259,9 +262,11 @@ class Reduce < Formula
     share.mkpath
     share.install "contrib"
     man.mkpath
+    mkdir_p man/"man1"
     cd "generic/breduce" do
       bin.install "breduce"
-      man.install "breduce.1"
+      (man/"man1").install "breduce.1"
+      ln_s man/"man1/breduce.1", man/"man1/bootstrapreduce.1"
       doc.install "breduce.pdf"
     end
     mkdir_p share/"casefold"
@@ -283,11 +288,13 @@ class Reduce < Formula
       doc.install "sl.pdf"
     end
     cd "debianbuild/reduce/debian" do
-      man.install "csl.1"
-      man.install "redcsl.1"
-      man.install "redpsl.1"
+      (man/"man1").install "csl.1"
+      (man/"man1").install "redcsl.1"
+      (man/"man1").install "redpsl.1"
     end
-    man.install "generic/newfront/redfront.1"
+    (man/"man1").install "generic/newfront/redfront.1"
+    ln_s man/"man1/redfront.1", man/"man1/rfcsl.1"
+    ln_s man/"man1/redfront.1", man/"man1/rfpsl.1"
     ln_s bin/"redcsl", bin/"reduce"
     doc.install "ACN-projects.doc"
     doc.install "BUGS"
@@ -296,8 +303,8 @@ class Reduce < Formula
 
   test do
     # TODO: Run the CSL and PSL REDUCE test suites and benchmarks
-    system "sh", "-c", "printf '%s\n' 'quit;' | #{bin}/reduce -v"
-    system "sh", "-c", "printf '%s\n' 'quit;' | #{bin}/redcsl -v"
-    system "sh", "-c", "printf '%s\n' 'quit;' | #{bin}/redpsl -v"
+    system "sh", "-c", "printf '%s\\n' 'quit;' | #{bin}/reduce -v"
+    system "sh", "-c", "printf '%s\\n' 'quit;' | #{bin}/redcsl -v"
+    system "sh", "-c", "printf '%s\\n' 'quit;' | #{bin}/redpsl -v"
   end
 end
