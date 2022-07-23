@@ -170,8 +170,8 @@ class Reduce < Formula
 
     # Configuration: Skip LaTeX -> HTML documentation generation
     # XXX: Skipped because the HTML generation requires pressing Return (interactively)
-    inreplace "doc/manual/mkhtml.sh",      "#!/bin/sh", "exit 0"
-    inreplace "psl/dist/manual/mkhtml.sh", "#!/bin/sh", "exit 0"
+    #inreplace "doc/manual/mkhtml.sh",      "#!/bin/sh", "exit 0"
+    #inreplace "psl/dist/manual/mkhtml.sh", "#!/bin/sh", "exit 0"
 
     # Configuration: Generate configure scripts for both CSL and PSL REDUCE
     system "./autogen.sh", "--fast", *std_configure_args,
@@ -189,19 +189,19 @@ class Reduce < Formula
                                 "--without-autogen"
 
     # Build libs: Build the local prerequisite components for CSL REDUCE
-    system "sh", "-c", "make -C \"cslbuild/$(scripts/findhost.sh \"$(./config.guess)\")/fox\""
-    system "sh", "-c", "make -C \"cslbuild/$(scripts/findhost.sh \"$(./config.guess)\")/crlibm\""
-    system "sh", "-c", "make -C \"cslbuild/$(scripts/findhost.sh \"$(./config.guess)\")/softfloat\""
-    system "sh", "-c", "make -C \"cslbuild/$(scripts/findhost.sh \"$(./config.guess)\")/libedit\""
-    system "sh", "-c", "make -C \"cslbuild/$(scripts/findhost.sh \"$(./config.guess)\")/libffi\""
+    system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh \"$(./config.guess)\")/fox"'
+    system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh \"$(./config.guess)\")/crlibm"'
+    system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh \"$(./config.guess)\")/softfloat"'
+    system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh \"$(./config.guess)\")/libedit"'
+    system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh \"$(./config.guess)\")/libffi"'
 
     # Build redcsl: Build CSL (Codemist Standard Lisp) REDUCE
-    system "sh", "-c", "make -C \"cslbuild/$(scripts/findhost.sh \"$(./config.guess)\")/csl\""
-    system "sh", "-c", "make -C \"cslbuild/$(scripts/findhost.sh \"$(./config.guess)\")/\""
+    system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/csl"'
+    system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/"'
     touch "csl.stamp"
 
     # Build redpsl: Build PSL (Portable Standard Lisp) REDUCE
-    system "sh", "-c", "make -C \"pslbuild/$(scripts/findhost.sh \"$(./config.guess)\")/\""
+    system "sh", "-c", 'make -C "pslbuild/$(scripts/findhost.sh $(./config.guess))"'
     touch "psl.stamp"
 
     # Build casefold: Build the case modification and normalization utility for REDUCE
@@ -217,10 +217,10 @@ class Reduce < Formula
 
     # Installation: Create initial installation (excluding source archive and associated README)
     mkdir "macbuild/distrib"
-    touch "macbuild/Reduce-source_#{version}.tar.bz2"
+    touch "macbuild/Reduce-source_release.tar.bz2"
     touch "macbuild/README.for.distribution"
-    system "sh", "-c", "cd macbuild && ./copyfiles.sh \"$(realpath ..)\" \"#{version}\""
-    rm "macbuild/distrib/Reduce-source_#{version}.tar.bz2"
+    system "sh", "-c", 'cd macbuild && ./copyfiles.sh "$(realpath ..)" "release"'
+    rm "macbuild/distrib/Reduce-source_release.tar.bz2"
     rm "macbuild/distrib/README"
     cp "generic/casefold/casefold", "macbuild/distrib/casefold"
 
