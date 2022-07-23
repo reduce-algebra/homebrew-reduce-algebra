@@ -1,3 +1,4 @@
+#  vim: set ft=ruby ts=2 sw=2 tw=120 expandtab colorcolumn=120 :
 class Reduce < Formula
   desc "Portable general-purpose interactive computer algebra system"
   homepage "https://reduce-algebra.sourceforge.io"
@@ -11,7 +12,7 @@ class Reduce < Formula
 
   bottle do
     root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-6339"
-    sha256 monterey: "763bc5a262c8691034cdf4ec3dd31bc76ba168d34af4ec485020c8ff7edc21aa"
+    sha256 cellar: :any_skip_relocation, monterey: "763bc5a262c8691034cdf4ec3dd31bc76ba168d34af4ec485020c8ff7edc21aa"
   end
 
   depends_on "autoconf" => :build
