@@ -9,6 +9,11 @@ class Reduce < Formula
 
   # Supports REDUCE builds from stable release snapshots or Subversion HEAD.
 
+  bottle do
+    root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-6339"
+    sha256 monterey: "763bc5a262c8691034cdf4ec3dd31bc76ba168d34af4ec485020c8ff7edc21aa"
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "ccache" => :build
@@ -47,11 +52,6 @@ class Reduce < Formula
     depends_on "gnu-sed" => [:build, :test]
     depends_on "gnu-time" => [:build, :test]
     depends_on "libiconv"
-  end
-
-  bottle do
-    root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-6339"
-    sha256 monterey: "763bc5a262c8691034cdf4ec3dd31bc76ba168d34af4ec485020c8ff7edc21aa"
   end
 
   # Regarding inreplace patching:
@@ -170,8 +170,8 @@ class Reduce < Formula
 
     # Configuration: Skip LaTeX -> HTML documentation generation
     # XXX: Skipped because the HTML generation requires pressing Return (interactively)
-    #inreplace "doc/manual/mkhtml.sh",      "#!/bin/sh", "exit 0"
-    #inreplace "psl/dist/manual/mkhtml.sh", "#!/bin/sh", "exit 0"
+    # inreplace "doc/manual/mkhtml.sh",      "#!/bin/sh", "exit 0"
+    # inreplace "psl/dist/manual/mkhtml.sh", "#!/bin/sh", "exit 0"
 
     # Configuration: Generate configure scripts for both CSL and PSL REDUCE
     system "./autogen.sh", "--fast", *std_configure_args,
