@@ -142,6 +142,9 @@ class Reduce < Formula
     # NOTE: Upstream notes this is to remain as "insurance" to avoid potential issues.
     inreplace "csl/cslbase/configure.ac", " -fno-common", " "
 
+    # Configuration: Modify the hard-coded path used in the breduce man page to match the Homebrew path.
+    inreplace "generic/breduce/breduce.1", "/usr/share/doc/reduce-addons/breduce.pdf", "#{doc}/breduce.pdf"
+
     # Configuration: Execute LaTeX builds in unattended non-stop mode (non-interactive)
     inreplace "csl/cslbase/Makefile",     "pdflatex ", "pdflatex -interaction=nonstopmode "
     inreplace "doc/manual/mkpdf.sh",      "pdflatex ", "pdflatex -interaction=nonstopmode "
@@ -218,6 +221,7 @@ class Reduce < Formula
     rm Dir["doc/manual/*.log"]
     rm Dir["doc/manual/*.sh"]
     rm Dir["doc/manual/*.tex"]
+    rm Dir["doc/manual/turtleeg*"]
     mv "doc/manual/manual.pdf", "reduce-manual.pdf"
     mv "doc/manual", "doc/html"
     touch "doc.stamp"
@@ -272,6 +276,7 @@ class Reduce < Formula
     cd "generic/breduce" do
       bin.install "breduce"
       man1.install "breduce.1"
+      chmod "-x", "breduce.pdf"
       doc.install "breduce.pdf"
     end
     mkdir_p share/"casefold"
@@ -296,14 +301,23 @@ class Reduce < Formula
     end
     man1.install "generic/newfront/redfront.1"
     ln_s bin/"redcsl", bin/"reduce"
-    chmod "+x", bin/"rfpsl"
-    chmod "+x", bin/"redfront"
-    chmod "+x", bin/"redpsl"
-    chmod "+x", bin/"reduce"
-    chmod "+x", bin/"bootstrapreduce"
-    chmod "+x", bin/"redcsl"
-    chmod "+x", bin/"csl"
-    chmod "+x", bin/"rfcsl"
+    ln_s man1/"redcsl.1", man1/"reduce.1"
+    ln_s man1/"redfront.1", man1/"rfcsl.1"
+    ln_s man1/"redfront.1", man1/"rfpsl.1"
+    ln_s bin/"rfpsl", bin/"redfront"
+    chmod "755", bin/"bootstrapreduce"
+    chmod "755", bin/"csl"
+    chmod "755", bin/"redcsl"
+    chmod "755", bin/"redfront"
+    chmod "755", bin/"redpsl"
+    chmod "755", bin/"reduce"
+    chmod "755", bin/"rfcsl"
+    chmod "755", bin/"rfpsl"
+    chmod "644", man1/"breduce.1"
+    chmod "644", man1/"csl.1"
+    chmod "644", man1/"redcsl.1"
+    chmod "644", man1/"redfront.1"
+    chmod "644", man1/"redpsl.1"
   end
 
   test do
