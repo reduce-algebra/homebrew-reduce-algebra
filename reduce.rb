@@ -298,7 +298,7 @@ class Reduce < Formula
     doc.install "doc/projects.txt"
 
     # XXX explicit fail for debugging
-    false
+    system "false"
   end
 
   test do
