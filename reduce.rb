@@ -209,8 +209,10 @@ class Reduce < Formula
     system "make", "-C", "generic/casefold", "casefold"
 
     # Build doc: Build the miscellaneous documentation and REDUCE manual
-    system "make", "-C", "doc/misc"
-    system "make", "-C", "doc/manual"
+    system "make", "-C", "doc/misc", "clean"
+    system "make", "-C", "doc/misc", "-j1"
+    system "make", "-C", "doc/manual", "clean"
+    system "make", "-C", "doc/manual", "-j1"
     touch "doc.stamp"
 
     # TODO: Build and/or install libreduce, qreduce, rbench, rlsmt
