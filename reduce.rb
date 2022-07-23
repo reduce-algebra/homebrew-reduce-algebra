@@ -16,7 +16,6 @@ class Reduce < Formula
   depends_on "libtool" => :build
   depends_on "make" => :build
   depends_on "perl" => :build
-  depends_on "pkg-config" => :build
   depends_on "texlive" => :build
 
   depends_on "brotli"
