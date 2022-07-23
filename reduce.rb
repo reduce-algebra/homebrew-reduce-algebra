@@ -10,7 +10,7 @@ class Reduce < Formula
 
   # Supports REDUCE builds from stable release snapshots or Subversion HEAD.
 
-  # TODO: (items below)
+  # What still needs to be completed before cleaning up for homebrew-core?
   # * REDUCE doesn't like Homebrew gnuplot ...
   # - - gnuplot> if(strstrt(GPVAL_TERMINALS,"aqua")!=0)set terminal aqua;;    set term x11;
   # - - line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
