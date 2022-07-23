@@ -282,8 +282,7 @@ class Reduce < Formula
       share.install "emacs"
       share.install "texmacs"
     end
-    cd "doc/primers" do
-      doc.install "insidereduce.pdf"
+    cd "doc/misc" do
       doc.install "primer.pdf"
       doc.install "sl.pdf"
     end
