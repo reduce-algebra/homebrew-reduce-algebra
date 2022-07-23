@@ -322,8 +322,8 @@ class Reduce < Formula
 
   test do
     # TODO: Run the CSL and PSL REDUCE test suites and benchmarks
-    system "sh", "-c", "printf '%s\n' 'quit;' | #{bin}/reduce -v"
-    system "sh", "-c", "printf '%s\n' 'quit;' | #{bin}/redcsl -v"
-    system "sh", "-c", "printf '%s\n' 'quit;' | #{bin}/redpsl -v"
+    system "sh", "-c", "printf '%s\\n' 'quit;' | #{bin}/reduce -v"
+    system "sh", "-c", "printf '%s\\n' 'quit;' | #{bin}/redcsl -v"
+    system "sh", "-c", "printf '%s\\n' 'quit;' | #{bin}/redpsl -v"
   end
 end
