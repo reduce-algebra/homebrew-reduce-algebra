@@ -296,9 +296,6 @@ class Reduce < Formula
     doc.install "ACN-projects.doc"
     doc.install "BUGS"
     doc.install "doc/projects.txt"
-
-    # XXX explicit fail for debugging
-    system "false"
   end
 
   test do
