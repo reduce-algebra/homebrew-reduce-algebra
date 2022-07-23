@@ -189,11 +189,11 @@ class Reduce < Formula
                                 "--without-autogen"
 
     # Build libs: Build the local prerequisite components for CSL REDUCE
-    system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh \"$(./config.guess)\")/fox"'
-    system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh \"$(./config.guess)\")/crlibm"'
-    system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh \"$(./config.guess)\")/softfloat"'
-    system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh \"$(./config.guess)\")/libedit"'
-    system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh \"$(./config.guess)\")/libffi"'
+    system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/fox"'
+    system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/crlibm"'
+    system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/softfloat"'
+    system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/libedit"'
+    system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/libffi"'
 
     # Build redcsl: Build CSL (Codemist Standard Lisp) REDUCE
     system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/csl"'
