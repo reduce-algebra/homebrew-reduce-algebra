@@ -50,7 +50,7 @@ class Reduce < Formula
   end
 
   bottle do
-    root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-6339/"
+    root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-6339"
     sha256 monterey: "763bc5a262c8691034cdf4ec3dd31bc76ba168d34af4ec485020c8ff7edc21aa"
   end
 
