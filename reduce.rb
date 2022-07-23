@@ -11,16 +11,22 @@ class Reduce < Formula
   # Supports REDUCE builds from stable release snapshots or Subversion HEAD.
 
   # TODO:
-  # - The default browser for GUI CSL REDUCE should be "/usr/bin/open" and not "firefox"
-  # - The installed documentation path must be taught to GUI CSL REDUCE / Redfront
-  # - Install rlsmt with the package
-  # - Need to rebuild the breduce.pdf from LaTeX sources
-  # - Include rbench and the regular test suite and benchmarks in the package?
-  # - Build libreduce (as a separate dependant package?)
-  # - Build qreduce (as a separate dependant package?)
-  # - Build VSL and it's documentation (even if just for fun? as a separate package?)
-  # - Check and normalize file permissions
-  # - Support Homebrew on Linux
+  # * REDUCE doesn't like Homebrew gnuplot ...
+  # - - gnuplot> if(strstrt(GPVAL_TERMINALS,"aqua")!=0)set terminal aqua;;    set term x11;
+  # - - line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+  # - - WARNING: Plotting with an 'unknown' terminal.
+  # - - No output will be generated. Please select a terminal with 'set terminal'.
+  # * Test the Emacs and TeXmacs plugins
+  # * The default browser for GUI CSL REDUCE should be "/usr/bin/open" and not "firefox"
+  # * The installed documentation path must be taught to GUI CSL REDUCE / Redfront
+  # * Install rlsmt with the package
+  # * Need to rebuild the breduce.pdf from LaTeX sources
+  # * Include rbench and the regular test suite and benchmarks in the package?
+  # * Build libreduce (as a separate dependant package?)
+  # * Build qreduce (as a separate dependant package?)
+  # * Build VSL and it's documentation (even if just for fun? as a separate package?)
+  # * Check and normalize file permissions
+  # * Support Homebrew on Linux
 
   bottle do
     root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-6339"
