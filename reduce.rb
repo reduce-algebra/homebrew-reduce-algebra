@@ -10,6 +10,18 @@ class Reduce < Formula
 
   # Supports REDUCE builds from stable release snapshots or Subversion HEAD.
 
+  # TODO:
+  # - The default browser for GUI CSL REDUCE should be "/usr/bin/open" and not "firefox"
+  # - The installed documentation path must be taught to GUI CSL REDUCE / Redfront
+  # - Install rlsmt with the package
+  # - Need to rebuild the breduce.pdf from LaTeX sources
+  # - Include rbench and the regular test suite and benchmarks in the package?
+  # - Build libreduce (as a separate dependant package?)
+  # - Build qreduce (as a separate dependant package?)
+  # - Build VSL and it's documentation (even if just for fun? as a separate package?)
+  # - Check and normalize file permissions
+  # - Support Homebrew on Linux
+
   bottle do
     root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-6339"
     sha256 monterey: "763bc5a262c8691034cdf4ec3dd31bc76ba168d34af4ec485020c8ff7edc21aa"
@@ -226,10 +238,10 @@ class Reduce < Formula
     mv "doc/manual", "doc/html"
     touch "doc.stamp"
 
-    # TODO: Build and/or install libreduce, qreduce, rbench, rlsmt
+    # Done with building.
     touch ".stamp"
 
-    # Installation: Create initial installation (excluding source archive and associated README)
+    # Installation: Create initial installation using copyfiles script.
     system "sh", "-c", 'cd macbuild && ./copyfiles.sh "$(realpath ..)" "release"'
     cp "generic/casefold/casefold", "macbuild/distrib/casefold"
 
