@@ -1,6 +1,6 @@
 class ReduceCurrent < Formula
   # vim: set ft=ruby ts=2 sw=2 tw=0 expandtab colorcolumn=118:
-  desc "Portable general-purpose interactive computer algebra system (tracking upstream SVN)"
+  desc "Portable general-purpose interactive computer algebra system (tracking SVN)"
   homepage "https://reduce-algebra.sourceforge.io"
   url "https://svn.code.sf.net/p/reduce-algebra/code/trunk", revision: "6355"
   version "6355"
