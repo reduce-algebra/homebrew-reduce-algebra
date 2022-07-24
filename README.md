@@ -29,19 +29,19 @@
 <!--                                                                        -->
 # REDUCE for Homebrew
 
-A [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
-[**REDUCE**](https://reduce-algebra.sourceforge.io/), the portable
-general-purpose computer algebra system.
+* A [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
+  [**REDUCE**](https://reduce-algebra.sourceforge.io/), the portable
+  general-purpose computer algebra system.
 
 ## Overview
 
-[**REDUCE**](https://reduce-algebra.sourceforge.io/) is a freely available
-open-source interactive system for general algebraic computations, of interest
-to mathematicians, scientists, and engineers.
+* [**REDUCE**](https://reduce-algebra.sourceforge.io/) is a freely available
+  open-source interactive system for general algebraic computations, of
+  interest to mathematicians, scientists, and engineers.
 
 ## Availability
 
-* Only **macOS** systems are supported.
+* Only **macOS** systems are supported at this time.
 
 ## Installation
 
@@ -50,13 +50,11 @@ to mathematicians, scientists, and engineers.
 * The most recent *`reduce`* package is revision **6339**,
   released 2022-06-17.
 * The *`reduce`* package is updated **5 times per year** (on average).
-
-It can be installed using:
-
-```sh
-brew tap johnsonjh/reduce-algebra
-brew install reduce
-```
+  * It can be installed using:
+    ```sh
+    brew tap johnsonjh/reduce-algebra
+    brew install reduce
+    ```
 
 ---
 
@@ -65,12 +63,10 @@ brew install reduce
 * The most recent *`reduce-current`* package is revision **6355**, released
   2022-07-22.
 * The *`reduce-current`* package is updated **5 times per week** (on average).
-
-It can be installed using:
-
-```sh
-brew tap johnsonjh/reduce-algebra
-brew install reduce-current
-```
+  * It can be installed using:
+    ```sh
+    brew tap johnsonjh/reduce-algebra
+    brew install reduce-current
+    ```
 
 ---
