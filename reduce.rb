@@ -348,7 +348,7 @@ class Reduce < Formula
         To access this documentation, browse to the following location:
           #{doc}
 
-      Add the following line to your .profile or equivilant:
+      Add the following line to your .profile or equivalent:
         REDUCE_HELP="#{doc}/html"
     EOS
   end
