@@ -32,10 +32,10 @@
 [![license](https://img.shields.io/github/license/johnsonjh/homebrew-reduce-algebra.svg?color=blue)](/LICENSE)
 [![updated](https://img.shields.io/github/last-commit/johnsonjh/homebrew-reduce-algebra.svg?color=blue&label=updated)](https://github.com/johnsonjh/homebrew-reduce-algebra/commits/master)
 
-## Overview
-
-This is a [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
+A [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
 [**REDUCE**](https://reduce-algebra.sourceforge.io/).
+
+## Overview
 
 **REDUCE** is a freely available open-source interactive system for general
 algebraic computations, of interest to mathematicians, scientists, and
