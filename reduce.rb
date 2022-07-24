@@ -8,6 +8,8 @@ class Reduce < Formula
   # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
   head "https://svn.code.sf.net/p/reduce-algebra/code/trunk"
+  # The following copyright statement applies to this Homebrew formula:
+  # Copyright (c) 2009-present, Homebrew contributors
 
   # Find latest release verison
   livecheck do
@@ -23,27 +25,26 @@ class Reduce < Formula
   #   strategy :page_match
   # end
 
-  # Homebrew Formulae for REDUCE supporting stable release snapshots or Subversion HEAD
-  # Copyright (c) 2009-present, Homebrew contributors
+  # Homebrew Formulae for REDUCE; supporting stable release snapshots or Subversion HEAD
 
-  # What still needs to be completed before cleaning up for homebrew-core?
-  # * Use libfaketime (already in Homebrew) to set the build date to the revision release date.
-  # * REDUCE doesn't like Homebrew gnuplot ...
-  # - - gnuplot> if(strstrt(GPVAL_TERMINALS,"aqua")!=0)set terminal aqua;;    set term x11;
-  # - - line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
-  # - - WARNING: Plotting with an 'unknown' terminal.
-  # - - No output will be generated. Please select a terminal with 'set terminal'.
-  # * Test the Emacs and TeXmacs plugins
-  # * The default browser for GUI CSL REDUCE should be "/usr/bin/open" and not "firefox"
-  # * The installed documentation path must be taught to GUI CSL REDUCE / Redfront
-  # * Install rlsmt with the package
-  # * Need to rebuild the breduce.pdf from LaTeX sources
-  # * Include rbench and the regular test suite and benchmarks in the package?
-  # * Build libreduce (as a separate dependant package?)
-  # * Build qreduce (as a separate dependant package?)
-  # * Build VSL and it's documentation (even if just for fun? as a separate package?)
-  # * Check and normalize file permissions
-  # * Support Homebrew on Linux
+  # TODO: Use libfaketime (already in Homebrew) to set the build date to the revision release date.
+  # TODO: REDUCE doesn't like Homebrew gnuplot ...
+  # -   -   gnuplot> if(strstrt(GPVAL_TERMINALS,"aqua")!=0)set terminal aqua;;    set term x11;
+  # -   -   line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+  # -   -   WARNING: Plotting with an 'unknown' terminal.
+  # -   -   No output will be generated. Please select a terminal with 'set terminal'.
+  # TODO: Test the Emacs REDUCE IDE
+  # TODO: Test the GNU TeXmacs plugin
+  # TODO: The default browser for GUI CSL REDUCE should be "/usr/bin/open" and not "firefox"
+  # TODO: The installed documentation path must be taught to GUI CSL REDUCE / Redfront
+  # TODO: Install rlsmt with the package
+  # TODO: Need to rebuild the breduce.pdf from LaTeX sources
+  # TODO: Include rbench and the regular test suite and benchmarks in the package?
+  # TODO: Build libreduce (as a separate dependant package?)
+  # TODO: Build qreduce (as a separate dependant package?)
+  # TODO: Build VSL and it's documentation (even if just for fun? as a separate package?)
+  # TODO: Check and normalize file permissions
+  # TODO: Support Homebrew on Linux
 
   bottle do
     root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-6339"
@@ -357,17 +358,21 @@ class Reduce < Formula
 
   caveats do
     <<~EOS
-      A GNU TeXmacs plugin has been installed; enable it for your user:
-        mkdir -p ~/.TeXmacs/plugins &&     \
-        rm -f ~/.TeXmacs/plugins/reduce && \
-        ln -s "#{share}/texmacs/reduce" ~/.TeXmacs/plugins
+      REDUCE has been installed to "#{prefix}".
+      A GNU TeXmacs plugin has been installed.
+        To enable it for your user, execute these commands from a shell:
+          mkdir -p ~/.TeXmacs/plugins &&     \
+          rm -f ~/.TeXmacs/plugins/reduce && \
+          ln -s "#{share}/texmacs/reduce" ~/.TeXmacs/plugins
 
-      REDUCE IDE for GNU Emacs has been installed; enable it within Emacs:
-        package-install-file "#{share}/emacs/reduce-mode.el"
-        package-install-file "#{share}/emacs/reduce-run.el"
+      A GNU Emacs major mode and IDE have been installed.
+        To enable it for your user, execute these commands from Emacs:
+          package-install-file "#{share}/emacs/reduce-mode.el"
+          package-install-file "#{share}/emacs/reduce-run.el"
 
-      Documentation has been installed; it is available at the following path:
-        #{doc}
+      Documentation in HTML and PDF formats has been installed.
+        To access this documentation, browse to the following location:
+          #{doc}
 
       Add the following line to your .profile or equivilant:
         REDUCE_HELP="#{doc}/html"
