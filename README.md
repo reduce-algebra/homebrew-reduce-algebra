@@ -29,18 +29,15 @@
 <!--                                                                        -->
 # REDUCE for Homebrew
 
-[![license](https://img.shields.io/github/license/johnsonjh/homebrew-reduce-algebra.svg?color=blue)](/LICENSE)
-[![updated](https://img.shields.io/github/last-commit/johnsonjh/homebrew-reduce-algebra.svg?color=blue&label=updated)](https://github.com/johnsonjh/homebrew-reduce-algebra/commits/master)
-
 A [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
-[**REDUCE**](https://reduce-algebra.sourceforge.io/), a portable
+[**REDUCE**](https://reduce-algebra.sourceforge.io/), the portable
 general-purpose computer algebra system.
 
 ## Overview
 
-**REDUCE** is a freely available open-source interactive system for general
-algebraic computations, of interest to mathematicians, scientists, and
-engineers.
+[**REDUCE**](https://reduce-algebra.sourceforge.io/) is a freely available
+open-source interactive system for general algebraic computations, of interest
+to mathematicians, scientists, and engineers.
 
 ## Availability
 
@@ -50,8 +47,9 @@ engineers.
 
 ### Stable
 
-* The most recent *`reduce`* package is revision **6339** (2022-06-17).
-* The *stable* package is updated 5 times per year (on average).
+* The most recent *`reduce`* package is revision **6339**,
+  released 2022-06-17.
+* The *`reduce`* package is updated **5 times per year** (on average).
 
 It can be installed using:
 
@@ -64,8 +62,9 @@ brew install reduce
 
 ### Current
 
-* The most recent *`reduce-current`* package is revision **6355** (2022-07-22).
-* The *current* package is updated **5 times per week** (on average).
+* The most recent *`reduce-current`* package is revision **6355**, released
+  2022-07-22.
+* The *`reduce-current`* package is updated **5 times per week** (on average).
 
 It can be installed using:
 
