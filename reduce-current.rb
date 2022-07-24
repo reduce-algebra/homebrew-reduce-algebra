@@ -333,8 +333,8 @@ class ReduceCurrent < Formula
     <<~EOS
       A GNU TeXmacs plugin has been installed.
         To enable it for your user, execute these commands from a shell:
-          mkdir -p ~/.TeXmacs/plugins &&     \
-          rm -f ~/.TeXmacs/plugins/reduce && \
+          mkdir -p ~/.TeXmacs/plugins &&     \\
+          rm -f ~/.TeXmacs/plugins/reduce && \\
           ln -s "#{share}/texmacs/reduce" ~/.TeXmacs/plugins
 
       A GNU Emacs major mode and IDE have been installed.
