@@ -51,8 +51,7 @@ engineers.
 ### Stable
 
 * The most recent *`reduce`* package is revision **6339** (2022-06-17).
-* The *`reduce`* package is built from the most recently released code, and
-  updated 5 times per year (on average).
+* The *stable* package is updated 5 times per year (on average).
 
 It can be installed using:
 
@@ -66,8 +65,7 @@ brew install reduce
 ### Current
 
 * The most recent *`reduce-current`* package is revision **6355** (2022-07-22).
-* The *`reduce-current`* package is built from **unreleased** SVN code, and
-  updated **5 times per week** (on average).
+* The *current* package is updated **5 times per week** (on average).
 
 It can be installed using:
 
