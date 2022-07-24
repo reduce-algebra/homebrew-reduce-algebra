@@ -35,45 +35,23 @@
 
 ## Overview
 
-This is a [*Homebrew*](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
-[**REDUCE**](https://reduce-algebra.sourceforge.io/). **REDUCE** is a freely
-available open-source interactive system for general algebraic computations,
-of interest to mathematicians, scientists, and engineers.
+This is a [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
+[**REDUCE**](https://reduce-algebra.sourceforge.io/).
 
-It can be used interactively for simple calculations, but also provides a
-flexible and expressive user programming language.
-
-The development of the **REDUCE** computer algebra system was started in the
-1960's by [Anthony C. Hearn](https://en.wikipedia.org/wiki/Anthony_C._Hearn)
-and further developed by
-[Arthur C. Norman](https://en.wikipedia.org/wiki/Arthur_Norman_(computer_scientist))
-and others. Since then, many scientists from all over the world have
-contributed to its development.
-
-**REDUCE** has a long and distinguished place in the history of computer
-algebra systems.
-
-**REDUCE** is implemented in *Standard Lisp*. It primarily runs on either
-**_Portable Standard Lisp_**, which compiles to native machine code, or
-**_Codemist Standard Lisp_**, which compiles to optimized byte-code.
-
-It can also run on **_Visible Standard Lisp_**, an extremely compact and
-highly portable *Standard Lisp* interpreter.
-
-**PSL** and **CSL** are included in the *Homebrew* **REDUCE** distribution.
+**REDUCE** is a freely available open-source interactive system for general
+algebraic computations, of interest to mathematicians, scientists, and
+engineers.
 
 ## Availability
 
-Currently, only **macOS** systems are supported; bottles are provided for
-Intel systems running **macOS** *Monterey*.
+* Only **macOS** systems are supported.
+* Support for **Linux** is planned.
 
 ## Installation
 
-Two release trains are available:
-
 ### Stable Release
 
-The stable release is built from the most recently released code.
+The *stable* release is built from the most recently released code.
 It can be installed using:
 
 ```sh
@@ -83,7 +61,7 @@ brew install reduce
 
 ### Current Release
 
-The current release is built from the unreleased SVN code.
+The *current* release is built from the unreleased SVN code.
 It can be installed using:
 
 ```sh
