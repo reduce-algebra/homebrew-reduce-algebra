@@ -20,16 +20,16 @@ class ReduceCurrent < Formula
   bottle do
     root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-current-6355"
     sha256 monterey: "9850a56873390ea78e8b06b32cf0059dbaee6fce95f0091b64a00b10b291fb88"
-   end
+  end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "ccache" => :build
+  depends_on "autoconf"  => :build
+  depends_on "automake"  => :build
+  depends_on "ccache"    => :build
   depends_on "coreutils" => :build
-  depends_on "libtool" => :build
-  depends_on "make" => :build
-  depends_on "perl" => :build
-  depends_on "texlive" => :build
+  depends_on "libtool"   => :build
+  depends_on "make"      => :build
+  depends_on "perl"      => :build
+  depends_on "texlive"   => :build
 
   depends_on "brotli"
   depends_on "fontconfig"
@@ -57,8 +57,8 @@ class ReduceCurrent < Formula
   uses_from_macos "zlib"
 
   on_macos do
-    depends_on "gnu-sed" => [:build, :test]
-    depends_on "gnu-tar" => [:build, :test]
+    depends_on "gnu-sed"  => [:build, :test]
+    depends_on "gnu-tar"  => [:build, :test]
     depends_on "gnu-time" => [:build, :test]
     depends_on "libiconv"
   end

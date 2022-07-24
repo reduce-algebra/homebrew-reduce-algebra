@@ -23,14 +23,14 @@ class Reduce < Formula
     sha256 monterey: "8931afff08967f872c834cb4b490691f32fc0539c3014abba671076b08be4103"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "ccache" => :build
+  depends_on "autoconf"  => :build
+  depends_on "automake"  => :build
+  depends_on "ccache"    => :build
   depends_on "coreutils" => :build
-  depends_on "libtool" => :build
-  depends_on "make" => :build
-  depends_on "perl" => :build
-  depends_on "texlive" => :build
+  depends_on "libtool"   => :build
+  depends_on "make"      => :build
+  depends_on "perl"      => :build
+  depends_on "texlive"   => :build
 
   depends_on "brotli"
   depends_on "fontconfig"
@@ -58,8 +58,8 @@ class Reduce < Formula
   uses_from_macos "zlib"
 
   on_macos do
-    depends_on "gnu-sed" => [:build, :test]
-    depends_on "gnu-tar" => [:build, :test]
+    depends_on "gnu-sed"  => [:build, :test]
+    depends_on "gnu-tar"  => [:build, :test]
     depends_on "gnu-time" => [:build, :test]
     depends_on "libiconv"
   end
