@@ -33,13 +33,16 @@
 [![updated](https://img.shields.io/github/last-commit/johnsonjh/homebrew-reduce-algebra.svg?color=blue&label=updated)](https://github.com/johnsonjh/homebrew-reduce-algebra/commits/master)
 
 A [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
-[**REDUCE**](https://reduce-algebra.sourceforge.io/).
+[**REDUCE**](https://reduce-algebra.sourceforge.io/), a portable
+general-purpose computer algebra system.
 
 ## Overview
 
 **REDUCE** is a freely available open-source interactive system for general
 algebraic computations, of interest to mathematicians, scientists, and
-engineers.
+engineers. **REDUCE** has a
+[long and distinguished place](https://reduce-algebra.sourceforge.io/bibliography.php)
+in the history of computer algebra systems.
 
 ## Availability
 
