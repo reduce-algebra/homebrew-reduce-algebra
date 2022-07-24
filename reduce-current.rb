@@ -80,6 +80,8 @@ class ReduceCurrent < Formula
   # > [and linking] against the .a rather than the .dylib versions is only to make our distribution here simpler, and
   # > not to try to lock anybody in (or out) of anything.
 
+  conflicts_with "reduce", because: "both install the same binaries"
+
   def install
     # Configuration: Use `gnubin` for GNU sed/tar/time on macOS
     if OS.mac?
