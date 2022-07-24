@@ -48,9 +48,13 @@ engineers.
 
 ## Installation
 
-### Stable Release
+### Stable
 
-The *stable* release is built from the most recently released code.
+* The *`reduce`* package is built from the most recently *released code*.
+* The *`reduce`* package is updated, on average, 5 times per year.
+* The most recent *`reduce`* version is **revision 6339**,
+  released *2022-06-17*.
+
 It can be installed using:
 
 ```sh
@@ -58,9 +62,13 @@ brew tap johnsonjh/reduce-algebra
 brew install reduce
 ```
 
-### Current Release
+### Current
 
-The *current* release is built from the unreleased SVN code.
+* The *`reduce-current`* package is built from *unreleased SVN code*.
+* The *`reduce-current`* package is updated, on average, **5 times per week**.
+* The most recent *`reduce-current`* version is **revision 6355**,
+  released *2022-07-22*.
+
 It can be installed using:
 
 ```sh
