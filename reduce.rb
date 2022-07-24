@@ -1,13 +1,13 @@
 class Reduce < Formula
   # vim: set ft=ruby ts=2 sw=2 tw=0 expandtab colorcolumn=118:
-  desc "Portable general-purpose interactive computer algebra system"
+  desc "Portable general-purpose interactive computer algebra system (stable release)"
   homepage "https://reduce-algebra.sourceforge.io"
   url "https://downloads.sourceforge.net/project/reduce-algebra/snapshot_2022-06-17/Reduce-svn6339-src.tar.gz"
   version "6339"
   sha256 "fba8567372126431bd60a14d780dc584e4677eb3275af351a5109552e7a62d4a"
   # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
-  head "https://svn.code.sf.net/p/reduce-algebra/code/trunk"
+
   # The following copyright statement applies to this Homebrew formula:
   # Copyright (c) 2009-present, Homebrew contributors
 
@@ -17,34 +17,6 @@ class Reduce < Formula
     regex(/<span class="sub-label">reduce-complete_(\d+)_/i)
     strategy :page_match
   end
-
-  # Find latest SVN version
-  # livecheck do
-  #   url "https://sourceforge.net/p/reduce-algebra/code/HEAD/tree/trunk/"
-  #   regex(/href="\/p\/reduce-algebra\/code\/(\d+)\//i)
-  #   strategy :page_match
-  # end
-
-  # Homebrew Formulae for REDUCE; supporting stable release snapshots or Subversion HEAD
-
-  # TODO: Use libfaketime (already in Homebrew) to set the build date to the revision release date.
-  # TODO: REDUCE doesn't like Homebrew gnuplot ...
-  # -   -   gnuplot> if(strstrt(GPVAL_TERMINALS,"aqua")!=0)set terminal aqua;;    set term x11;
-  # -   -   line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
-  # -   -   WARNING: Plotting with an 'unknown' terminal.
-  # -   -   No output will be generated. Please select a terminal with 'set terminal'.
-  # TODO: Test the Emacs REDUCE IDE
-  # TODO: Test the GNU TeXmacs plugin
-  # TODO: The default browser for GUI CSL REDUCE should be "/usr/bin/open" and not "firefox"
-  # TODO: The installed documentation path must be taught to GUI CSL REDUCE / Redfront
-  # TODO: Install rlsmt with the package
-  # TODO: Need to rebuild the breduce.pdf from LaTeX sources
-  # TODO: Include rbench and the regular test suite and benchmarks in the package?
-  # TODO: Build libreduce (as a separate dependant package?)
-  # TODO: Build qreduce (as a separate dependant package?)
-  # TODO: Build VSL and it's documentation (even if just for fun? as a separate package?)
-  # TODO: Check and normalize file permissions
-  # TODO: Support Homebrew on Linux
 
   bottle do
     root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-6339"
@@ -380,7 +352,6 @@ class Reduce < Formula
   end
 
   test do
-    # TODO: Run the CSL and PSL REDUCE test suites and benchmarks
     system "sh", "-c", "printf '%s\\n' 'quit;' | #{bin}/reduce -v"
     system "sh", "-c", "printf '%s\\n' 'quit;' | #{bin}/redcsl -v"
     system "sh", "-c", "printf '%s\\n' 'quit;' | #{bin}/redpsl -v"
