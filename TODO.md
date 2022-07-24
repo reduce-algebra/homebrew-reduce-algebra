@@ -28,8 +28,8 @@
 <!-- OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.   -->
 <!--                                                                        -->
 * TODO: Run the CSL and PSL REDUCE test suites and benchmarks
-* TODO: Use libfaketime (already in Homebrew) to set the build date to the revision release date.
-* TODO: REDUCE doesn't like Homebrew gnuplot:
+* TODO: Use `libfaketime` (already in Homebrew) to set the build date to the revision release date
+* TODO: REDUCE doesn't like Homebrew's gnuplot:
   ```
   gnuplot> if(strstrt(GPVAL_TERMINALS,"aqua")!=0)set terminal aqua;;    set term x11;
   line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
@@ -37,14 +37,13 @@
   No output will be generated. Please select a terminal with 'set terminal'.
   ```
 * TODO: Test the Emacs REDUCE IDE
-* TODO: Test the GNU TeXmacs plugin
-* TODO: The default browser for GUI CSL REDUCE should be "/usr/bin/open" and not "firefox"
-* TODO: The installed documentation path must be taught to GUI CSL REDUCE / Redfront
-* TODO: Install rlsmt with the package
-* TODO: Need to rebuild the breduce.pdf from LaTeX sources
-* TODO: Include rbench and the regular test suite and benchmarks in the package?
-* TODO: Build libreduce (as a separate dependant package?)
-* TODO: Build qreduce (as a separate dependant package?)
-* TODO: Build VSL and it's documentation (even if just for fun? as a separate package?)
-* TODO: Check and normalize file permissions
+* TODO: The default browser for GUI REDUCE should be `/usr/bin/open`, not `firefox`
+* TODO: The installed documentation path should be preset when using Redfront
+* TODO: Install `rlsmt` with the package
+* TODO: Need to rebuild the `breduce.pdf` from LaTeX sources
+* TODO: Include `rbench` and the regular test suite and benchmarks in the package?
+* TODO: Build `libreduce` (as a separate dependant package?)
+* TODO: Build `qreduce` (as a separate dependant package?)
+* TODO: Build `VSL` and it's documentation (just for fun? as a separate package?)
+* TODO: Check/normalize file permissions
 * TODO: Support Homebrew on Linux
