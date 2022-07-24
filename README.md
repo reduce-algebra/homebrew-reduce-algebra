@@ -61,6 +61,8 @@ brew tap johnsonjh/reduce-algebra
 brew install reduce
 ```
 
+---
+
 ### Current
 
 * The *`reduce-current`* package is built from **unreleased** SVN code, and
@@ -73,3 +75,5 @@ It can be installed using:
 brew tap johnsonjh/reduce-algebra
 brew install reduce-current
 ```
+
+---
