@@ -40,23 +40,20 @@ general-purpose computer algebra system.
 
 **REDUCE** is a freely available open-source interactive system for general
 algebraic computations, of interest to mathematicians, scientists, and
-engineers. **REDUCE** has a
-[long and distinguished place](https://reduce-algebra.sourceforge.io/bibliography.php)
-in the history of computer algebra systems.
+engineers.
 
 ## Availability
 
 * Only **macOS** systems are supported.
-* Support for **Linux** is planned.
 
 ## Installation
 
 ### Stable
 
-* The *`reduce`* package is built from the most recently *released code*.
-* The *`reduce`* package is updated, on average, 5 times per year.
-* The most recent *`reduce`* version is **revision 6339**,
-  released *2022-06-17*.
+* The *`reduce`* package is built from the most recently released code, and
+  is updated, on average, 5 times per year.
+* The most recent *`reduce`* version is revision **6339**,
+  released 2022-06-17.
 
 It can be installed using:
 
@@ -67,10 +64,10 @@ brew install reduce
 
 ### Current
 
-* The *`reduce-current`* package is built from *unreleased SVN code*.
-* The *`reduce-current`* package is updated, on average, **5 times per week**.
-* The most recent *`reduce-current`* version is **revision 6355**,
-  released *2022-07-22*.
+* The *`reduce-current`* package is built from **unreleased** SVN code, and
+  is updated, on average, **5 times per week**.
+* The most recent *`reduce-current`* version is revision **6355**,
+  released 2022-07-22.
 
 It can be installed using:
 
