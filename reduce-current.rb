@@ -17,10 +17,10 @@ class ReduceCurrent < Formula
     strategy :page_match
   end
 
-  # bottle do
-  # # root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-6339"
-  # # sha256 monterey: "8931afff08967f872c834cb4b490691f32fc0539c3014abba671076b08be4103"
-  # end
+  bottle do
+    root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-current-6355"
+    sha256 monterey: "9850a56873390ea78e8b06b32cf0059dbaee6fce95f0091b64a00b10b291fb88"
+   end
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
