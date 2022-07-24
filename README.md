@@ -27,7 +27,7 @@
 <!-- (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE  -->
 <!-- OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.   -->
 <!--                                                                        -->
-[![license](https://img.shields.io/badge/license-BSD--2--Clause-blue.svg?color=blue/BSD-2-Clause.txt)](/LICENSE)
-[![updated](https://img.shields.io/github/last-commit/johnsonjh/homebrew-reduce-algebra.svg?color=blue&label=updated)]
-[![testbot](https://img.shields.io/github/workflow/status/johnsonjh/homebrew-reduce-algebra/brew%20test-bot.svg?color=blue&label=test-bot)]
+[![license](https://img.shields.io/github/license/johnsonjh/homebrew-reduce-algebra.svg)](/LICENSE)
+[![updated](https://img.shields.io/github/last-commit/johnsonjh/homebrew-reduce-algebra.svg?color=ok&label=updated)]
+[![testbot](https://img.shields.io/github/workflow/status/johnsonjh/homebrew-reduce-algebra/brew%20test-bot.svg&label=test-bot)]
 [![tickgit](https://img.shields.io/endpoint?url=https://api.tickgit.com/badge?repo=github.com/johnsonjh/homebrew-reduce-algebra)](https://www.tickgit.com/browse?repo=github.com/johnsonjh/homebrew-reduce-algebra)
