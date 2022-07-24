@@ -30,7 +30,7 @@ class Reduce < Formula
 
   bottle do
     root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-6339"
-    sha256 monterey: "763bc5a262c8691034cdf4ec3dd31bc76ba168d34af4ec485020c8ff7edc21aa"
+    sha256 monterey: "8931afff08967f872c834cb4b490691f32fc0539c3014abba671076b08be4103"
   end
 
   depends_on "autoconf" => :build
