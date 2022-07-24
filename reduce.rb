@@ -356,7 +356,7 @@ class Reduce < Formula
     chmod 0644, man1/"redpsl.1"
   end
 
-  caveats do
+  def caveats
     <<~EOS
       REDUCE has been installed to "#{prefix}".
       A GNU TeXmacs plugin has been installed.
