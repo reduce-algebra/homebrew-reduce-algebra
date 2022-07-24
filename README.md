@@ -29,9 +29,8 @@
 <!--                                                                        -->
 # REDUCE for Homebrew
 
-[![license](https://img.shields.io/github/license/johnsonjh/homebrew-reduce-algebra.svg?color=ok)](/LICENSE)
-[![updated](https://img.shields.io/github/last-commit/johnsonjh/homebrew-reduce-algebra.svg?color=ok&label=updated)](https://github.com/johnsonjh/homebrew-reduce-algebra/commits/master)
-[![testbot](https://img.shields.io/github/workflow/status/johnsonjh/homebrew-reduce-algebra/brew%20test-bot&label=test-bot)](https://github.com/johnsonjh/homebrew-reduce-algebra/actions/workflows/tests.yml)
+[![license](https://img.shields.io/github/license/johnsonjh/homebrew-reduce-algebra.svg?color=blue)](/LICENSE)
+[![updated](https://img.shields.io/github/last-commit/johnsonjh/homebrew-reduce-algebra.svg?color=blue&label=updated)](https://github.com/johnsonjh/homebrew-reduce-algebra/commits/master)
 
 ## Overview
 
