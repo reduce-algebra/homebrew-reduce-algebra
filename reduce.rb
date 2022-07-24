@@ -9,12 +9,19 @@ class Reduce < Formula
   license "BSD-2-Clause"
   head "https://svn.code.sf.net/p/reduce-algebra/code/trunk"
 
-  # Check to find the latest released version
+  # Find latest release verison
   livecheck do
     url "https://sourceforge.net/projects/reduce-algebra/files/"
     regex(/<span class="sub-label">reduce-complete_(\d+)_/i)
     strategy :page_match
   end
+
+  # Find latest SVN version
+  # livecheck do
+  #   url "https://sourceforge.net/p/reduce-algebra/code/HEAD/tree/trunk/"
+  #   regex(/href="\/p\/reduce-algebra\/code\/(\d+)\//i)
+  #   strategy :page_match
+  # end
 
   # Homebrew Formulae for REDUCE supporting stable release snapshots or Subversion HEAD
   # Copyright (c) 2009-present, Homebrew contributors
@@ -346,6 +353,25 @@ class Reduce < Formula
     chmod 0644, man1/"redcsl.1"
     chmod 0644, man1/"redfront.1"
     chmod 0644, man1/"redpsl.1"
+  end
+
+  caveats do
+    <<~EOS
+      A GNU TeXmacs plugin has been installed; enable it for your user:
+        mkdir -p ~/.TeXmacs/plugins &&     \
+        rm -f ~/.TeXmacs/plugins/reduce && \
+        ln -s "#{share}/texmacs/reduce" ~/.TeXmacs/plugins
+
+      REDUCE IDE for GNU Emacs has been installed; enable it within Emacs:
+        package-install-file "#{share}/emacs/reduce-mode.el"
+        package-install-file "#{share}/emacs/reduce-run.el"
+
+      Documentation has been installed; it is available at the following path:
+        #{doc}
+
+      Add the following line to your .profile or equivilant:
+        REDUCE_HELP="#{doc}/html"
+    EOS
   end
 
   test do
