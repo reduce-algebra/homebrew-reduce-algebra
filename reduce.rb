@@ -9,6 +9,13 @@ class Reduce < Formula
   license "BSD-2-Clause"
   head "https://svn.code.sf.net/p/reduce-algebra/code/trunk"
 
+  # Check to find the latest released version
+  livecheck do
+    url "https://sourceforge.net/projects/reduce-algebra/files/"
+    regex(/<span class="sub-label">reduce-complete_(\d+)_/i)
+    strategy :page_match
+  end
+
   # Homebrew Formulae for REDUCE supporting stable release snapshots or Subversion HEAD
   # Copyright (c) 2009-present, Homebrew contributors
 
