@@ -33,3 +33,5 @@ jobs:
         env:
           BRANCH: ${{ github.event.pull_request.head.ref }}
         run: git push --delete origin $BRANCH
+# Copyright (c) 2009-present, Homebrew contributors
+# SPDX-License-Identifier: BSD-2-Clause

@@ -5,10 +5,12 @@ class Reduce < Formula
   url "https://downloads.sourceforge.net/project/reduce-algebra/snapshot_2022-06-17/Reduce-svn6339-src.tar.gz"
   version "6339"
   sha256 "fba8567372126431bd60a14d780dc584e4677eb3275af351a5109552e7a62d4a"
+  # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
   head "https://svn.code.sf.net/p/reduce-algebra/code/trunk"
 
-  # Supports REDUCE builds from stable release snapshots or Subversion HEAD.
+  # Homebrew Formulae for REDUCE supporting stable release snapshots or Subversion HEAD
+  # Copyright (c) 2009-present, Homebrew contributors
 
   # What still needs to be completed before cleaning up for homebrew-core?
   # * Use libfaketime (already in Homebrew) to set the build date to the revision release date.

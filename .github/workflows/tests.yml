@@ -42,3 +42,5 @@ jobs:
         with:
           name: bottles
           path: '*.bottle.*'
+# Copyright (c) 2009-present, Homebrew contributors
+# SPDX-License-Identifier: BSD-2-Clause
