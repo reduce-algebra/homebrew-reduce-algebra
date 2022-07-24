@@ -332,7 +332,6 @@ class Reduce < Formula
 
   def caveats
     <<~EOS
-      REDUCE has been installed to "#{prefix}".
       A GNU TeXmacs plugin has been installed.
         To enable it for your user, execute these commands from a shell:
           mkdir -p ~/.TeXmacs/plugins &&     \
