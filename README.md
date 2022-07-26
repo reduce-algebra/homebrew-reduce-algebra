@@ -131,7 +131,7 @@ brew install -q reduce-current
 *Installation instructions*:
 ```sh
 brew tap bell-sw/liberica
-brew install -q liberica-jre18-full --cask
+brew install -q --cask liberica-jre18-full
 brew tap homebrew/cask-fonts
 brew install -q --cask font-dejavu
 brew tap johnsonjh/reduce-algebra
