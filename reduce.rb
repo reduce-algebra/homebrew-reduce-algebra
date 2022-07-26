@@ -332,23 +332,45 @@ class Reduce < Formula
 
   def caveats
     <<~EOS
-      A GNU TeXmacs plugin has been installed.
-        To enable it for your user, execute these commands from a shell:
-          mkdir -p ~/.TeXmacs/plugins &&     \\
-          rm -f ~/.TeXmacs/plugins/reduce && \\
-          ln -s "#{share}/texmacs/reduce" ~/.TeXmacs/plugins
+      ------------------------------------------------------------------------
 
-      A GNU Emacs major mode and IDE have been installed.
-        To enable it for your user, execute these commands from Emacs:
+        A GNU TeXmacs plugin has been installed.
+
+        To enable this plugin for your user, execute from a shell prompt:
+
+          mkdir -p "$HOME/.TeXmacs/plugins" && \\
+          rm -f "$HOME/.TeXmacs/plugins/reduce" && \\
+          ln -s "#{share}/texmacs/reduce" "$HOME/.TeXmacs/plugins"
+
+      ------------------------------------------------------------------------
+
+        REDUCE IDE, a GNU Emacs package providing an integrated development
+        environment for REDUCE consisting of major modes for editing REDUCE
+        code and for running a REDUCE in an Emacs window has been installed.
+
+        To enable this package for your user, execute from within GNU Emacs:
+
           package-install-file "#{share}/emacs/reduce-mode.el"
           package-install-file "#{share}/emacs/reduce-run.el"
 
-      Documentation in HTML and PDF formats has been installed.
-        To access this documentation, browse to the following location:
-          #{doc}
+      ------------------------------------------------------------------------
 
-      Add the following line to your .profile or equivalent:
-        REDUCE_HELP="#{doc}/html"
+        REDUCE manuals and reference documentation has been installed.
+
+        To access this documentation, browse to the directory:
+
+          "#{doc}"
+
+      ------------------------------------------------------------------------
+
+        REDUCE documentation in HTML format has been installed.
+
+        To make REDUCE aware of this HTML documentation, add the following
+        line your "$HOME/.profile" or equivalent shell configuration file:
+
+          REDUCE_HELP="#{doc}/html"
+
+      ------------------------------------------------------------------------
     EOS
   end
 
