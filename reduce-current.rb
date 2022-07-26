@@ -2,8 +2,8 @@ class ReduceCurrent < Formula
   # vim: set ft=ruby ts=2 sw=2 tw=0 expandtab colorcolumn=118:
   desc "Portable general-purpose interactive computer algebra system (tracking SVN)"
   homepage "https://reduce-algebra.sourceforge.io"
-  url "https://svn.code.sf.net/p/reduce-algebra/code/trunk", revision: "6355"
-  version "6355"
+  url "https://svn.code.sf.net/p/reduce-algebra/code/trunk", revision: "6357"
+  version "6357"
   # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
 
@@ -18,8 +18,8 @@ class ReduceCurrent < Formula
   end
 
   bottle do
-    root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-current-6355"
-    sha256 monterey: "9850a56873390ea78e8b06b32cf0059dbaee6fce95f0091b64a00b10b291fb88"
+    root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-current-6357"
+    sha256 monterey: "e56a5b614db6e8b7ee60d536768059c4be6b15ccb1b87f6b5b60dbf91893a50a"
   end
 
   depends_on "autoconf"  => :build

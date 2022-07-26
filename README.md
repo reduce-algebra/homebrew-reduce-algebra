@@ -69,8 +69,8 @@
 
 ### Current
 
-* The most recent *`reduce-current`* package is revision **6355**, released
-  2022-07-22.
+* The most recent *`reduce-current`* package is revision **6357**, released
+  2022-07-25.
 * The *`reduce-current`* package is updated **5 times per week** (on average).
 * *Installation*:
   ```sh
