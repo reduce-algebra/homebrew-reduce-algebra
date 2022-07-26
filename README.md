@@ -54,6 +54,7 @@
   simple calculations, but also provides a flexible and expressive user
   programming language. **REDUCE** has a long and distinguished place in the
   history of computer algebra systems.
+
 * [**Run-REDUCE**](https://fjwright.github.io/Run-REDUCE/) is a
   [JavaFX](https://openjfx.io/)-based graphical user interface for running the
   **REDUCE** computer algebra system. It provides a consistent cross-platform
@@ -65,9 +66,10 @@
 
 ## Stable Packges
 
-* The **stable** packages are based on stable code snapshots and are released,
-  on average, **5 times per year**.
-* ***Most users will want to use these stable packages***.
+* The **stable** packages are based on
+  [released code snapshots](https://sourceforge.net/projects/reduce-algebra/files/).
+* These snapshots are released upstream approximately **5 times per year**.
+* Most users will want to use these stable packages.
 
 ### REDUCE
 
@@ -99,7 +101,10 @@
 ## Current Packages
 
 * The **current** packages are based on unreleased (and *potentially*
-  *unstable*) SVN code and are updated, on average, **once per week**.
+  *unstable*)
+  [SVN](https://sourceforge.net/p/reduce-algebra/code/commit_browser)
+  code.
+* These packages are updated, on average, **once per week**.
 
 ### REDUCE
 
