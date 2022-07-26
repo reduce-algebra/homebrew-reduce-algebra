@@ -56,10 +56,10 @@
 
 ### Stable
 
-* The most recent *`reduce`* package is revision **6339**,
-  released 2022-06-17.
-* The *`reduce`* package is updated **5 times per year** (on average).
-* *Installation*:
+* The most recent *`reduce`* package is revision **6339**, released
+  **2022-06-17**.
+* The *`reduce`* package is updated, on average, **5 times per year**.
+* *Installation instructions*:
   ```sh
   brew tap johnsonjh/reduce-algebra
   brew install reduce
@@ -70,9 +70,9 @@
 ### Current
 
 * The most recent *`reduce-current`* package is revision **6357**, released
-  2022-07-25.
-* The *`reduce-current`* package is updated **5 times per week** (on average).
-* *Installation*:
+  **2022-07-25**.
+* The *`reduce-current`* package is updated, on average, **once per week**.
+* *Installation instructions*:
   ```sh
   brew tap johnsonjh/reduce-algebra
   brew install reduce-current
