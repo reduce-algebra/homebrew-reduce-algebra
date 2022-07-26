@@ -75,8 +75,7 @@
 
 * The most recent *`reduce`* package is revision **6339**, released
   **2022-06-17**.
-\
-*Installation instructions*:
+* *Installation instructions*:
 ```sh
 brew tap johnsonjh/reduce-algebra
 brew install -q reduce
@@ -89,7 +88,7 @@ brew install -q reduce
 * **Run-REDUCE** requires
   [BellSoft Liberica LTS](https://bell-sw.com/pages/libericajdk/) and the
   [DejaVu font distribution](https://dejavu-fonts.github.io/).
-*Installation instructions*:
+* *Installation instructions*:
 ```sh
 brew tap bell-sw/liberica
 brew install -q --cask liberica-jre17-full
@@ -108,7 +107,7 @@ brew install -q run-reduce
 
 * The most recent *`reduce-current`* package is revision **6357**, updated
   **2022-07-25**.
-*Installation instructions*:
+* *Installation instructions*:
 ```sh
 brew tap johnsonjh/reduce-algebra
 brew install -q reduce-current
@@ -121,7 +120,7 @@ brew install -q reduce-current
 * **Run-REDUCE** requires
   [BellSoft Liberica](https://bell-sw.com/pages/libericajdk/) and the
   [DejaVu font distribution](https://dejavu-fonts.github.io/).
-*Installation instructions*:
+* *Installation instructions*:
 ```sh
 brew tap bell-sw/liberica
 brew install -q --cask liberica-jre18-full
