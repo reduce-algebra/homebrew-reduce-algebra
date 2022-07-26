@@ -89,7 +89,7 @@ brew install -q reduce
 * The most recent *`run-reduce`* package is version **3.0**, released
   **2021-03-20**.
 * **Run-REDUCE** requires
-  [BellSoft Liberica](https://bell-sw.com/pages/libericajdk/) and the
+  [BellSoft Liberica LTS](https://bell-sw.com/pages/libericajdk/) and the
   [DejaVu font distribution](https://dejavu-fonts.github.io/), both
   available via Homebrew.
 
