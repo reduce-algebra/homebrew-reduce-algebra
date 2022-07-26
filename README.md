@@ -87,7 +87,7 @@ brew install reduce
 ### Run-REDUCE
 
 * The most recent *`run-reduce`* package is version **3.0**, released
-  2021-03-20.
+  **2021-03-20**.
 * **Run-REDUCE** requires
   [BellSoft Liberica](https://bell-sw.com/pages/libericajdk/) and the
   [DejaVu font distribution](https://dejavu-fonts.github.io/), both
@@ -122,7 +122,7 @@ brew install reduce-current
 ### Run-REDUCE
 
 * The most recent *`run-reduce-current`* package is version **3.0+gc25162**,
-  updated 2021-04-19.
+  updated **2021-04-19**.
 * **Run-REDUCE** requires
   [BellSoft Liberica](https://bell-sw.com/pages/libericajdk/) and the
   [DejaVu font distribution](https://dejavu-fonts.github.io/), both
