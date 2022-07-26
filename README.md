@@ -30,7 +30,7 @@
 # REDUCE for Homebrew
 
 * A [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
-  [**REDUCE**](https://reduce-algebra.sourceforge.io/), a portable
+  the [**REDUCE**](https://reduce-algebra.sourceforge.io/) portable
   general-purpose computer algebra system, and related packages.
 
 ## Overview
@@ -39,12 +39,12 @@
   open source system for general algebraic computations, of interest to
   mathematicians, scientists, and engineers. It can be used interactively for
   simple calculations, but also provides a flexible and expressive user 
-  programming language.  **REDUCE** has a long and distinguished place in the
+  programming language. **REDUCE** has a long and distinguished place in the
   history of computer algebra systems.
 
 * [**Run-REDUCE**](https://fjwright.github.io/Run-REDUCE/) is a
   [JavaFX](https://openjfx.io/)-based graphical user interface for running the
-  **REDUCE** computer algebra system.  It provides a consistent cross-platform
+  **REDUCE** computer algebra system. It provides a consistent cross-platform
   user experience across all implementations of **REDUCE**.
 
 ## Availability
@@ -55,11 +55,15 @@
 
 ### Stable
 
+The **stable** packages are based on released code snapshots and are updated,
+on average, **5 times per year**.
+
+Most users will want to use these packages.
+
 #### REDUCE
 
 * The most recent *`reduce`* package is revision **6339**, released
   **2022-06-17**.
-* The *`reduce`* package is updated, on average, **5 times per year**.
 
 *Installation instructions*:
 ```sh
@@ -88,11 +92,13 @@ brew install run-reduce
 
 ### Current
 
+The **current** packages are based on unreleased (and *potentially* unstable)
+SVN code and are updated, on average, **once per week**.
+
 #### REDUCE
 
-* The most recent *`reduce-current`* package is revision **6357**, released
+* The most recent *`reduce-current`* package is revision **6357**, updated
   **2022-07-25**.
-* The *`reduce-current`* package is updated, on average, **once per week**.
 
 *Installation instructions*:
 ```sh
@@ -102,8 +108,8 @@ brew install reduce-current
 
 #### Run-REDUCE
 
-* The most recent *`run-reduce-current`* package is version **3.0-gc25162**,
-  released 2021-04-19.
+* The most recent *`run-reduce-current`* package is version **3.0+gc25162**,
+  updated 2021-04-19.
 * In addition to **REDUCE**,
   [**Run-REDUCE**](https://fjwright.github.io/Run-REDUCE/) requires
   [BellSoft Liberica](https://bell-sw.com/pages/libericajdk/) and the
