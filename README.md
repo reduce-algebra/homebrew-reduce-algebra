@@ -36,7 +36,6 @@
 ## Table of Contents
 
 <!-- toc -->
-
 - [Overview](#overview)
 - [Availability](#availability)
 - [Stable Packges](#stable-packges)
@@ -45,7 +44,6 @@
 - [Current Packages](#current-packages)
   * [REDUCE](#reduce-1)
   * [Run-REDUCE](#run-reduce-1)
-
 <!-- tocstop -->
 
 ## Overview
@@ -76,10 +74,10 @@
 * The most recent *`reduce`* package is revision **6339**, released
   **2022-06-17**.
 * *Installation instructions*:
-```sh
-brew tap johnsonjh/reduce-algebra
-brew install -q reduce
-```
+  ```sh
+  brew tap johnsonjh/reduce-algebra
+  brew install -q reduce
+  ```
 
 ### Run-REDUCE
 
@@ -89,14 +87,14 @@ brew install -q reduce
   [BellSoft Liberica LTS](https://bell-sw.com/pages/libericajdk/) and the
   [DejaVu font distribution](https://dejavu-fonts.github.io/).
 * *Installation instructions*:
-```sh
-brew tap bell-sw/liberica
-brew install -q --cask liberica-jre17-full
-brew tap homebrew/cask-fonts
-brew install -q --cask font-dejavu
-brew tap johnsonjh/reduce-algebra
-brew install -q run-reduce
-```
+  ```sh
+  brew tap bell-sw/liberica
+  brew install -q --cask liberica-jre17-full
+  brew tap homebrew/cask-fonts
+  brew install -q --cask font-dejavu
+  brew tap johnsonjh/reduce-algebra
+  brew install -q run-reduce
+  ```
 
 ## Current Packages
 
@@ -108,10 +106,10 @@ brew install -q run-reduce
 * The most recent *`reduce-current`* package is revision **6357**, updated
   **2022-07-25**.
 * *Installation instructions*:
-```sh
-brew tap johnsonjh/reduce-algebra
-brew install -q reduce-current
-```
+  ```sh
+  brew tap johnsonjh/reduce-algebra
+  brew install -q reduce-current
+  ```
 
 ### Run-REDUCE
 
@@ -121,11 +119,11 @@ brew install -q reduce-current
   [BellSoft Liberica](https://bell-sw.com/pages/libericajdk/) and the
   [DejaVu font distribution](https://dejavu-fonts.github.io/).
 * *Installation instructions*:
-```sh
-brew tap bell-sw/liberica
-brew install -q --cask liberica-jre18-full
-brew tap homebrew/cask-fonts
-brew install -q --cask font-dejavu
-brew tap johnsonjh/reduce-algebra
-brew install -q run-reduce-current
-```
+  ```sh
+  brew tap bell-sw/liberica
+  brew install -q --cask liberica-jre18-full
+  brew tap homebrew/cask-fonts
+  brew install -q --cask font-dejavu
+  brew tap johnsonjh/reduce-algebra
+  brew install -q run-reduce-current
+  ```
