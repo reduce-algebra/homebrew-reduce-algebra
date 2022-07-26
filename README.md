@@ -25,7 +25,7 @@
 <!-- DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY  -->
 <!-- THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT    -->
 <!-- (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE  -->
-<!-- OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.   -->
+t<!-- OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.   -->
 <!--                                                                        -->
 # REDUCE for Homebrew
 
@@ -42,7 +42,8 @@
   programming language.  **REDUCE** has a long and distinguished place in the
   history of computer algebra systems.
 
-* **Run-REDUCE** is a JavaFX-based graphical user interface for running the
+* [**Run-REDUCE**](https://fjwright.github.io/Run-REDUCE/) is a
+  [JavaFX](https://openjfx.io/)-based graphical user interface for running the
   **REDUCE** computer algebra system.  It provides a consistent cross-platform
   user experience across all implementations of **REDUCE**.
 
@@ -59,27 +60,31 @@
 * The most recent *`reduce`* package is revision **6339**, released
   **2022-06-17**.
 * The *`reduce`* package is updated, on average, **5 times per year**.
-* *Installation instructions*:
-  ```sh
-  brew tap johnsonjh/reduce-algebra
-  brew install reduce
-  ```
+
+*Installation instructions*:
+```sh
+brew tap johnsonjh/reduce-algebra
+brew install reduce
+```
 
 #### Run-REDUCE
 
 * The most recent *`run-reduce`* package is version **3.0**, released
   2021-03-20.
-* Run-REDUCE requires BellSoft Liberica JRE 17 LTS and the DejaVu Sans Mono
-  typeface.
-* *Installation instructions*:
-  ```sh
-  brew tap bell-sw/liberica
-  brew install --cask liberica-jre17-full
-  brew tap brew tap homebrew/cask-fonts
-  brew install --cask font-dejavu
-  brew tap johnsonjh/reduce-algebra
-  brew install run-reduce
-  ```
+* In addition to **REDUCE**,
+  [**Run-REDUCE**](https://fjwright.github.io/Run-REDUCE/) requires
+  [BellSoft Liberica](https://bell-sw.com/pages/libericajdk/) and the
+  [DejaVu font distribution](https://dejavu-fonts.github.io/).
+
+*Installation instructions*:
+```sh
+brew tap bell-sw/liberica
+brew install --cask liberica-jre17-full
+brew tap brew tap homebrew/cask-fonts
+brew install --cask font-dejavu
+brew tap johnsonjh/reduce-algebra
+brew install run-reduce
+```
 
 ### Current
 
@@ -88,25 +93,28 @@
 * The most recent *`reduce-current`* package is revision **6357**, released
   **2022-07-25**.
 * The *`reduce-current`* package is updated, on average, **once per week**.
-* *Installation instructions*:
-  ```sh
-  brew tap johnsonjh/reduce-algebra
-  brew install reduce-current
-  ```
+
+*Installation instructions*:
+```sh
+brew tap johnsonjh/reduce-algebra
+brew install reduce-current
+```
 
 #### Run-REDUCE
 
-Run-REDUCE, a JavaFX GUI for REDUCE, is available.
-
 * The most recent *`run-reduce-current`* package is version **3.0-gc25162**,
   released 2021-04-19.
-* Run-REDUCE requires BellSoft Liberica JRE 18.
-* *Installation instructions*:
-  ```sh
-  brew tap bell-sw/liberica
-  brew install liberica-jre18-full --cask
-  brew tap brew tap homebrew/cask-fonts
-  brew install --cask font-dejavu
-  brew tap johnsonjh/reduce-algebra
-  brew install run-reduce-current
-  ```
+* In addition to **REDUCE**,
+  [**Run-REDUCE**](https://fjwright.github.io/Run-REDUCE/) requires
+  [BellSoft Liberica](https://bell-sw.com/pages/libericajdk/) and the
+  [DejaVu font distribution](https://dejavu-fonts.github.io/).
+
+*Installation instructions*:
+```sh
+brew tap bell-sw/liberica
+brew install liberica-jre18-full --cask
+brew tap brew tap homebrew/cask-fonts
+brew install --cask font-dejavu
+brew tap johnsonjh/reduce-algebra
+brew install run-reduce-current
+```
