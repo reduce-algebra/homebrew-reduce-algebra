@@ -33,6 +33,8 @@
   the [**REDUCE**](https://reduce-algebra.sourceforge.io/) portable
   general-purpose computer algebra system, and related packages.
 
+## Table of Contents
+
 <!-- toc -->
 
 - [Overview](#overview)
