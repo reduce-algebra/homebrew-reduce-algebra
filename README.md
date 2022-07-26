@@ -81,7 +81,7 @@ Most users will want to use these packages.
 *Installation instructions*:
 ```sh
 brew tap johnsonjh/reduce-algebra
-brew install reduce
+brew install -q reduce
 ```
 
 ### Run-REDUCE
@@ -96,11 +96,11 @@ brew install reduce
 *Installation instructions*:
 ```sh
 brew tap bell-sw/liberica
-brew install --cask liberica-jre17-full
+brew install -q --cask liberica-jre17-full
 brew tap homebrew/cask-fonts
-brew install --cask font-dejavu
+brew install -q --cask font-dejavu
 brew tap johnsonjh/reduce-algebra
-brew install run-reduce
+brew install -q run-reduce
 ```
 
 ## Current Packages
@@ -116,7 +116,7 @@ SVN code and are updated, on average, **once per week**.
 *Installation instructions*:
 ```sh
 brew tap johnsonjh/reduce-algebra
-brew install reduce-current
+brew install -q reduce-current
 ```
 
 ### Run-REDUCE
@@ -131,9 +131,9 @@ brew install reduce-current
 *Installation instructions*:
 ```sh
 brew tap bell-sw/liberica
-brew install liberica-jre18-full --cask
+brew install -q liberica-jre18-full --cask
 brew tap homebrew/cask-fonts
-brew install --cask font-dejavu
+brew install -q --cask font-dejavu
 brew tap johnsonjh/reduce-algebra
-brew install run-reduce-current
+brew install -q run-reduce-current
 ```
