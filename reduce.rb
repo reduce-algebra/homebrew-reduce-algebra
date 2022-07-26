@@ -334,6 +334,15 @@ class Reduce < Formula
     <<~EOS
       ------------------------------------------------------------------------
 
+        A GUI for REDUCE has been installed, requiring the X Window System.
+
+        XQuartz is a freely available version of the X Window System for
+        macOS, available as a Homebrew Cask. To install the XQuartz Cask:
+
+          brew install --cask xquartz
+
+      ------------------------------------------------------------------------
+
         A GNU TeXmacs plugin has been installed.
 
         To enable this plugin for your user, execute from a shell prompt:
