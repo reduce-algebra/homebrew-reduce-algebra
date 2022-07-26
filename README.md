@@ -39,13 +39,12 @@
 
 - [Overview](#overview)
 - [Availability](#availability)
-- [Installation](#installation)
-  * [Stable Packages](#stable)
-    + [REDUCE](#reduce)
-    + [Run-REDUCE](#run-reduce)
-  * [Current Packages](#current)
-    + [REDUCE](#reduce-1)
-    + [Run-REDUCE](#run-reduce-1)
+- [Stable Packges](#stable-packges)
+  * [REDUCE](#reduce)
+  * [Run-REDUCE](#run-reduce)
+- [Current Packages](#current-packages)
+  * [REDUCE](#reduce-1)
+  * [Run-REDUCE](#run-reduce-1)
 
 <!-- tocstop -->
 
@@ -67,18 +66,14 @@
 
 * Only **macOS** systems are supported at this time.
 
-## Installation
-
----
-
-### Stable
+## Stable Packges
 
 The **stable** packages are based on released code snapshots and are updated,
 on average, **5 times per year**.
 
 Most users will want to use these packages.
 
-#### REDUCE
+### REDUCE
 
 * The most recent *`reduce`* package is revision **6339**, released
   **2022-06-17**.
@@ -89,7 +84,7 @@ brew tap johnsonjh/reduce-algebra
 brew install reduce
 ```
 
-#### Run-REDUCE
+### Run-REDUCE
 
 * The most recent *`run-reduce`* package is version **3.0**, released
   2021-03-20.
@@ -108,14 +103,12 @@ brew tap johnsonjh/reduce-algebra
 brew install run-reduce
 ```
 
----
-
-### Current
+## Current Packages
 
 The **current** packages are based on unreleased (and *potentially* unstable)
 SVN code and are updated, on average, **once per week**.
 
-#### REDUCE
+### REDUCE
 
 * The most recent *`reduce-current`* package is revision **6357**, updated
   **2022-07-25**.
@@ -126,7 +119,7 @@ brew tap johnsonjh/reduce-algebra
 brew install reduce-current
 ```
 
-#### Run-REDUCE
+### Run-REDUCE
 
 * The most recent *`run-reduce-current`* package is version **3.0+gc25162**,
   updated 2021-04-19.
@@ -144,5 +137,3 @@ brew install --cask font-dejavu
 brew tap johnsonjh/reduce-algebra
 brew install run-reduce-current
 ```
-
----
