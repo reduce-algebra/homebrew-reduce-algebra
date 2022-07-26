@@ -68,10 +68,9 @@
 
 ## Stable Packges
 
-The **stable** packages are based on released code snapshots and are updated,
-on average, **5 times per year**.
-
-Most users will want to use these packages.
+* The **stable** packages are based on released code snapshots and are
+  released, on average, **5 times per year**.
+* ***Most users will want to use these stable packages***.
 
 ### REDUCE
 
@@ -104,8 +103,8 @@ brew install -q run-reduce
 
 ## Current Packages
 
-The **current** packages are based on unreleased (and *potentially unstable*)
-SVN code and are updated, on average, **once per week**.
+* The **current** packages are based on unreleased (and *potentially*
+  *unstable*) SVN code and are updated, on average, **once per week**.
 
 ### REDUCE
 
