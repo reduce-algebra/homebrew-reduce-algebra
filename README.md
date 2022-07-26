@@ -53,6 +53,8 @@
 
 ## Installation
 
+---
+
 ### Stable
 
 The **stable** packages are based on released code snapshots and are updated,
@@ -90,6 +92,8 @@ brew tap johnsonjh/reduce-algebra
 brew install run-reduce
 ```
 
+---
+
 ### Current
 
 The **current** packages are based on unreleased (and *potentially* unstable)
@@ -124,3 +128,5 @@ brew install --cask font-dejavu
 brew tap johnsonjh/reduce-algebra
 brew install run-reduce-current
 ```
+
+---
