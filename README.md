@@ -97,7 +97,7 @@ brew install reduce
 ```sh
 brew tap bell-sw/liberica
 brew install --cask liberica-jre17-full
-brew tap brew tap homebrew/cask-fonts
+brew tap homebrew/cask-fonts
 brew install --cask font-dejavu
 brew tap johnsonjh/reduce-algebra
 brew install run-reduce
@@ -132,7 +132,7 @@ brew install reduce-current
 ```sh
 brew tap bell-sw/liberica
 brew install liberica-jre18-full --cask
-brew tap brew tap homebrew/cask-fonts
+brew tap homebrew/cask-fonts
 brew install --cask font-dejavu
 brew tap johnsonjh/reduce-algebra
 brew install run-reduce-current
