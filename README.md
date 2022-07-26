@@ -33,6 +33,20 @@
   the [**REDUCE**](https://reduce-algebra.sourceforge.io/) portable
   general-purpose computer algebra system, and related packages.
 
+<!-- toc -->
+
+- [Overview](#overview)
+- [Availability](#availability)
+- [Installation](#installation)
+  * [Stable Packages](#stable)
+    + [REDUCE](#reduce)
+    + [Run-REDUCE](#run-reduce)
+  * [Current Packages](#current)
+    + [REDUCE](#reduce-1)
+    + [Run-REDUCE](#run-reduce-1)
+
+<!-- tocstop -->
+
 ## Overview
 
 * [**REDUCE**](https://reduce-algebra.sourceforge.io/) is a freely available
