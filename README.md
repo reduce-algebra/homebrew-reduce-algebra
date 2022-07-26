@@ -53,7 +53,7 @@
 * [**REDUCE**](https://reduce-algebra.sourceforge.io/) is a freely available
   open source system for general algebraic computations, of interest to
   mathematicians, scientists, and engineers. It can be used interactively for
-  simple calculations, but also provides a flexible and expressive user 
+  simple calculations, but also provides a flexible and expressive user
   programming language. **REDUCE** has a long and distinguished place in the
   history of computer algebra systems.
 
@@ -90,8 +90,7 @@ brew install -q reduce
   **2021-03-20**.
 * **Run-REDUCE** requires
   [BellSoft Liberica LTS](https://bell-sw.com/pages/libericajdk/) and the
-  [DejaVu font distribution](https://dejavu-fonts.github.io/), both
-  available via Homebrew.
+  [DejaVu font distribution](https://dejavu-fonts.github.io/).
 
 *Installation instructions*:
 ```sh
@@ -125,8 +124,7 @@ brew install -q reduce-current
   updated **2021-04-19**.
 * **Run-REDUCE** requires
   [BellSoft Liberica](https://bell-sw.com/pages/libericajdk/) and the
-  [DejaVu font distribution](https://dejavu-fonts.github.io/), both
-  available via Homebrew.
+  [DejaVu font distribution](https://dejavu-fonts.github.io/).
 
 *Installation instructions*:
 ```sh
