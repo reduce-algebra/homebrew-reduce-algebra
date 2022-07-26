@@ -68,8 +68,8 @@
 
 ## Stable Packges
 
-* The **stable** packages are based on released code snapshots and are
-  released, on average, **5 times per year**.
+* The **stable** packages are based on stable code snapshots and are released,
+  on average, **5 times per year**.
 * ***Most users will want to use these stable packages***.
 
 ### REDUCE
