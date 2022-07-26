@@ -29,15 +29,17 @@
 <!--                                                                        -->
 # REDUCE for Homebrew
 
+---
+
 <p align="center">
-  <hr>
   <b><font size="+3">
     This is currently a work-in-progress
     <br>
     This message will be removed when these packages are ready for wider use!
   </font size="+3"></b>
-  <hr>
 </p>
+
+---
 
 * A [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
   the [**REDUCE**](https://reduce-algebra.sourceforge.io/) portable
