@@ -56,7 +56,6 @@
   simple calculations, but also provides a flexible and expressive user
   programming language. **REDUCE** has a long and distinguished place in the
   history of computer algebra systems.
-
 * [**Run-REDUCE**](https://fjwright.github.io/Run-REDUCE/) is a
   [JavaFX](https://openjfx.io/)-based graphical user interface for running the
   **REDUCE** computer algebra system. It provides a consistent cross-platform
@@ -76,7 +75,6 @@
 
 * The most recent *`reduce`* package is revision **6339**, released
   **2022-06-17**.
-
 *Installation instructions*:
 ```sh
 brew tap johnsonjh/reduce-algebra
@@ -90,7 +88,6 @@ brew install -q reduce
 * **Run-REDUCE** requires
   [BellSoft Liberica LTS](https://bell-sw.com/pages/libericajdk/) and the
   [DejaVu font distribution](https://dejavu-fonts.github.io/).
-
 *Installation instructions*:
 ```sh
 brew tap bell-sw/liberica
@@ -110,7 +107,6 @@ brew install -q run-reduce
 
 * The most recent *`reduce-current`* package is revision **6357**, updated
   **2022-07-25**.
-
 *Installation instructions*:
 ```sh
 brew tap johnsonjh/reduce-algebra
@@ -124,7 +120,6 @@ brew install -q reduce-current
 * **Run-REDUCE** requires
   [BellSoft Liberica](https://bell-sw.com/pages/libericajdk/) and the
   [DejaVu font distribution](https://dejavu-fonts.github.io/).
-
 *Installation instructions*:
 ```sh
 brew tap bell-sw/liberica
