@@ -29,10 +29,11 @@
 <!--                                                                        -->
 # REDUCE for Homebrew
 
-<CENTER>
+<p align="center">
 ***This is currently a work-in-progress***!
-***This message will be removed when these packages are ready for wider use.***
-</CENTER>
+<br>
+***This message will be removed when these packages are ready for wider use!***
+</p>
 
 * A [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
   the [**REDUCE**](https://reduce-algebra.sourceforge.io/) portable
