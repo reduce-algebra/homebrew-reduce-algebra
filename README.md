@@ -30,23 +30,21 @@
 # REDUCE for Homebrew
 
 * A [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
-  [**REDUCE**](https://reduce-algebra.sourceforge.io/), the portable
-  general-purpose computer algebra system.
+  [**REDUCE**](https://reduce-algebra.sourceforge.io/), a portable
+  general-purpose computer algebra system, and related packages.
 
 ## Overview
 
 * [**REDUCE**](https://reduce-algebra.sourceforge.io/) is a freely available
-  open source interactive system for general algebraic computations, of
-  interest to mathematicians, scientists, and engineers. It can be used
-  interactively for simple calculations, but also provides a flexible and
-  expressive user programming language.
+  open source system for general algebraic computations, of interest to
+  mathematicians, scientists, and engineers. It can be used interactively for
+  simple calculations, but also provides a flexible and expressive user 
+  programming language.  **REDUCE** has a long and distinguished place in the
+  history of computer algebra systems.
 
-* The development of the [**REDUCE**](https://reduce-algebra.sourceforge.io/)
-  computer algebra system was started in the 1960's by Anthony C. Hearn
-  and further developed by Arthur C. Norman and others. Since then,
-  many scientists from all over the world have contributed to its
-  development — [**REDUCE**](https://reduce-algebra.sourceforge.io/) has a
-  long and distinguished place in the history of computer algebra systems.
+* **Run-REDUCE** is a JavaFX-based graphical user interface for running the
+  **REDUCE** computer algebra system.  It provides a consistent cross-platform
+  user experience across all implementations of **REDUCE**.
 
 ## Availability
 
@@ -55,6 +53,8 @@
 ## Installation
 
 ### Stable
+
+#### REDUCE
 
 * The most recent *`reduce`* package is revision **6339**, released
   **2022-06-17**.
@@ -65,9 +65,25 @@
   brew install reduce
   ```
 
----
+#### Run-REDUCE
+
+* The most recent *`run-reduce`* package is version **3.0**, released
+  2021-03-20.
+* Run-REDUCE requires BellSoft Liberica JRE 17 LTS and the DejaVu Sans Mono
+  typeface.
+* *Installation instructions*:
+  ```sh
+  brew tap bell-sw/liberica
+  brew install --cask liberica-jre17-full
+  brew tap brew tap homebrew/cask-fonts
+  brew install --cask font-dejavu
+  brew tap johnsonjh/reduce-algebra
+  brew install run-reduce
+  ```
 
 ### Current
+
+#### REDUCE
 
 * The most recent *`reduce-current`* package is revision **6357**, released
   **2022-07-25**.
@@ -78,4 +94,19 @@
   brew install reduce-current
   ```
 
----
+#### Run-REDUCE
+
+Run-REDUCE, a JavaFX GUI for REDUCE, is available.
+
+* The most recent *`run-reduce-current`* package is version **3.0-gc25162**,
+  released 2021-04-19.
+* Run-REDUCE requires BellSoft Liberica JRE 18.
+* *Installation instructions*:
+  ```sh
+  brew tap bell-sw/liberica
+  brew install liberica-jre18-full --cask
+  brew tap brew tap homebrew/cask-fonts
+  brew install --cask font-dejavu
+  brew tap johnsonjh/reduce-algebra
+  brew install run-reduce-current
+  ```
