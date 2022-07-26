@@ -105,7 +105,7 @@ brew install -q run-reduce
 
 ## Current Packages
 
-The **current** packages are based on unreleased (and *potentially* unstable)
+The **current** packages are based on unreleased (and *potentially unstable*)
 SVN code and are updated, on average, **once per week**.
 
 ### REDUCE
