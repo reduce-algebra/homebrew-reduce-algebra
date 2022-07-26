@@ -75,6 +75,7 @@
 
 * The most recent *`reduce`* package is revision **6339**, released
   **2022-06-17**.
+\
 *Installation instructions*:
 ```sh
 brew tap johnsonjh/reduce-algebra
