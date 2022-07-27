@@ -66,11 +66,11 @@
   simple calculations, but also provides a flexible and expressive user
   programming language. **REDUCE** has a long and distinguished place in the
   history of computer algebra systems.
-
+<!--
 * [**Run-REDUCE**](https://fjwright.github.io/Run-REDUCE/) is a
   [JavaFX](https://openjfx.io/)-based graphical user interface for running the
   **REDUCE** computer algebra system. It provides a consistent cross-platform
-  user experience across all implementations of **REDUCE**.
+  user experience across all implementations of **REDUCE**.-->
 
 ## Availability
 
@@ -92,7 +92,7 @@
   brew tap johnsonjh/reduce-algebra
   brew install -q reduce
   ```
-
+<!--
 ### Run-REDUCE
 
 * The most recent *`run-reduce`* package is version **3.0**, released
@@ -108,7 +108,7 @@
   brew install -q --cask font-dejavu
   brew tap johnsonjh/reduce-algebra
   brew install -q run-reduce
-  ```
+  ```-->
 
 ## Current Packages
 
@@ -127,7 +127,7 @@
   brew tap johnsonjh/reduce-algebra
   brew install -q reduce-current
   ```
-
+<!--
 ### Run-REDUCE
 
 * The most recent *`run-reduce-current`* package is version **3.0+gc25162**,
@@ -143,4 +143,4 @@
   brew install -q --cask font-dejavu
   brew tap johnsonjh/reduce-algebra
   brew install -q run-reduce-current
-  ```
+  ```-->
