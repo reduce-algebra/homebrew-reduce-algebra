@@ -310,10 +310,15 @@ class ReduceCurrent < Formula
     end
     man1.install "generic/newfront/redfront.1"
     ln_s bin/"redcsl", bin/"reduce"
+    ln_s bin/"rfpsl", bin/"redfront"
     ln_s man1/"redcsl.1", man1/"reduce.1"
     ln_s man1/"redfront.1", man1/"rfcsl.1"
     ln_s man1/"redfront.1", man1/"rfpsl.1"
-    ln_s bin/"rfpsl", bin/"redfront"
+    chmod 0644, man1/"breduce.1"
+    chmod 0644, man1/"csl.1"
+    chmod 0644, man1/"redcsl.1"
+    chmod 0644, man1/"redfront.1"
+    chmod 0644, man1/"redpsl.1"
     chmod 0755, bin/"bootstrapreduce"
     chmod 0755, bin/"csl"
     chmod 0755, bin/"redcsl"
@@ -322,11 +327,6 @@ class ReduceCurrent < Formula
     chmod 0755, bin/"reduce"
     chmod 0755, bin/"rfcsl"
     chmod 0755, bin/"rfpsl"
-    chmod 0644, man1/"breduce.1"
-    chmod 0644, man1/"csl.1"
-    chmod 0644, man1/"redcsl.1"
-    chmod 0644, man1/"redfront.1"
-    chmod 0644, man1/"redpsl.1"
   end
 
   def caveats
@@ -336,7 +336,7 @@ class ReduceCurrent < Formula
         A GUI for REDUCE has been installed, requiring the X Window System.
 
         XQuartz is a freely available version of the X Window System for
-        macOS, available as a Homebrew Cask. To install the XQuartz Cask:
+        macOS available as a Homebrew Cask. To install the XQuartz Cask:
 
           brew install --cask xquartz
 
@@ -354,7 +354,7 @@ class ReduceCurrent < Formula
 
         REDUCE IDE, a GNU Emacs package providing an integrated development
         environment for REDUCE consisting of major modes for editing REDUCE
-        code and for running a REDUCE in an Emacs window has been installed.
+        code and for running REDUCE in an Emacs window has been installed.
 
         To enable this package for your user, execute from within GNU Emacs:
 

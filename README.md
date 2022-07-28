@@ -33,9 +33,9 @@
 
 <p align="center">
   <b><font size="+3">
-    This is currently a work-in-progress
+    WARNING: These packages are a WORK IN PROGRESS and NOT production ready!
     <br>
-    This message will be removed when these packages are ready for wider use!
+    See the [TODO](/TODO.md) for current status.
   </font size="+3"></b>
 </p>
 
