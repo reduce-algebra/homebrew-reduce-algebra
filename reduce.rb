@@ -332,29 +332,29 @@ class Reduce < Formula
 
   def caveats
     <<~EOS
-        A GUI for REDUCE has been installed, requiring the X Window System.
+      A GUI for REDUCE has been installed, requiring the X Window System.
         XQuartz is a freely available version of the X Window System for
         macOS available as a Homebrew Cask. To install XQuartz:
           brew install --cask xquartz
 
-        A GNU TeXmacs plugin has been installed.
+      A GNU TeXmacs plugin has been installed.
         To enable this plugin for your user, execute from a shell prompt:
           mkdir -p "$HOME/.TeXmacs/plugins" && \\
           rm -f "$HOME/.TeXmacs/plugins/reduce" && \\
           ln -s "#{share}/texmacs/reduce" "$HOME/.TeXmacs/plugins"
 
-        REDUCE IDE, a GNU Emacs package providing an integrated development
+      REDUCE IDE, a GNU Emacs package providing an integrated development
         environment for REDUCE consisting of major modes for editing REDUCE
         code and for running REDUCE in an Emacs window has been installed.
         To enable this package for your user, execute from within GNU Emacs:
           package-install-file "#{share}/emacs/reduce-mode.el"
           package-install-file "#{share}/emacs/reduce-run.el"
 
-        REDUCE manuals and reference documentation has been installed.
+      REDUCE manuals and reference documentation has been installed.
         To access this documentation, browse to the directory:
           "#{doc}"
 
-        REDUCE documentation in HTML format has been installed.
+      REDUCE documentation in HTML format has been installed.
         To make REDUCE aware of the HTML documentation, add the following
         line your "$HOME/.profile" or equivalent shell configuration file:
           REDUCE_HELP="#{doc}/html"
