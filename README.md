@@ -120,8 +120,8 @@ brew install -q run-reduce
 
 ### REDUCE
 
-* The most recent *`reduce-current`* package is revision **6357**, updated
-  **2022-07-25**.
+* The most recent *`reduce-current`* package is revision **6360**, updated
+  **2022-07-29**.
 
 ```sh
 brew tap johnsonjh/reduce-algebra
