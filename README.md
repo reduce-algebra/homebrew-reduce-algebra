@@ -35,7 +35,7 @@
   <b><font size="+3">
     WARNING: These packages are a WORK IN PROGRESS and NOT production ready!
     <br>
-    See the [TODO](/TODO.md) for current status.
+    See the <A HREF="/TODO.md">TODO</A> file for current status.
   </font size="+3"></b>
 </p>
 
