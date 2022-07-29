@@ -78,7 +78,7 @@
 
 ## Stable Packges
 
-* The **stable** packages are based on
+* The **stable** packages are based primarily on
   [released code snapshots](https://sourceforge.net/projects/reduce-algebra/files/).
 * These snapshots are released upstream approximately **5 times per year**.
 * Most users should use these stable packages.
