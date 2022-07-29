@@ -28,12 +28,13 @@
 <!-- OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.   -->
 <!--                                                                        -->
 * Run the CSL and PSL REDUCE test suites and benchmarks
-* ~Use `libfaketime` (already in Homebrew) to set the build date to the revision release date~ Fixed in SVN
+* Use `libfaketime` (already in Homebrew) to set the build date to the revision release date
 * Test the Emacs REDUCE IDE
 * The default browser for GUI REDUCE should be `/usr/bin/open`, not `firefox`
 * The installed documentation path should be preset when using Redfront
 * Install `rlsmt` with the package
 * Need to rebuild the `breduce.pdf` from LaTeX sources
+* Build and include Inside Reduce PDF
 * Include `rbench` and the regular test suite and benchmarks in the package?
 * Build `libreduce` (as a separate dependant package?)
 * Build `qreduce` (as a separate dependant package?)
