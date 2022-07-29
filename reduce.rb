@@ -311,10 +311,15 @@ class Reduce < Formula
     end
     man1.install "generic/newfront/redfront.1"
     ln_s bin/"redcsl", bin/"reduce"
+    ln_s bin/"rfpsl", bin/"redfront"
     ln_s man1/"redcsl.1", man1/"reduce.1"
     ln_s man1/"redfront.1", man1/"rfcsl.1"
     ln_s man1/"redfront.1", man1/"rfpsl.1"
-    ln_s bin/"rfpsl", bin/"redfront"
+    chmod 0644, man1/"breduce.1"
+    chmod 0644, man1/"csl.1"
+    chmod 0644, man1/"redcsl.1"
+    chmod 0644, man1/"redfront.1"
+    chmod 0644, man1/"redpsl.1"
     chmod 0755, bin/"bootstrapreduce"
     chmod 0755, bin/"csl"
     chmod 0755, bin/"redcsl"
@@ -323,32 +328,58 @@ class Reduce < Formula
     chmod 0755, bin/"reduce"
     chmod 0755, bin/"rfcsl"
     chmod 0755, bin/"rfpsl"
-    chmod 0644, man1/"breduce.1"
-    chmod 0644, man1/"csl.1"
-    chmod 0644, man1/"redcsl.1"
-    chmod 0644, man1/"redfront.1"
-    chmod 0644, man1/"redpsl.1"
   end
 
   def caveats
     <<~EOS
-      A GNU TeXmacs plugin has been installed.
-        To enable it for your user, execute these commands from a shell:
-          mkdir -p ~/.TeXmacs/plugins &&     \\
-          rm -f ~/.TeXmacs/plugins/reduce && \\
-          ln -s "#{share}/texmacs/reduce" ~/.TeXmacs/plugins
+      ------------------------------------------------------------------------
 
-      A GNU Emacs major mode and IDE have been installed.
-        To enable it for your user, execute these commands from Emacs:
+        A GUI for REDUCE has been installed, requiring the X Window System.
+
+        XQuartz is a freely available version of the X Window System for
+        macOS available as a Homebrew Cask. To install the XQuartz Cask:
+
+          brew install --cask xquartz
+
+      ------------------------------------------------------------------------
+
+        A GNU TeXmacs plugin has been installed.
+
+        To enable this plugin for your user, execute from a shell prompt:
+
+          mkdir -p "$HOME/.TeXmacs/plugins" && \\
+          rm -f "$HOME/.TeXmacs/plugins/reduce" && \\
+          ln -s "#{share}/texmacs/reduce" "$HOME/.TeXmacs/plugins"
+
+      ------------------------------------------------------------------------
+
+        REDUCE IDE, a GNU Emacs package providing an integrated development
+        environment for REDUCE consisting of major modes for editing REDUCE
+        code and for running REDUCE in an Emacs window has been installed.
+
+        To enable this package for your user, execute from within GNU Emacs:
+
           package-install-file "#{share}/emacs/reduce-mode.el"
           package-install-file "#{share}/emacs/reduce-run.el"
 
-      Documentation in HTML and PDF formats has been installed.
-        To access this documentation, browse to the following location:
-          #{doc}
+      ------------------------------------------------------------------------
 
-      Add the following line to your .profile or equivalent:
-        REDUCE_HELP="#{doc}/html"
+        REDUCE manuals and reference documentation has been installed.
+
+        To access this documentation, browse to the directory:
+
+          "#{doc}"
+
+      ------------------------------------------------------------------------
+
+        REDUCE documentation in HTML format has been installed.
+
+        To make REDUCE aware of this HTML documentation, add the following
+        line your "$HOME/.profile" or equivalent shell configuration file:
+
+          REDUCE_HELP="#{doc}/html"
+
+      ------------------------------------------------------------------------
     EOS
   end
 
