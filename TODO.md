@@ -28,14 +28,7 @@
 <!-- OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.   -->
 <!--                                                                        -->
 * Run the CSL and PSL REDUCE test suites and benchmarks
-* Use `libfaketime` (already in Homebrew) to set the build date to the revision release date
-* REDUCE doesn't like Homebrew's gnuplot:
-  ```
-  gnuplot> if(strstrt(GPVAL_TERMINALS,"aqua")!=0)set terminal aqua;;    set term x11;
-  line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
-  WARNING: Plotting with an 'unknown' terminal.
-  No output will be generated. Please select a terminal with 'set terminal'.
-  ```
+* ~Use `libfaketime` (already in Homebrew) to set the build date to the revision release date~ Fixed in SVN
 * Test the Emacs REDUCE IDE
 * The default browser for GUI REDUCE should be `/usr/bin/open`, not `firefox`
 * The installed documentation path should be preset when using Redfront
