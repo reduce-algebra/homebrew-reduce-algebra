@@ -33,10 +33,10 @@
 
 <p align="center">
   <b><font size="+3">
-    WARNING: These packages are a WORK IN PROGRESS and NOT production ready!
+    <u>WARNING</u>
     <br>
-    See the <A HREF="/TODO.md">TODO</A> file for current status.
-  </font size="+3"></b>
+    <A HREF="/TODO.md">These packages are not yet production quality.</A>
+  </font></b>
 </p>
 
 ---
