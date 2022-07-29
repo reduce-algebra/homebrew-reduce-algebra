@@ -51,11 +51,11 @@
 - [Overview](#overview)
 - [Availability](#availability)
 - [Stable Packges](#stable-packges)
-  * [REDUCE](#reduce)
-  * [Run-REDUCE](#run-reduce)
+<!--  * [REDUCE](#reduce) -->
+<!--  * [Run-REDUCE](#run-reduce) -->
 - [Current Packages](#current-packages)
-  * [REDUCE](#reduce-1)
-  * [Run-REDUCE](#run-reduce-1)
+<!--  * [REDUCE](#reduce-1) -->
+<!--  * [Run-REDUCE](#run-reduce-1) -->
 <!-- tocstop -->
 
 ## Overview
