@@ -18,8 +18,8 @@ class ReduceCurrent < Formula
   end
 
   bottle do
-    root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-current-6357"
-    sha256 monterey: "e56a5b614db6e8b7ee60d536768059c4be6b15ccb1b87f6b5b60dbf91893a50a"
+    root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-current-6360"
+    sha256 monterey: "bb378b1dd4c26baef95f77017c52ca5c585633e18bac5c5f00476aed785a633a"
   end
 
   depends_on "autoconf"  => :build
