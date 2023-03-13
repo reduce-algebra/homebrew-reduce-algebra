@@ -27,7 +27,7 @@
 <!-- (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE  -->
 <!-- OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.   -->
 <!--                                                                        -->
-# REDUCE for Homebrew
+# REDUCE
 
 * [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
   the [**REDUCE**](https://reduce-algebra.sourceforge.io/) portable
