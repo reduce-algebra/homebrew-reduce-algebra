@@ -29,9 +29,9 @@
 <!--                                                                        -->
 # REDUCE for Homebrew
 
-* A [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
+* [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
   the [**REDUCE**](https://reduce-algebra.sourceforge.io/) portable
-  general-purpose computer algebra system, and related packages.
+  general-purpose computer algebra system.
 
 ## Table of Contents
 
