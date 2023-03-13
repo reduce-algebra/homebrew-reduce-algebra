@@ -1,7 +1,7 @@
 <!-- vim: set ft=markdown ts=4 sw=4 tw=0 expandtab colorcolumn=80 :         -->
 <!-- SPDX-License-Identifier: BSD-2-Clause                                  -->
 <!--                                                                        -->
-<!-- Copyright (c) 2022 Jeffrey H. Johnson <trnsz@pobox.com>                -->
+<!-- Copyright (c) 2023 Jeffrey H. Johnson <trnsz@pobox.com>                -->
 <!--                                                                        -->
 <!-- Redistribution and use in source and binary forms, with or without     -->
 <!-- modification, are permitted provided that the following conditions are -->
@@ -27,17 +27,20 @@
 <!-- (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE  -->
 <!-- OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.   -->
 <!--                                                                        -->
+
+# High priority
 * Run the CSL and PSL REDUCE test suites and benchmarks
-* Use `libfaketime` (already in Homebrew) to set the build date to the revision release date
-* Test the Emacs REDUCE IDE
 * The default browser for GUI REDUCE should be `/usr/bin/open`, not `firefox`
-* The installed documentation path should be preset when using Redfront
-* Install `rlsmt` with the package
-* Need to rebuild the `breduce.pdf` from LaTeX sources
-* Build and include Inside Reduce PDF
+* The installed documentation path could be preset for "Redfront"
+* Build the `breduce.pdf` document from LaTeX sources
+* Build the "Inside Reduce" document from LaTeX sources
+
+# Medium priority
 * Include `rbench` and the regular test suite and benchmarks in the package?
+* Install `rlsmt` with the package?
+
+# Low priority
 * Build `libreduce` (as a separate dependant package?)
 * Build `qreduce` (as a separate dependant package?)
 * Build `VSL` and it's documentation (just for fun? as a separate package?)
-* Check/normalize file permissions
 * Support Homebrew on Linux
