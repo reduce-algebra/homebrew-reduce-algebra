@@ -73,10 +73,9 @@ brew install -q reduce
 
 ## Current Package
 
-* The **current** package is based on the unreleased (and *potentially*
-  *unstable*)
-  [SVN](https://sourceforge.net/p/reduce-algebra/code/commit_browser)
-  code.
+* The **current** package is based on a *potentially unstable*
+  [Subversion](https://sourceforge.net/p/reduce-algebra/code/commit_browser)
+  repository checkout.
 
 ### REDUCE
 
