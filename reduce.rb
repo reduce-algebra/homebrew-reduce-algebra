@@ -12,7 +12,7 @@ class Reduce < Formula
   # Copyright (c) 2009-present, Homebrew contributors
 
   bottle do
-    root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-6547"
+    root_url "https://github.com/reduce-algebra/homebrew-reduce-algebra/releases/download/reduce-6547"
     sha256 cellar: :any, ventura: "a0978fcd1fd536633342c3119cb16c5fa10ef39678fd371c6bcaa1c9ac94e5c1"
   end
 

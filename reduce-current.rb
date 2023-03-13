@@ -11,7 +11,7 @@ class ReduceCurrent < Formula
   # Copyright (c) 2009-present, Homebrew contributors
 
   bottle do
-    root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-current-6550"
+    root_url "https://github.com/reduce-algebra/homebrew-reduce-algebra/releases/download/reduce-current-6550"
     sha256 cellar: :any, ventura: "42dc026509bb731301559c470e213b57ccec0f9ae57ccb5854d844ebe7798346"
   end
 

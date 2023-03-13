@@ -60,8 +60,8 @@
   **2023-03-08**.
 
 ```sh
-brew tap johnsonjh/reduce-algebra
-brew install -q reduce
+brew tap reduce-algebra/reduce-algebra
+brew install reduce
 ```
 
 ## Current Package
@@ -74,6 +74,6 @@ brew install -q reduce
   **2023-03-11**.
 
 ```sh
-brew tap johnsonjh/reduce-algebra
-brew install -q reduce-current
+brew tap reduce-algebra/reduce-algebra
+brew install reduce-current
 ```
