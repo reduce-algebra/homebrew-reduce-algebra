@@ -45,7 +45,7 @@
 ## Overview
 
 * [**REDUCE**](https://reduce-algebra.sourceforge.io/) is a freely available
-  open source system for general algebraic computations, of interest to
+  open-source system for general algebraic computations, of interest to
   mathematicians, scientists, and engineers. It can be used interactively for
   simple calculations, but also provides a flexible and expressive user
   programming language. **REDUCE** has a long and distinguished place in the
