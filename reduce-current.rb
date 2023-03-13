@@ -10,13 +10,6 @@ class ReduceCurrent < Formula
   # The following copyright applies to the Homebrew formula:
   # Copyright (c) 2009-present, Homebrew contributors
 
-  # Find latest release verison
-  livecheck do
-    url "https://sourceforge.net/projects/reduce-algebra/files/"
-    regex(/<span class="sub-label">reduce-complete_(\d+)_/i)
-    strategy :page_match
-  end
-
   bottle do
     root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-current-6360"
     sha256 monterey: "bb378b1dd4c26baef95f77017c52ca5c585633e18bac5c5f00476aed785a633a"
