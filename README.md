@@ -81,7 +81,7 @@
 
 ### REDUCE
 
-* The most recent *`reduce`* package is revision **6339**, released
+* The most recent *`reduce`* package is revision **6547**, released
   **2023-03-08**.
 
 ```sh

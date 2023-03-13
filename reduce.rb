@@ -12,8 +12,8 @@ class Reduce < Formula
   # Copyright (c) 2009-present, Homebrew contributors
 
   bottle do
-    root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-6339"
-    sha256 monterey: "3a85f082bf98322c50e10ca5bea80ddd3db6c97add186041c4e5926ab8ea907e"
+    root_url "https://github.com/johnsonjh/homebrew-reduce-algebra/releases/download/reduce-6547"
+    sha256 cellar: :any, ventura: "a0978fcd1fd536633342c3119cb16c5fa10ef39678fd371c6bcaa1c9ac94e5c1"
   end
 
   depends_on "autoconf"  => :build
