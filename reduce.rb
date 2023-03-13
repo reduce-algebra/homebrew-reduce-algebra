@@ -2,9 +2,9 @@ class Reduce < Formula
   # vim: set ft=ruby ts=2 sw=2 tw=0 expandtab colorcolumn=118:
   desc "Portable general-purpose interactive computer algebra system (stable release)"
   homepage "https://reduce-algebra.sourceforge.io"
-  url "https://downloads.sourceforge.net/project/reduce-algebra/snapshot_2022-06-17/Reduce-svn6339-src.tar.gz"
-  version "6339"
-  sha256 "fba8567372126431bd60a14d780dc584e4677eb3275af351a5109552e7a62d4a"
+  url "https://downloads.sourceforge.net/project/reduce-algebra/snapshot_2023-03-08/Reduce-svn6547-src.tar.gz"
+  version "6547"
+  sha256 "2890beac30d8c497c58bd7c73f6c507ecabe318ace28e85d9c5a15e7884ea5a8"
   # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
 
@@ -14,7 +14,7 @@ class Reduce < Formula
   # Find latest release verison
   livecheck do
     url "https://sourceforge.net/projects/reduce-algebra/files/"
-    regex(/<span class="sub-label">reduce-complete_(\d+)_/i)
+    regex(/<span class="name">snapshot_(\d+)_/i)
     strategy :page_match
   end
 

@@ -1,7 +1,7 @@
 <!-- vim: set ft=markdown ts=4 sw=4 tw=0 expandtab colorcolumn=80 :         -->
 <!-- SPDX-License-Identifier: BSD-2-Clause                                  -->
 <!--                                                                        -->
-<!-- Copyright (c) 2022 Jeffrey H. Johnson <trnsz@pobox.com>                -->
+<!-- Copyright (c) 2023 Jeffrey H. Johnson <trnsz@pobox.com>                -->
 <!--                                                                        -->
 <!-- Redistribution and use in source and binary forms, with or without     -->
 <!-- modification, are permitted provided that the following conditions are -->
@@ -82,7 +82,7 @@
 ### REDUCE
 
 * The most recent *`reduce`* package is revision **6339**, released
-  **2022-06-17**.
+  **2023-03-08**.
 
 ```sh
 brew tap johnsonjh/reduce-algebra
@@ -116,8 +116,8 @@ brew install -q run-reduce
 
 ### REDUCE
 
-* The most recent *`reduce-current`* package is revision **6360**, updated
-  **2022-07-29**.
+* The most recent *`reduce-current`* package is revision **6550**, updated
+  **2023-03-11**.
 
 ```sh
 brew tap johnsonjh/reduce-algebra
