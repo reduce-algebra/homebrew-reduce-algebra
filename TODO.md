@@ -34,6 +34,7 @@
 * The installed documentation path could be preset for "Redfront"
 * Build the `breduce.pdf` document from LaTeX sources
 * Build the "Inside Reduce" document from LaTeX sources
+* Package **Run-REDUCE** front-end (as a separate package)
 
 # Medium priority
 * Include `rbench` and the regular test suite and benchmarks in the package?
