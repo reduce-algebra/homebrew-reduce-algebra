@@ -29,18 +29,6 @@
 <!--                                                                        -->
 # REDUCE for Homebrew
 
----
-
-<p align="center">
-  <b><font size="+3">
-    <u>WARNING</u>
-    <br>
-    <A HREF="/TODO.md">These packages are not yet production quality.</A>
-  </font></b>
-</p>
-
----
-
 * A [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
   the [**REDUCE**](https://reduce-algebra.sourceforge.io/) portable
   general-purpose computer algebra system, and related packages.
@@ -50,8 +38,8 @@
 <!-- toc -->
 - [Overview](#overview)
 - [Availability](#availability)
-- [Stable Packges](#stable-packges)
-- [Current Packages](#current-packages)
+- [Stable Packge](#stable-packges)
+- [Current Package](#current-packages)
 <!-- tocstop -->
 
 ## Overview
@@ -72,16 +60,15 @@
 
 * Only **macOS** systems are supported at this time.
 
-## Stable Packges
+## Stable Packge
 
-* The **stable** packages are based primarily on
-  [released code snapshots](https://sourceforge.net/projects/reduce-algebra/files/).
-* These snapshots are released upstream approximately **5 times per year**.
-* Most users should use these stable packages.
+* The **stable** package is based on the most recent
+  [stable snapshot](https://sourceforge.net/projects/reduce-algebra/files/).
+* These releases are produced upstream approximately **5 times per year**.
 
 ### REDUCE
 
-* The most recent *`reduce`* package is revision **6547**, released
+* The most recent stable *`reduce`* package is revision **6547**, released
   **2023-03-08**.
 
 ```sh
@@ -106,13 +93,12 @@ brew tap johnsonjh/reduce-algebra
 brew install -q run-reduce
 ```-->
 
-## Current Packages
+## Current Package
 
-* The **current** packages are based on unreleased (and *potentially*
+* The **current** package is based on the unreleased (and *potentially*
   *unstable*)
   [SVN](https://sourceforge.net/p/reduce-algebra/code/commit_browser)
   code.
-* These packages are updated approximately **once per week**.
 
 ### REDUCE
 
