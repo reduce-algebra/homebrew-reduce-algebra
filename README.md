@@ -37,8 +37,8 @@
 
 <!-- toc -->
 - [Overview](#overview)
-- [Stable Packge](#stable-packges)
-- [Current Package](#current-packages)
+- [Stable Packge](#stable-packge)
+- [Current Package](#current-package)
 <!-- tocstop -->
 
 ## Overview
@@ -52,7 +52,7 @@
 
 ## Stable Packge
 
-* The **stable** package is based on the most recent
+* The **stable** macOS package is based on the most recent
   [stable snapshot](https://sourceforge.net/projects/reduce-algebra/files/).
 * These releases are produced upstream approximately **5 times per year**.
 []()
@@ -66,7 +66,7 @@ brew install -q reduce
 
 ## Current Package
 
-* The **current** package is based on a recent
+* The **current** macOS package is based on a recent
   [Subversion](https://sourceforge.net/p/reduce-algebra/code/commit_browser)
   repository checkout.
 []()
