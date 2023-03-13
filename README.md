@@ -37,7 +37,6 @@
 
 <!-- toc -->
 - [Overview](#overview)
-- [Availability](#availability)
 - [Stable Packge](#stable-packges)
 - [Current Package](#current-packages)
 <!-- tocstop -->
@@ -51,18 +50,12 @@
   programming language. **REDUCE** has a long and distinguished place in the
   history of computer algebra systems.
 
-## Availability
-
-* Only **macOS** systems are supported at this time.
-
 ## Stable Packge
 
 * The **stable** package is based on the most recent
   [stable snapshot](https://sourceforge.net/projects/reduce-algebra/files/).
 * These releases are produced upstream approximately **5 times per year**.
-
-### REDUCE
-
+[]()
 * The most recent stable *`reduce`* package is revision **6547**, released
   **2023-03-08**.
 
@@ -76,9 +69,7 @@ brew install -q reduce
 * The **current** package is based on a recent
   [Subversion](https://sourceforge.net/p/reduce-algebra/code/commit_browser)
   repository checkout.
-
-### REDUCE
-
+[]()
 * The most recent *`reduce-current`* package is revision **6550**, updated
   **2023-03-11**.
 
