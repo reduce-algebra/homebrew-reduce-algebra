@@ -11,7 +11,7 @@ class ReduceCurrent < Formula
   # Copyright (c) 2009-present, Homebrew contributors
 
   livecheck do
-    url http://svn.code.sf.net/p/reduce-algebra/code/trunk/
+    url "http://svn.code.sf.net/p/reduce-algebra/code/trunk/"
     regex(/Revision ?(\d+(?:\.\d+)+):/i)
   end
 

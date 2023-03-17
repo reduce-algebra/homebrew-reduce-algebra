@@ -12,7 +12,7 @@ class Reduce < Formula
   # Copyright (c) 2009-present, Homebrew contributors
 
   livecheck do
-    url https://sourceforge.net/projects/reduce-algebra/rss?path=/
+    url "https://sourceforge.net/projects/reduce-algebra/rss?path=/"
     regex(/Reduce-svn?(\d+(?:\.\d+)+)-src\.tar\.gz/i)
   end
 
