@@ -12,7 +12,7 @@ class ReduceCurrent < Formula
 
   livecheck do
     url "http://svn.code.sf.net/p/reduce-algebra/code/trunk/"
-    regex(/Revision ?(\d+(?:\.\d+)+):/i)
+    regex(/Revision ?(\d+):/i)
   end
 
   bottle do

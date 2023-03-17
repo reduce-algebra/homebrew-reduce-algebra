@@ -13,7 +13,7 @@ class Reduce < Formula
 
   livecheck do
     url "https://sourceforge.net/projects/reduce-algebra/rss?path=/"
-    regex(/Reduce-svn?(\d+(?:\.\d+)+)-src\.tar\.gz/i)
+    regex(/Reduce-svn?(\d+)-src\.tar\.gz/i)
   end
 
   bottle do
