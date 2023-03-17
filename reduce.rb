@@ -11,6 +11,11 @@ class Reduce < Formula
   # The following copyright statement applies to this Homebrew formula:
   # Copyright (c) 2009-present, Homebrew contributors
 
+  livecheck do
+    url https://sourceforge.net/projects/reduce-algebra/rss?path=/
+    regex(/Reduce-svn?(\d+(?:\.\d+)+)-src\.tar\.gz/i)
+  end
+
   bottle do
     root_url "https://github.com/reduce-algebra/homebrew-reduce-algebra/releases/download/reduce-6547"
     sha256 cellar: :any, ventura: "a0978fcd1fd536633342c3119cb16c5fa10ef39678fd371c6bcaa1c9ac94e5c1"
