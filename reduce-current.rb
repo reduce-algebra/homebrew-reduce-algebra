@@ -13,6 +13,7 @@ class ReduceCurrent < Formula
   livecheck do
     url "http://svn.code.sf.net/p/reduce-algebra/code/trunk/"
     regex(/Revision ?(\d+):/i)
+    strategy :page_match
   end
 
   bottle do
