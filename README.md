@@ -50,11 +50,8 @@
   programming language. **REDUCE** has a long and distinguished place in the
   history of computer algebra systems.
 
-* Only macOS is supported at this time.  Linux support is planned and will
-  be added in a future update.
-
-* **NOTE**: Apple Silicon (*i.e.* **M1**, **M2**)
-  support is currently untested!
+* Only macOS is supported at this time.  Linux support is planned for a
+  future update.
 
 ## Stable Packge
 
