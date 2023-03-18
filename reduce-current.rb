@@ -4,7 +4,7 @@ class ReduceCurrent < Formula
   homepage "https://reduce-algebra.sourceforge.io"
   url "https://svn.code.sf.net/p/reduce-algebra/code/trunk", revision: "6550"
   version "6550"
-  revision 5
+  revision 6
   # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
 
@@ -95,12 +95,13 @@ class ReduceCurrent < Formula
     inreplace "csl/cslbase/configure.ac", "$LL/libz.a",      "-lz"
 
     # Configuration: Rewrite CSL hard-coded paths to use Homebrew provided libffi
+    inreplace "configure", "$SHELL $abssrcdir/libraries/libffi/configure ", "true "
     inreplace "configure.ac", "$SHELL $abssrcdir/libraries/libffi/configure ", "true "
     inreplace "csl/cslbase/Makefile.am", "../lib/libffi.a",  " "
     inreplace "csl/cslbase/Makefile.in", "../lib/libffi.a",  " "
     inreplace "csl/cslbase/Makefile.am", "../include/ffi.h", " "
     inreplace "csl/cslbase/Makefile.in", "../include/ffi.h", " "
-    inreplace "csl/cslbase/Makefile.am", "-+$(TRACE)@$(MAKE) -C ../libffi install",  "@true"
+    inreplace "csl/cslbase/Makefile.am", "-+$(TRACE)@$(MAKE) -C ../libffi install", "@true"
     inreplace "csl/cslbase/Makefile.am", "$(TRACE)@cd ../libffi && $(MAKE) install", "@true"
     inreplace "csl/cslbase/Makefile.am", "LDADD += ", "LDADD += #{Formula["libffi"].opt_lib}/libffi.a "
 
@@ -176,13 +177,15 @@ class ReduceCurrent < Formula
     # Configuration: Generate configure scripts for both CSL and PSL REDUCE
     system "./autogen.sh", "--fast", *std_configure_args, "--with-csl", "--with-psl"
 
+    # Remove unnecessary and unused libffi directories
+    system "sh", "-c", "rm -rf libraries/libffi*"
+
     # Configuration: Configure to do a (one-shot) release build of both CSL and PSL REDUCE
     system "./configure", "-C", *std_configure_args,
                                 "--disable-libtool-lock",
                                 "--disable-option-checking",
                                 "--with-ccache",
                                 "--with-csl",
-                                "--with-ffi",
                                 "--with-lto",
                                 "--with-psl",
                                 "--without-autogen"
