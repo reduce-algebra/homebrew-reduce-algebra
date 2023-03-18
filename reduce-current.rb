@@ -4,7 +4,7 @@ class ReduceCurrent < Formula
   homepage "https://reduce-algebra.sourceforge.io"
   url "https://svn.code.sf.net/p/reduce-algebra/code/trunk", revision: "6550"
   version "6550"
-  revision 3
+  revision 4
   # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
 
@@ -103,7 +103,7 @@ class ReduceCurrent < Formula
     inreplace "csl/cslbase/Makefile.in",  "../lib/libffi.a",  " "
     inreplace "csl/cslbase/Makefile.am",  "../include/ffi.h", " "
     inreplace "csl/cslbase/Makefile.in",  "../include/ffi.h", " "
-    inreplace "csl/cslbase/Makefile.am",  "LDADD += ", "LDADD += #{Formula["libffi"].opt_include}/ffi.h "
+    inreplace "csl/cslbase/Makefile.am",  "LDADD += ", "LDADD += -I#{Formula["libffi"].opt_include} "
     inreplace "csl/cslbase/Makefile.am",  "LDADD += ", "LDADD += #{Formula["libffi"].opt_lib}/libffi.a "
 
     # Configuration: Rewrite FOX hard-coded paths to use Homebrew provided libraries
