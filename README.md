@@ -29,7 +29,7 @@
 <!--                                                                        -->
 # REDUCE
 
-* [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
+* macOS [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
   the [**REDUCE**](https://reduce-algebra.sourceforge.io/) portable
   general-purpose computer algebra system.
 
@@ -58,6 +58,8 @@
 []()
 * The most recent stable *`reduce`* package is revision **6547**, released
   **2023-03-08**.
+* ***NOTE***: **No M1**/**Apple Silicon support yet!**
+  Please try using the [current package](#current-package).
 
 ```sh
 brew tap reduce-algebra/reduce-algebra
