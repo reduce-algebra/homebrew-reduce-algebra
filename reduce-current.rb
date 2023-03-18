@@ -60,7 +60,7 @@ class ReduceCurrent < Formula
     depends_on "libiconv"
   end
 
-  # The inreplace patching done by this formula override upstream values that are hard-coded to work exclusively with
+  # The inreplace patching done by this formula overrides upstream values that are hard-coded to work exclusively with
   # MacPorts. The patching as done below is preferred by the upstream, as they cannot maintain alternative recipes for
   # packaging systems beyond MacPorts, but in no way intend to limit the availability of REDUCE only to MacPorts users
   # (or pre-compiled binaries):
@@ -153,8 +153,7 @@ class ReduceCurrent < Formula
     inreplace "csl/cslbase/configure.ac", "/opt/local",  "/dev/null"
     inreplace "csl/cslbase/configure.ac", "/opt/X11",    "/dev/null"
 
-    # Configuration: Remove the unnecessary `-fno-common` usage which reduces optimization
-    # NOTE: Upstream notes this is to remain as "insurance" to avoid potential issues.
+    # Configuration: Remove `-fno-common` unnecessary on macOS which reduces optimization
     inreplace "csl/cslbase/configure.ac", " -fno-common", " "
 
     # Configuration: Modify the hard-coded path used in the breduce man page to match the Homebrew path.
