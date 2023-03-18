@@ -53,8 +53,8 @@
 * Only macOS is supported at this time.  Linux support is planned and will
   be added in a future update.
 
-* ***NOTE***: **Apple Silicon** (*i.e.* **M1**, **M2**)
-  **support is a work in progress!**
+* **NOTE**: Apple Silicon (*i.e.* **M1**, **M2**)
+  support is currently untested!
 
 ## Stable Packge
 
