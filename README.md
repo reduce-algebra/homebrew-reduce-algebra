@@ -53,6 +53,9 @@
 * Only macOS is supported at this time.  Linux support is planned and will
   be added in a future update.
 
+* ***NOTE***: **Apple Silicon** (*i.e.* **M1**, **M2**)
+  **support is a work in progress!**
+
 ## Stable Packge
 
 * The **stable** macOS package is based on the most recent
@@ -61,8 +64,6 @@
 []()
 * The most recent stable *`reduce`* package is revision **6547**, released
   **2023-03-08**.
-* ***NOTE***: **No M1** / **Apple Silicon support yet!**
-  Try using the [current package](#current-package).
 
 ```sh
 brew tap reduce-algebra/reduce-algebra
