@@ -1,25 +1,21 @@
-class Reduce < Formula
+class ReduceCurrent < Formula
   # vim: set ft=ruby ts=2 sw=2 tw=0 expandtab colorcolumn=118:
-  desc "Portable general-purpose interactive computer algebra system (stable release)"
+  desc "Portable general-purpose interactive computer algebra system"
   homepage "https://reduce-algebra.sourceforge.io"
   url "https://downloads.sourceforge.net/project/reduce-algebra/snapshot_2023-03-08/Reduce-svn6547-src.tar.gz"
   version "6547"
+  revision 1
   sha256 "2890beac30d8c497c58bd7c73f6c507ecabe318ace28e85d9c5a15e7884ea5a8"
   # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
 
-  # The following copyright statement applies to this Homebrew formula:
+  # The following copyright applies to the Homebrew formula:
   # Copyright (c) 2009-present, Homebrew contributors
 
   livecheck do
     url "https://sourceforge.net/projects/reduce-algebra/rss?path=/"
     regex(/Reduce-svn?(\d+)-src\.tar\.gz/i)
     strategy :page_match
-  end
-
-  bottle do
-    root_url "https://github.com/reduce-algebra/homebrew-reduce-algebra/releases/download/reduce-6547"
-    sha256 cellar: :any, ventura: "a0978fcd1fd536633342c3119cb16c5fa10ef39678fd371c6bcaa1c9ac94e5c1"
   end
 
   depends_on "autoconf"  => :build
@@ -64,10 +60,6 @@ class Reduce < Formula
     depends_on "libiconv"
   end
 
-  # > inreplace should be used instead of patches when patching something that will never be accepted upstream, e.g.
-  # > making the software’s build system respect Homebrew’s installation hierarchy. If it’s something that affects
-  # > both Homebrew and MacPorts (i.e. macOS specific) it should be turned into an upstream submitted patch instead.
-  #
   # The inreplace patching done by this formula override upstream values that are hard-coded to work exclusively with
   # MacPorts. The patching as done below is preferred by the upstream, as they cannot maintain alternative recipes for
   # packaging systems beyond MacPorts, but in no way intend to limit the availability of REDUCE only to MacPorts users
@@ -81,7 +73,7 @@ class Reduce < Formula
   # > [and linking] against the .a rather than the .dylib versions is only to make our distribution here simpler, and
   # > not to try to lock anybody in (or out) of anything.
 
-  conflicts_with "reduce-current", because: "both install the same binaries"
+  conflicts_with "reduce", because: "both install the same binaries"
 
   def install
     # Configuration: Use `gnubin` for GNU sed/tar/time on macOS
@@ -91,57 +83,70 @@ class Reduce < Formula
       ENV.prepend_path "PATH", Formula["gnu-time"].opt_libexec/"gnubin"
     end
 
-    # Configuration: Rewrite CSL hard-coded paths to use system provided libraries
-    inreplace "csl/cslbase/configure.ac", "$LL/libbz2.a",    "-lbz2"
+    # Configuration: Rewrite CSL hard-coded paths to use system-provided libraries
+    inreplace "csl/cslbase/configure.ac", "$LL/libbz2.a", "-lbz2"
     inreplace "csl/cslbase/configure.ac", "$LL/libcurses.a", "-lncurses"
-    inreplace "csl/cslbase/configure.ac", "$LL/libexpat.a",  "-lexpat"
-    inreplace "csl/cslbase/configure.ac", "$LL/libiconv.a",  "-liconv"
-    inreplace "csl/cslbase/configure.ac", "$LL/libz.a",      "-lz"
+    inreplace "csl/cslbase/configure.ac", "$LL/libexpat.a", "-lexpat"
+    inreplace "csl/cslbase/configure.ac", "$LL/libiconv.a", "-liconv"
+    inreplace "csl/cslbase/configure.ac", "$LL/libz.a", "-lz"
 
-    # Configuration: Rewrite FOX hard-coded paths to use Homebrew provided libraries
+    # Configuration: Avoid configuring or building the REDUCE-bundled libffi
+    inreplace "configure", "$SHELL $abssrcdir/libraries/libffi/configure ", "true "
+    inreplace "configure.ac", "$SHELL $abssrcdir/libraries/libffi/configure ", "true "
+    inreplace "csl/cslbase/Makefile.am", "-+$(TRACE)@$(MAKE) -C ../libffi install", "@true"
+    inreplace "csl/cslbase/Makefile.in", "$(TRACE)@cd ../libffi && $(MAKE) install", "@true"
+
+    # Configuration: Rewrite CSL hard-coded paths to use Homebrew-provided libffi
+    inreplace "csl/cslbase/Makefile.am", "../lib/libffi.a", " "
+    inreplace "csl/cslbase/Makefile.in", "../lib/libffi.a", " "
+    inreplace "csl/cslbase/Makefile.am", "../include/ffi.h", " "
+    inreplace "csl/cslbase/Makefile.in", "../include/ffi.h", " "
+    inreplace "csl/cslbase/Makefile.am", "LDADD += ", "LDADD += #{Formula["libffi"].opt_lib}/libffi.a "
+
+    # Configuration: Rewrite FOX hard-coded paths to use Homebrew-provided libraries
     inreplace "csl/fox/configure.ac", "-I/usr/local/include ", " "
     inreplace "csl/fox/configure.ac", "-I/usr/include/freetype2",
-                                      "-I#{Formula["freetype"].opt_include}/freetype2"
+                                  "-I#{Formula["freetype"].opt_include}/freetype2"
     inreplace "csl/fox/configure.ac", "-I/usr/local/include/freetype2",
-                                      "-I#{Formula["freetype"].opt_include}/freetype2"
+                                  "-I#{Formula["freetype"].opt_include}/freetype2"
     inreplace "csl/fox/configure.ac", "-I/opt/local/include/freetype2",
-                                      "-I#{Formula["freetype"].opt_include}/freetype2"
+                                  "-I#{Formula["freetype"].opt_include}/freetype2"
 
-    # Configuration: Rewrite CSL hard-coded paths to use Homebrew provided libraries
+    # Configuration: Rewrite CSL hard-coded paths to use Homebrew-provided libraries
     inreplace "csl/cslbase/configure.ac", "-I/opt/local/include/freetype2",
-                                          "-I#{Formula["freetype"].opt_include}/freetype2"
+                                  "-I#{Formula["libffi"].opt_include} -I#{Formula["freetype"].opt_include}/freetype2"
     inreplace "csl/cslbase/configure.ac", "$LL/libbrotlicommon-static.a",
-                                          "-L#{Formula["brotli"].opt_lib} -lbrotlicommon"
+                                  "-L#{Formula["brotli"].opt_lib} -lbrotlicommon"
     inreplace "csl/cslbase/configure.ac", "$LL/libbrotlidec-static.a",
-                                          "-L#{Formula["brotli"].opt_lib} -lbrotlidec"
+                                  "-L#{Formula["brotli"].opt_lib} -lbrotlidec"
     inreplace "csl/cslbase/configure.ac", "$LL/libfontconfig.a",
-                                          "-L#{Formula["fontconfig"].opt_lib} -lfontconfig"
+                                  "-L#{Formula["fontconfig"].opt_lib} -lfontconfig"
     inreplace "csl/cslbase/configure.ac", "$LL/libfreetype.a",
-                                          "-L#{Formula["freetype"].opt_lib} -lfreetype"
+                                  "-L#{Formula["freetype"].opt_lib} -lfreetype"
     inreplace "csl/cslbase/configure.ac", "$LL/libintl.a",
-                                          "-L#{Formula["gettext"].opt_lib} -lintl"
+                                  "-L#{Formula["gettext"].opt_lib} -lintl"
     inreplace "csl/cslbase/configure.ac", "$LL/libpng.a",
-                                          "-L#{Formula["libpng"].opt_lib} -lpng"
+                                  "-L#{Formula["libpng"].opt_lib} -lpng"
     inreplace "csl/cslbase/configure.ac", "$LL/libX11.a",
-                                          "-L#{Formula["libx11"].opt_lib} -lX11"
+                                  "-L#{Formula["libx11"].opt_lib} -lX11"
     inreplace "csl/cslbase/configure.ac", "$LL/libXau.a",
-                                          "-L#{Formula["libxau"].opt_lib} -lXau"
+                                  "-L#{Formula["libxau"].opt_lib} -lXau"
     inreplace "csl/cslbase/configure.ac", "$LL/libxcb.a",
-                                          "-L#{Formula["libxcb"].opt_lib} -lxcb"
+                                  "-L#{Formula["libxcb"].opt_lib} -lxcb"
     inreplace "csl/cslbase/configure.ac", "$LL/libXcursor.a",
-                                          "-L#{Formula["libxcursor"].opt_lib} -lXcursor"
+                                  "-L#{Formula["libxcursor"].opt_lib} -lXcursor"
     inreplace "csl/cslbase/configure.ac", "$LL/libXdmcp.a",
-                                          "-L#{Formula["libxdmcp"].opt_lib} -lXdmcp"
+                                  "-L#{Formula["libxdmcp"].opt_lib} -lXdmcp"
     inreplace "csl/cslbase/configure.ac", "$LL/libXext.a",
-                                          "-L#{Formula["libxext"].opt_lib} -lXext"
+                                  "-L#{Formula["libxext"].opt_lib} -lXext"
     inreplace "csl/cslbase/configure.ac", "$LL/libXfixes.a",
-                                          "-L#{Formula["libxfixes"].opt_lib} -lXfixes"
+                                  "-L#{Formula["libxfixes"].opt_lib} -lXfixes"
     inreplace "csl/cslbase/configure.ac", "$LL/libXft.a",
-                                          "-L#{Formula["libxft"].opt_lib} -lXft"
+                                  "-L#{Formula["libxft"].opt_lib} -lXft"
     inreplace "csl/cslbase/configure.ac", "$LL/libXrandr.a",
-                                          "-L#{Formula["libxrandr"].opt_lib} -lXrandr"
+                                  "-L#{Formula["libxrandr"].opt_lib} -lXrandr"
     inreplace "csl/cslbase/configure.ac", "$LL/libXrender.a",
-                                          "-L#{Formula["libxrender"].opt_lib} -lXrender"
+                                  "-L#{Formula["libxrender"].opt_lib} -lXrender"
 
     # Configuration: Rewrite CSL hard-coded paths to avoid polluting the build environment
     inreplace "csl/cslbase/configure.ac", "$HOME/ports", "/dev/null"
@@ -180,12 +185,12 @@ class Reduce < Formula
                                 "--with-psl",
                                 "--without-autogen"
 
-    # Build libs: Build the local prerequisite components for CSL REDUCE
+    # Build libs: Build the localized prerequisite components for CSL REDUCE
     system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/fox"'
     system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/crlibm"'
     system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/softfloat"'
     system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/libedit"'
-    system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/libffi"'
+    touch "lib.stamp"
 
     # Build redcsl: Build CSL (Codemist Standard Lisp) REDUCE
     system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/csl"'
@@ -203,13 +208,14 @@ class Reduce < Formula
     # Build texmacs: Build (decompress) the TeXmacs support to allow easy user utilization
     mkdir "generic/texmacs/texmacs"
     system "sh", "-c", "cd generic/texmacs && tar zxvf texmacs-plugin.tgz --no-same-owner -C texmacs"
-    # NOTE: This removes unused temporary files that exist in some versions of the REDUCE distribution
+    # NOTE: Remove unused temporary files that exist in some versions of the REDUCE distribution
     system "sh", "-c", "{ cd generic/texmacs/texmacs/reduce/progs && rm -f ./*~ 2> /dev/null || true ; }"
+    touch "texmacs.stamp"
 
     # Build doc: Build the miscellaneous documentation and REDUCE manual
-    system "make", "-C", "doc/misc",   "clean"
-    system "make", "-C", "doc/misc",   "primer.pdf"
-    system "make", "-C", "doc/misc",   "sl.pdf"
+    system "make", "-C", "doc/misc", "clean"
+    system "make", "-C", "doc/misc", "primer.pdf"
+    system "make", "-C", "doc/misc", "sl.pdf"
     system "make", "-C", "doc/manual", "clean"
     system "make", "-C", "doc/manual", "manual.pdf"
     system "make", "-C", "doc/manual", "index.html"
@@ -334,7 +340,7 @@ class Reduce < Formula
     <<~EOS
       A GUI for REDUCE has been installed, requiring the X Window System.
         XQuartz is a freely available version of the X Window System for
-        macOS available as a Homebrew Cask. To install XQuartz:
+        macOS available as a Homebrew Cask. To install the XQuartz:
           brew install --cask xquartz
 
       A GNU TeXmacs plugin has been installed.
