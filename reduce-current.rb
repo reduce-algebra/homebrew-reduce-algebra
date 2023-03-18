@@ -4,9 +4,9 @@ class ReduceCurrent < Formula
   homepage "https://reduce-algebra.sourceforge.io"
   url "https://svn.code.sf.net/p/reduce-algebra/code/trunk", revision: "6550"
   version "6550"
-  revision 8
   # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
+  revision 8
 
   # The following copyright applies to the Homebrew formula:
   # Copyright (c) 2009-present, Homebrew contributors

@@ -5,9 +5,9 @@ class Reduce < Formula
   url "https://downloads.sourceforge.net/project/reduce-algebra/snapshot_2023-03-08/Reduce-svn6547-src.tar.gz"
   version "6547"
   sha256 "2890beac30d8c497c58bd7c73f6c507ecabe318ace28e85d9c5a15e7884ea5a8"
-  revision 1
   # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
+  revision 1
 
   # The following copyright applies to the Homebrew formula:
   # Copyright (c) 2009-present, Homebrew contributors
