@@ -59,7 +59,7 @@
   [stable snapshot](https://sourceforge.net/projects/reduce-algebra/files/).
 * These **stable** releases are produced approximately **5 times per year**.
 []()
-* The most recent stable *`reduce`* package is revision **6547**, released
+* The most **recent** stable *`reduce`* package is revision **6547**, released
   **2023-03-08**.
 
 ```sh
