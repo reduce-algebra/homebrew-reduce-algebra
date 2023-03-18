@@ -29,7 +29,7 @@
 <!--                                                                        -->
 # REDUCE
 
-* macOS [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
+* [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
   the [**REDUCE**](https://reduce-algebra.sourceforge.io/) portable
   general-purpose computer algebra system.
 
@@ -49,6 +49,9 @@
   simple calculations, but also provides a flexible and expressive user
   programming language. **REDUCE** has a long and distinguished place in the
   history of computer algebra systems.
+
+* Only macOS is supported at this time.  Linux support is planned and will
+  be added in a future update.
 
 ## Stable Packge
 
