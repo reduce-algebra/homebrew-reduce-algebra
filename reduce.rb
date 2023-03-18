@@ -4,8 +4,8 @@ class Reduce < Formula
   homepage "https://reduce-algebra.sourceforge.io"
   url "https://downloads.sourceforge.net/project/reduce-algebra/snapshot_2023-03-08/Reduce-svn6547-src.tar.gz"
   version "6547"
-  revision 1
   sha256 "2890beac30d8c497c58bd7c73f6c507ecabe318ace28e85d9c5a15e7884ea5a8"
+  revision 1
   # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
 
@@ -14,7 +14,7 @@ class Reduce < Formula
 
   livecheck do
     url "https://sourceforge.net/projects/reduce-algebra/rss?path=/"
-    regex(/Reduce-svn?(\d+)-src\.tar\.gz/i)
+    regex(/Reduce-svn?(\d+)-src\.t/i)
     strategy :page_match
   end
 
