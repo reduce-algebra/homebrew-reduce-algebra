@@ -54,12 +54,12 @@
 
 * The **stable** macOS package is based on the most recent
   [stable snapshot](https://sourceforge.net/projects/reduce-algebra/files/).
-* These releases are produced upstream approximately **5 times per year**.
+* These **stable** releases are produced approximately **5 times per year**.
 []()
 * The most recent stable *`reduce`* package is revision **6547**, released
   **2023-03-08**.
-* ***NOTE***: **No M1**/**Apple Silicon support yet!**
-  Please try using the [current package](#current-package).
+* ***NOTE***: **No M1** / **Apple Silicon support yet!**
+  Try using the [current package](#current-package).
 
 ```sh
 brew tap reduce-algebra/reduce-algebra
