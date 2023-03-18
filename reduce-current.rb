@@ -17,14 +17,15 @@ class ReduceCurrent < Formula
     strategy :page_match
   end
 
-  depends_on "autoconf"  => :build
-  depends_on "automake"  => :build
-  depends_on "ccache"    => :build
-  depends_on "coreutils" => :build
-  depends_on "libtool"   => :build
-  depends_on "make"      => :build
-  depends_on "perl"      => :build
-  depends_on "texlive"   => :build
+  depends_on "autoconf"   => :build
+  depends_on "automake"   => :build
+  depends_on "ccache"     => :build
+  depends_on "coreutils"  => :build
+  depends_on "libtool"    => :build
+  depends_on "make"       => :build
+  depends_on "perl"       => :build
+  depends_on "subversion" => :build
+  depends_on "texlive"    => :build
 
   depends_on "brotli"
   depends_on "fontconfig"
