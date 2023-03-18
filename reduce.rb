@@ -1,4 +1,4 @@
-class ReduceCurrent < Formula
+class Reduce < Formula
   # vim: set ft=ruby ts=2 sw=2 tw=0 expandtab colorcolumn=118:
   desc "Portable general-purpose interactive computer algebra system"
   homepage "https://reduce-algebra.sourceforge.io"
