@@ -17,11 +17,6 @@ class ReduceCurrent < Formula
     strategy :page_match
   end
 
-  # bottle do
-  #   root_url "https://github.com/reduce-algebra/homebrew-reduce-algebra/releases/download/reduce-current-6550"
-  #   sha256 cellar: :any, ventura: "42dc026509bb731301559c470e213b57ccec0f9ae57ccb5854d844ebe7798346"
-  # end
-
   depends_on "autoconf"  => :build
   depends_on "automake"  => :build
   depends_on "ccache"    => :build
