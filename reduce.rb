@@ -36,6 +36,7 @@ class Reduce < Formula
   depends_on "freetype"
   depends_on "gettext"
   depends_on "gnuplot"
+  depends_on "libffi"
   depends_on "libpng"
   depends_on "libx11"
   depends_on "libxau"
