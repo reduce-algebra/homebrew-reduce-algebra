@@ -214,7 +214,7 @@ class Reduce < Formula
     # Build texmacs: Build (decompress) the TeXmacs support to allow easy user utilization
     mkdir "generic/texmacs/texmacs"
     system "sh", "-c", "cd generic/texmacs && tar zxvf texmacs-plugin.tgz --no-same-owner -C texmacs"
-    # NOTE: Remove unused temporary files that exist in some versions of the REDUCE distribution
+    # Remove unused temporary files that exist in some versions of the REDUCE TeXmacs distribution
     system "sh", "-c", "{ cd generic/texmacs/texmacs/reduce/progs && rm -f ./*~ 2> /dev/null || true ; }"
     touch "texmacs.stamp"
 
