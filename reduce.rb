@@ -172,7 +172,7 @@ class Reduce < Formula
     inreplace "doc/misc/mkpdf.sh",        "pdflatex ", "pdflatex -interaction=nonstopmode "
     inreplace "psl/dist/manual/mkpdf.sh", "pdflatex ", "pdflatex -interaction=nonstopmode "
 
-    # Configuration: Modify the `copyfiles.sh` script to ease Homebrew build usage.
+    # Configuration: Modify the `copyfiles.sh` script to ease Homebrew build usage
     inreplace "macbuild/copyfiles.sh", "cp -r ", "cp -pR "
     inreplace "macbuild/copyfiles.sh", "cp README.for.distribution distrib/README", " "
     inreplace "macbuild/copyfiles.sh", "cp Reduce-source_$2.tar.bz2 distrib/Reduce-source_$2.tar.bz2", " "
