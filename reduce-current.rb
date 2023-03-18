@@ -4,6 +4,7 @@ class ReduceCurrent < Formula
   homepage "https://reduce-algebra.sourceforge.io"
   url "https://svn.code.sf.net/p/reduce-algebra/code/trunk", revision: "6550"
   version "6550"
+  revision 1
   # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
 
@@ -35,6 +36,7 @@ class ReduceCurrent < Formula
   depends_on "freetype"
   depends_on "gettext"
   depends_on "gnuplot"
+  depends_on "libffi"
   depends_on "libpng"
   depends_on "libx11"
   depends_on "libxau"
@@ -183,7 +185,7 @@ class ReduceCurrent < Formula
     system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/crlibm"'
     system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/softfloat"'
     system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/libedit"'
-    system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/libffi"'
+    # system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/libffi"'
 
     # Build redcsl: Build CSL (Codemist Standard Lisp) REDUCE
     system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/csl"'
