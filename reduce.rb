@@ -350,7 +350,7 @@ class Reduce < Formula
           package-install-file "#{share}/emacs/reduce-mode.el"
           package-install-file "#{share}/emacs/reduce-run.el"
 
-      REDUCE manuals and reference documentation has been installed.
+      REDUCE manuals and reference documentation have been installed.
         To access this documentation, browse to the directory:
           "#{doc}"
 
