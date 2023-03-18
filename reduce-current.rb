@@ -4,7 +4,7 @@ class ReduceCurrent < Formula
   homepage "https://reduce-algebra.sourceforge.io"
   url "https://svn.code.sf.net/p/reduce-algebra/code/trunk", revision: "6550"
   version "6550"
-  revision 4
+  revision 5
   # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
 
@@ -64,10 +64,6 @@ class ReduceCurrent < Formula
     depends_on "libiconv"
   end
 
-  # > inreplace should be used instead of patches when patching something that will never be accepted upstream, e.g.
-  # > making the software’s build system respect Homebrew’s installation hierarchy. If it’s something that affects
-  # > both Homebrew and MacPorts (i.e. macOS specific) it should be turned into an upstream submitted patch instead.
-  #
   # The inreplace patching done by this formula override upstream values that are hard-coded to work exclusively with
   # MacPorts. The patching as done below is preferred by the upstream, as they cannot maintain alternative recipes for
   # packaging systems beyond MacPorts, but in no way intend to limit the availability of REDUCE only to MacPorts users
@@ -99,12 +95,14 @@ class ReduceCurrent < Formula
     inreplace "csl/cslbase/configure.ac", "$LL/libz.a",      "-lz"
 
     # Configuration: Rewrite CSL hard-coded paths to use Homebrew provided libffi
-    inreplace "csl/cslbase/Makefile.am",  "../lib/libffi.a",  " "
-    inreplace "csl/cslbase/Makefile.in",  "../lib/libffi.a",  " "
-    inreplace "csl/cslbase/Makefile.am",  "../include/ffi.h", " "
-    inreplace "csl/cslbase/Makefile.in",  "../include/ffi.h", " "
-    inreplace "csl/cslbase/Makefile.am",  "LDADD += ", "LDADD += -I#{Formula["libffi"].opt_include} "
-    inreplace "csl/cslbase/Makefile.am",  "LDADD += ", "LDADD += #{Formula["libffi"].opt_lib}/libffi.a "
+    inreplace "configure.ac", "$SHELL $abssrcdir/libraries/libffi/configure ", "true "
+    inreplace "csl/cslbase/Makefile.am", "../lib/libffi.a",  " "
+    inreplace "csl/cslbase/Makefile.in", "../lib/libffi.a",  " "
+    inreplace "csl/cslbase/Makefile.am", "../include/ffi.h", " "
+    inreplace "csl/cslbase/Makefile.in", "../include/ffi.h", " "
+    inreplace "csl/cslbase/Makefile.am", "-+$(TRACE)@$(MAKE) -C ../libffi install",  "@true"
+    inreplace "csl/cslbase/Makefile.am", "$(TRACE)@cd ../libffi && $(MAKE) install", "@true"
+    inreplace "csl/cslbase/Makefile.am", "LDADD += ", "LDADD += #{Formula["libffi"].opt_lib}/libffi.a "
 
     # Configuration: Rewrite FOX hard-coded paths to use Homebrew provided libraries
     inreplace "csl/fox/configure.ac", "-I/usr/local/include ", " "
@@ -117,7 +115,7 @@ class ReduceCurrent < Formula
 
     # Configuration: Rewrite CSL hard-coded paths to use Homebrew provided libraries
     inreplace "csl/cslbase/configure.ac", "-I/opt/local/include/freetype2",
-                                          "-I#{Formula["freetype"].opt_include}/freetype2"
+                                  "-I#{Formula["libffi"].opt_include} -I#{Formula["freetype"].opt_include}/freetype2"
     inreplace "csl/cslbase/configure.ac", "$LL/libbrotlicommon-static.a",
                                           "-L#{Formula["brotli"].opt_lib} -lbrotlicommon"
     inreplace "csl/cslbase/configure.ac", "$LL/libbrotlidec-static.a",
@@ -194,7 +192,6 @@ class ReduceCurrent < Formula
     system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/crlibm"'
     system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/softfloat"'
     system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/libedit"'
-    # system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/libffi"'
 
     # Build redcsl: Build CSL (Codemist Standard Lisp) REDUCE
     system "sh", "-c", 'make -C "cslbuild/$(scripts/findhost.sh $(./config.guess))/csl"'
