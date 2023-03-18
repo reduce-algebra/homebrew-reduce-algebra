@@ -367,7 +367,7 @@ class ReduceCurrent < Formula
 
       REDUCE documentation in HTML format has been installed.
         To make REDUCE aware of the HTML documentation, add the following
-        line your "$HOME/.profile" or equivalent shell configuration file:
+        line to "$HOME/.profile" (or equivalent shell configuration file):
           REDUCE_HELP="#{doc}/html"
     EOS
   end
