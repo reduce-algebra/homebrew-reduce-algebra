@@ -195,6 +195,9 @@ class ReduceStatic < Formula
     # Configuration: Force configure scripts to use static ncurses library
     ENV["ac_cv_search_tgetent"] = "#{Formula["ncurses"].opt_lib}/libncursesw.a"
 
+    # Configuration: Remove unnecessary `-fno-common` argument to improve optimizations
+    system "sh", "-c", 'find . -type f -print0 | xargs -L1 -0 sed -i '' -e "s/-fno-common/           /g"'
+
     # Configuration: Generate configure scripts for both CSL and PSL REDUCE
     system "./autogen.sh", "--fast", *std_configure_args, "--with-csl", "--with-psl"
 
