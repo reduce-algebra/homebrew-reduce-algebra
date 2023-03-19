@@ -7,6 +7,7 @@ class ReduceStatic < Formula
   sha256 "2890beac30d8c497c58bd7c73f6c507ecabe318ace28e85d9c5a15e7884ea5a8"
   # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
+  revision 1
 
   # The following copyright applies to the Homebrew formula:
   # Copyright (c) 2009-present, Homebrew contributors
@@ -87,7 +88,7 @@ class ReduceStatic < Formula
     inreplace "csl/cslbase/configure.ac", "$LL/libbz2.a",
                                   "#{Formula["bzip2"].opt_lib}/libbz2.a"
     inreplace "csl/cslbase/configure.ac", "$LL/libcurses.a",
-                                  "#{Formula["ncurses"].opt_lib}/libncurses.a"
+                                  "#{Formula["ncurses"].opt_lib}/libncursesw.a"
     inreplace "csl/cslbase/configure.ac", "$LL/libexpat.a",
                                   "#{Formula["expat"].opt_lib}/libexpat.a"
     inreplace "csl/cslbase/configure.ac", "$LL/libiconv.a",
@@ -116,6 +117,22 @@ class ReduceStatic < Formula
                                   "-I#{Formula["freetype"].opt_include}/freetype2"
     inreplace "csl/fox/configure.ac", "-I/opt/local/include/freetype2",
                                   "-I#{Formula["freetype"].opt_include}/freetype2"
+
+    # Configuration: Rewrites to use Homebrew-provided static ncurses library
+    inreplace "generic/newfront/configure.ac", "-lncurses",
+                                  "#{Formula["ncurses"].opt_lib}/libncursesw.a"
+    inreplace "generic/newfront/Makefile.am", "-lncurses",
+                                  "#{Formula["ncurses"].opt_lib}/libncursesw.a"
+    inreplace "csl/configure.ac", "-lncurses",
+                                  "#{Formula["ncurses"].opt_lib}/libncursesw.a"
+    inreplace "csl/configure", "-lncurses",
+                                  "#{Formula["ncurses"].opt_lib}/libncursesw.a"
+    inreplace "csl/fox/configure", "-lncurses",
+                                  "#{Formula["ncurses"].opt_lib}/libncursesw.a"
+    inreplace "csl/cslbase/configure", "-lncurses",
+                                  "#{Formula["ncurses"].opt_lib}/libncursesw.a"
+    inreplace "csl/cslbase/configure.ac", "-lncurses",
+                                  "#{Formula["ncurses"].opt_lib}/libncursesw.a"
 
     # Configuration: Rewrite CSL hard-coded paths to use Homebrew-provided libraries
     inreplace "csl/cslbase/configure.ac", "-I/opt/local/include/freetype2",
