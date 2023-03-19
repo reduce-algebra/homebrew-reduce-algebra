@@ -266,7 +266,7 @@ class ReduceStatic < Formula
 
     # Preinstall: Recompress PNG images using advancecomp
     system "sh", "-c",
-      'find . -type f -regex ".*\.png$" -print0 | xargs -L1 -0 -P $(getconf _NPROCESSORS_ONLN) advpng -z4 || true'
+      'find . -type f -regex ".*\.png$" -print0 | xargs -L1 -0 -P 0$(getconf _NPROCESSORS_ONLN) advpng -z4 || true'
 
     # Installation: Create initial installation using copyfiles script.
     system "sh", "-c", 'cd macbuild && ./copyfiles.sh "$(realpath ..)" "release"'
