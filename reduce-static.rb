@@ -7,7 +7,7 @@ class ReduceStatic < Formula
   sha256 "2890beac30d8c497c58bd7c73f6c507ecabe318ace28e85d9c5a15e7884ea5a8"
   # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
-  revision 2
+  revision 3
 
   # The following copyright applies to the Homebrew formula:
   # Copyright (c) 2009-present, Homebrew contributors
@@ -119,7 +119,7 @@ class ReduceStatic < Formula
     inreplace "csl/fox/configure.ac", "-I/opt/local/include/freetype2",
                                   "-I#{Formula["freetype"].opt_include}/freetype2"
 
-    # Configuration: Rewrites to use Homebrew-provided static ncurses library
+    # Configuration: Rewrite files to use Homebrew-provided static ncurses library
     inreplace "generic/newfront/configure.ac", "-lncurses",
                                   "#{Formula["ncurses"].opt_lib}/libncursesw.a"
     inreplace "generic/newfront/Makefile.am", "-lncurses",
@@ -190,6 +190,9 @@ class ReduceStatic < Formula
     inreplace "macbuild/copyfiles.sh", "cp README.for.distribution distrib/README", " "
     inreplace "macbuild/copyfiles.sh", "cp Reduce-source_$2.tar.bz2 distrib/Reduce-source_$2.tar.bz2", " "
     inreplace "macbuild/copyfiles.sh", "cp $1/doc/manual/manual.pdf distrib/reduce-manual.pdf", " "
+
+    # Configuration: Force configure scripts to use static ncurses library
+    ENV["ac_cv_search_tgetent"] = "#{Formula["ncurses"].opt_lib}/libncursesw.a"
 
     # Configuration: Generate configure scripts for both CSL and PSL REDUCE
     system "./autogen.sh", "--fast", *std_configure_args, "--with-csl", "--with-psl"
