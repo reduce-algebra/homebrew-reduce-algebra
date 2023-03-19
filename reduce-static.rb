@@ -7,6 +7,7 @@ class ReduceStatic < Formula
   sha256 "2890beac30d8c497c58bd7c73f6c507ecabe318ace28e85d9c5a15e7884ea5a8"
   # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
+  head "https://svn.code.sf.net/p/reduce-algebra/code/trunk", using: :svn
   revision 4
 
   # The following copyright applies to the Homebrew formula:
