@@ -7,8 +7,8 @@ class ReduceStatic < Formula
   sha256 "2890beac30d8c497c58bd7c73f6c507ecabe318ace28e85d9c5a15e7884ea5a8"
   # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
-  head "https://svn.code.sf.net/p/reduce-algebra/code/trunk", using: :svn
   revision 4
+  head "https://svn.code.sf.net/p/reduce-algebra/code/trunk"
 
   # The following copyright applies to the Homebrew formula:
   # Copyright (c) 2009-present, Homebrew contributors
@@ -366,7 +366,7 @@ class ReduceStatic < Formula
 
     # Postinstall: Recompress PNG images using advancecomp
     system "sh", "-c",
-      "find #{prefix} -type f -regex '.*\.png$' -print0|xargs -L1 -0 -P0$(getconf _NPROCESSORS_ONLN) advpng -z4||true"
+      "find #{prefix} -type f -regex '.*png$' -print0 | xargs -L1 -0 -P0$(getconf _NPROCESSORS_ONLN) advpng -z4||true"
 
     # Verification: Collect information about libraries using otool
     system "sh", "-c", "find #{prefix}|xargs -n1 file|grep 'Mach-O'|cut -d':' -f1|xargs -n1 otool -L|tee .libs"
