@@ -80,6 +80,7 @@ class ReduceCurrent < Formula
   # > not to try to lock anybody in (or out) of anything.
 
   conflicts_with "reduce", because: "both install the same binaries"
+  conflicts_with "reduce-static", because: "both install the same binaries"
 
   def install
     # Configuration: Use `gnubin` for GNU sed/tar/time on macOS
@@ -345,7 +346,7 @@ class ReduceCurrent < Formula
     <<~EOS
       A GUI for REDUCE has been installed, requiring the X Window System.
         XQuartz is a freely available version of the X Window System for
-        macOS available as a Homebrew Cask. To install the XQuartz Cask:
+        macOS available as a Homebrew Cask.  To install the XQuartz Cask:
           brew install --cask xquartz
 
       A GNU TeXmacs plugin has been installed.
