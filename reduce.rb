@@ -8,6 +8,7 @@ class Reduce < Formula
   # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
   revision 1
+  head "https://svn.code.sf.net/p/reduce-algebra/code/trunk"
 
   # The following copyright applies to the Homebrew formula:
   # Copyright (c) 2009-present, Homebrew contributors
