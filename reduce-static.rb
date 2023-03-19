@@ -196,7 +196,8 @@ class ReduceStatic < Formula
     ENV["ac_cv_search_tgetent"] = "#{Formula["ncurses"].opt_lib}/libncursesw.a"
 
     # Configuration: Remove unnecessary `-fno-common` argument to improve optimizations
-    system "sh", "-c", 'find . -type f -print0|tee /dev/stderr|xargs -L1 -0 sed -i "" -e "s/-fno-common/ /g"'
+    system "sh", "-c",
+      'find . -type f -print0|xargs -0 -P0$(getconf _NPROCESSORS_ONLN) sed -i"" -e "s/-fno-common/           /g"'
 
     # Configuration: Generate configure scripts for both CSL and PSL REDUCE
     system "./autogen.sh", "--fast", *std_configure_args, "--with-csl", "--with-psl"
