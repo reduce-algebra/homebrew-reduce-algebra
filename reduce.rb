@@ -24,15 +24,16 @@ class Reduce < Formula
     strategy :page_match
   end
 
-  depends_on "autoconf"   => :build
-  depends_on "automake"   => :build
-  depends_on "ccache"     => :build
-  depends_on "coreutils"  => :build
-  depends_on "libtool"    => :build
-  depends_on "make"       => :build
-  depends_on "perl"       => :build
-  depends_on "subversion" => :build
-  depends_on "texlive"    => :build
+  depends_on "advancecomp" => :build
+  depends_on "autoconf"    => :build
+  depends_on "automake"    => :build
+  depends_on "ccache"      => :build
+  depends_on "coreutils"   => :build
+  depends_on "libtool"     => :build
+  depends_on "make"        => :build
+  depends_on "perl"        => :build
+  depends_on "subversion"  => :build
+  depends_on "texlive"     => :build
 
   depends_on "brotli"
   depends_on "fontconfig"
@@ -338,6 +339,10 @@ class Reduce < Formula
     chmod 0755, bin/"reduce"
     chmod 0755, bin/"rfcsl"
     chmod 0755, bin/"rfpsl"
+
+    # Postinstall: Recompress PNG images using advancecomp
+    system "sh", "-c",
+      "find #{prefix} -type f -regex '.*png$' -print0 | xargs -L1 -0 -P0$(getconf _NPROCESSORS_ONLN) advpng -z4||true"
   end
 
   def caveats
