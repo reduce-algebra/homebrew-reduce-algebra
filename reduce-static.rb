@@ -307,10 +307,14 @@ class ReduceStatic < Formula
       EOS
       (bin/"rfpsl").write <<~EOS
         #!/usr/bin/env sh
+        test -x "#{libexec}/psl/psl/bpsl" 2> /dev/null ||
+          { printf '%s\\n' "Error: Portable Standard Lisp is unavailable."; exit 1; }
         { cd "#{libexec}/psl" && exec ./rfpsl "${@}"; }
       EOS
       (bin/"redpsl").write <<~EOS
         #!/usr/bin/env sh
+        test -x "#{libexec}/psl/psl/bpsl" 2> /dev/null ||
+          { printf '%s\\n' "Error: Portable Standard Lisp is unavailable."; exit 1; }
         { cd "#{libexec}/psl" && exec ./redpsl "${@}"; }
       EOS
     end
