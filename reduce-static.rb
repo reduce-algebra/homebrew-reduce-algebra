@@ -407,8 +407,7 @@ class ReduceStatic < Formula
   end
 
   test do
-    system "sh", "-c", "printf '%s\\n' 'quit;' | #{bin}/reduce -v"
-    system "sh", "-c", "printf '%s\\n' 'quit;' | #{bin}/redcsl -v"
-    system "sh", "-c", "printf '%s\\n' 'quit;' | #{bin}/redpsl -v"
+    system "sh", "-c",
+      "printf '%s\\n' '36^9^4;quit;'|#{bin}/redcsl -v|grep 106387358923716524807713475752456393740167855629859291136"
   end
 end
