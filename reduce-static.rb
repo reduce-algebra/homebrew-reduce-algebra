@@ -18,36 +18,37 @@ class ReduceStatic < Formula
     strategy :page_match
   end
 
-  depends_on "autoconf"   => :build
-  depends_on "automake"   => :build
-  depends_on "brotli"     => :build
-  depends_on "bzip2"      => :build
-  depends_on "ccache"     => :build
-  depends_on "coreutils"  => :build
-  depends_on "expat"      => :build
-  depends_on "fontconfig" => :build
-  depends_on "freetype"   => :build
-  depends_on "gettext"    => :build
-  depends_on "libffi"     => :build
-  depends_on "libpng"     => :build
-  depends_on "libtool"    => :build
-  depends_on "libx11"     => :build
-  depends_on "libxau"     => :build
-  depends_on "libxcb"     => :build
-  depends_on "libxcursor" => :build
-  depends_on "libxdmcp"   => :build
-  depends_on "libxext"    => :build
-  depends_on "libxfixes"  => :build
-  depends_on "libxft"     => :build
-  depends_on "libxi"      => :build
-  depends_on "libxrandr"  => :build
-  depends_on "libxrender" => :build
-  depends_on "make"       => :build
-  depends_on "ncurses"    => :build
-  depends_on "perl"       => :build
-  depends_on "subversion" => :build
-  depends_on "texlive"    => :build
-  depends_on "zlib"       => :build
+  depends_on "advancecomp" => :build
+  depends_on "autoconf"    => :build
+  depends_on "automake"    => :build
+  depends_on "brotli"      => :build
+  depends_on "bzip2"       => :build
+  depends_on "ccache"      => :build
+  depends_on "coreutils"   => :build
+  depends_on "expat"       => :build
+  depends_on "fontconfig"  => :build
+  depends_on "freetype"    => :build
+  depends_on "gettext"     => :build
+  depends_on "libffi"      => :build
+  depends_on "libpng"      => :build
+  depends_on "libtool"     => :build
+  depends_on "libx11"      => :build
+  depends_on "libxau"      => :build
+  depends_on "libxcb"      => :build
+  depends_on "libxcursor"  => :build
+  depends_on "libxdmcp"    => :build
+  depends_on "libxext"     => :build
+  depends_on "libxfixes"   => :build
+  depends_on "libxft"      => :build
+  depends_on "libxi"       => :build
+  depends_on "libxrandr"   => :build
+  depends_on "libxrender"  => :build
+  depends_on "make"        => :build
+  depends_on "ncurses"     => :build
+  depends_on "perl"        => :build
+  depends_on "subversion"  => :build
+  depends_on "texlive"     => :build
+  depends_on "zlib"        => :build
   depends_on "gnuplot"
   depends_on :macos
 
@@ -262,6 +263,10 @@ class ReduceStatic < Formula
 
     # Done with building.
     touch ".stamp"
+
+    # Preinstall: Recompress PNG images using advancecomp
+    system "sh", "-c",
+      'find . -type f -regex ".*\.png$" -print0 | xargs -L1 -0 -P $(getconf _NPROCESSORS_ONLN) advpng -z4 || true'
 
     # Installation: Create initial installation using copyfiles script.
     system "sh", "-c", 'cd macbuild && ./copyfiles.sh "$(realpath ..)" "release"'
