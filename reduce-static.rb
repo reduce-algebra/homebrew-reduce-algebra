@@ -50,7 +50,6 @@ class ReduceStatic < Formula
   depends_on "subversion"  => :build
   depends_on "texlive"     => :build
   depends_on "zlib"        => :build
-  depends_on "gnuplot"
   depends_on :macos
 
   uses_from_macos "groff"
