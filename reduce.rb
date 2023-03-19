@@ -161,9 +161,6 @@ class Reduce < Formula
     inreplace "csl/cslbase/configure.ac", "/opt/local",  "/dev/null"
     inreplace "csl/cslbase/configure.ac", "/opt/X11",    "/dev/null"
 
-    # Configuration: Remove `-fno-common` unnecessary on macOS which reduces optimization
-    inreplace "csl/cslbase/configure.ac", " -fno-common", " "
-
     # Configuration: Modify the hard-coded path used in the breduce man page to match the Homebrew path.
     inreplace "generic/breduce/breduce.1", "/usr/share/doc/reduce-addons/breduce.pdf", "#{doc}/breduce.pdf"
 
