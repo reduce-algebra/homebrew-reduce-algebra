@@ -372,7 +372,7 @@ class ReduceStatic < Formula
     system "sh", "-c", "find #{prefix}|xargs -n1 file|grep 'Mach-O'|cut -d':' -f1|xargs -n1 otool -L|tee .libs"
 
     # Verification: Check that we actually built everything statically
-    system "sh", "-c", 'grep -Ev "(libSystem|Library/Frameworks|libc+)" .libs|grep -q dylib && { exit 1; }; exit 0"'
+    system "sh", "-c", "grep -Ev '(libSystem|Library/Frameworks|libc+)' .libs|grep -q dylib && { exit 1; }; exit 0"
   end
 
   def caveats
