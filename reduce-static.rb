@@ -390,7 +390,7 @@ class ReduceStatic < Formula
       mkdir -p "${R_TARGET:?}/extras"
       printf '%s' "Packaging ${R_PACKAGE:?} ..."
       cp -pR "#{libexec}/csl" "${R_TARGET:?}"
-      cp -pR "#{libexec}/psl" "${R_TARGET:?}"
+      cp -pR "#{libexec}/psl" "${R_TARGET:?}" || true
       cp -pR "#{share}/"* "${R_TARGET:?}/extras/"
       cp -pR "#{bin}/breduce" "${R_TARGET:?}/extras/contrib/"
       cp -pR "#{bin}/casefold" "${R_TARGET:?}/extras/casefold/"
