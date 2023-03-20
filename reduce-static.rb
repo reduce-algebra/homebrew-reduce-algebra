@@ -373,8 +373,9 @@ class ReduceStatic < Formula
     # [STATIC ONLY] Verification: Check that we actually built everything statically
     system "sh", "-c", "grep -Ev '(libSystem|Library/Frameworks|libc+)' .libs|grep -q dylib && { exit 1; }; exit 0"
 
-    # [STATIC ONLY] Install the upstream REDUCE config.guess and findhost.sh scripts
+    # [STATIC ONLY] Install the upstream REDUCE `config.guess`, `findos.sh`, and `findhost.sh` scripts
     bin.install "config.guess"
+    bin.install "scripts/findos.sh"
     bin.install "scripts/findhost.sh"
 
     # [STATIC ONLY] Create `package-reduce.sh` which creates a redistribution kit using the upstream layout
@@ -390,10 +391,10 @@ class ReduceStatic < Formula
       printf '%s\\n' "Packaging ${R_PACKAGE:?} ..."
       cp -pR "#{libexec}/csl" "${R_TARGET:?}"
       cp -pR "#{libexec}/psl" "${R_TARGET:?}"
-      cp -pR "#{share}/*" "${R_TARGET:?}/extras/"
+      cp -pR "#{share}/"* "${R_TARGET:?}/extras/"
       cp -pR "#{bin}/breduce" "${R_TARGET:?}/extras/contrib/"
       cp -pR "#{bin}/casefold" "${R_TARGET:?}/extras/casefold/"
-      mv "${R_TARGET:?}/extras/doc/reduce-static/*" "${R_TARGET:?}/extras/doc"
+      mv "${R_TARGET:?}/extras/doc/reduce-static/"* "${R_TARGET:?}/extras/doc"
       rmdir "${R_TARGET:?}/extras/doc/reduce-static"
       hdiutil create "${D_TARGET:?}/${R_PACKAGE:?}.tdmg" \\
         -ov -volname "${R_PACKAGE:?}" -fs HFS+ -srcfolder "${R_TARGET:?}"
@@ -403,7 +404,7 @@ class ReduceStatic < Formula
       rm -rf "${R_TARGET:?}"
       test -f "${D_TARGET:?}/${R_PACKAGE:?}.dmg"" &&
         printf '%s\\n' "Successfully created ${D_TARGET:?}/${R_PACKAGE:?}.dmg"
-      printf '\\n%s\\n' "You can now run \"brew remove reduce-static\"."
+      printf '\\n%s\\n' "You can now run \\"brew remove reduce-static\\"."
     EOS
     chmod 0755, bin/"package-reduce.sh"
   end
