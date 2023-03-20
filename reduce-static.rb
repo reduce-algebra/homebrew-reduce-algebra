@@ -394,6 +394,11 @@ class ReduceStatic < Formula
           package-install-file "#{share}/emacs/reduce-mode.el"
           package-install-file "#{share}/emacs/reduce-run.el"
 
+      REDUCE includes support for executing the "gnuplot" program for the
+        interactive display of curves/surfaces or for the production of
+        pictures on paper.  To install the "gnuplot" package using Homebrew:
+          brew install gnuplot
+
       REDUCE manuals and reference documentation have been installed.
         To access this documentation, browse to the directory:
           "#{doc}"
