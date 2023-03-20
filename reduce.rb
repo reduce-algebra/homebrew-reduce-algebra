@@ -92,7 +92,7 @@ class Reduce < Formula
       ENV.prepend_path "PATH", Formula["gnu-time"].opt_libexec/"gnubin"
     end
 
-    # Configuration: Rewrite CSL hard-coded paths to use dynamic provided libraries
+    # Configuration: Rewrite CSL hard-coded paths to use dynamic libraries
     inreplace "csl/cslbase/configure.ac", "$LL/libbz2.a", "-lbz2"
     inreplace "csl/cslbase/configure.ac", "$LL/libcurses.a", "-lncursesw"
     inreplace "csl/cslbase/configure.ac", "$LL/libexpat.a", "-lexpat"
