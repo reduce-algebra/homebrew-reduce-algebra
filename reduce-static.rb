@@ -397,9 +397,9 @@ class ReduceStatic < Formula
       mv "${R_TARGET:?}/extras/doc/reduce-static/"* "${R_TARGET:?}/extras/doc"
       rmdir "${R_TARGET:?}/extras/doc/reduce-static"
       hdiutil create "${D_TARGET:?}/${R_PACKAGE:?}.tdmg" \\
-        -ov -volname "${R_PACKAGE:?}" -fs HFS+ -srcfolder "${R_TARGET:?}"
+        -ov -volname "${R_PACKAGE:?}" -fs "HFS+" -srcfolder "${R_TARGET:?}"
       hdiutil convert "${D_TARGET:?}/${R_PACKAGE:?}.tdmg.dmg" \\
-        -format UDBZ -o "${D_TARGET:?}/${R_PACKAGE:?}"
+        -format "ULFO" -o "${D_TARGET:?}/${R_PACKAGE:?}"
       rm -f "${D_TARGET:?}/${R_PACKAGE:?}.tdmg.dmg" > /dev/null 2>&1
       mv -f "${D_TARGET:?}/${R_PACKAGE:?}.dmg" "${HOME:?}"
       rm -rf "${R_TARGET:?}" "${D_TARGET:?}" > /dev/null 2>&1
