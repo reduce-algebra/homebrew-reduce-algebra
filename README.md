@@ -64,7 +64,7 @@
 
 ```sh
 brew tap reduce-algebra/reduce-algebra
-brew install reduce
+brew install reduce --verbose
 ```
 
 ## Current Package
@@ -78,5 +78,5 @@ brew install reduce
 
 ```sh
 brew tap reduce-algebra/reduce-algebra
-brew install reduce-current
+brew install reduce-current --verbose
 ```
