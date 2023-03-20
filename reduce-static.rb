@@ -383,12 +383,12 @@ class ReduceStatic < Formula
       #!/usr/bin/env sh
       set -eu
       R_PACKAGE="Reduce_#{version}-$(#{bin}/findhost.sh $(#{bin}/config.guess))"
-      R_TARGET="$(mktemp -d)" || { printf '%s\\n' "Error: mktemp failed."; exit 1; }
-      test -d "${R_TARGET:?}" || { printf '%s\\n' "Error: No mktemp dir."; exit 1; }
-      D_TARGET="$(mktemp -d)" || { printf '%s\\n' "Error: mktemp failed."; exit 1; }
-      test -d "${D_TARGET:?}" || { printf '%s\\n' "Error: No mktemp dir."; exit 1; }
+      R_TARGET="$(mktemp -d)" || { printf '%s\\n' "Error: mktemp failed!"; exit 1; }
+      test -d "${R_TARGET:?}" || { printf '%s\\n' "Error: No mktemp dir!"; exit 1; }
+      D_TARGET="$(mktemp -d)" || { printf '%s\\n' "Error: mktemp failed!"; exit 1; }
+      test -d "${D_TARGET:?}" || { printf '%s\\n' "Error: No mktemp dir!"; exit 1; }
       mkdir -p "${R_TARGET:?}/extras"
-      printf '%s\\n' "Packaging ${R_PACKAGE:?} ..."
+      printf '%s' "Packaging ${R_PACKAGE:?} ..."
       cp -pR "#{libexec}/csl" "${R_TARGET:?}"
       cp -pR "#{libexec}/psl" "${R_TARGET:?}"
       cp -pR "#{share}/"* "${R_TARGET:?}/extras/"
@@ -398,12 +398,13 @@ class ReduceStatic < Formula
       rmdir "${R_TARGET:?}/extras/doc/reduce-static"
       hdiutil create "${D_TARGET:?}/${R_PACKAGE:?}.tdmg" \\
         -ov -volname "${R_PACKAGE:?}" -fs HFS+ -srcfolder "${R_TARGET:?}"
-      hdiutil convert "${D_TARGET:?}/${R_PACKAGE:?}.tdmg" \\
-        -format UDZO -o "${D_TARGET:?}/${R_PACKAGE:?}.dmg"
-      rm -f "${D_TARGET:?}/${R_PACKAGE:?}.tdmg"
-      rm -rf "${R_TARGET:?}"
-      test -f "${D_TARGET:?}/${R_PACKAGE:?}.dmg"" &&
-        printf '%s\\n' "Successfully created ${D_TARGET:?}/${R_PACKAGE:?}.dmg"
+      hdiutil convert "${D_TARGET:?}/${R_PACKAGE:?}.tdmg.dmg" \\
+        -format UDZO -o "${D_TARGET:?}/${R_PACKAGE:?}"
+      rm -f "${D_TARGET:?}/${R_PACKAGE:?}.tdmg.dmg" > /dev/null 2>&1
+      mv -f "${D_TARGET:?}/${R_PACKAGE:?}.dmg" "${HOME:?}"
+      rm -rf "${R_TARGET:?}" "${D_TARGET:?}" > /dev/null 2>&1
+      test -f "${HOME:?}/${R_PACKAGE:?}.dmg" &&
+        printf '\\n%s\\n' "Successfully created ${HOME:?}/${R_PACKAGE:?}.dmg"
       printf '\\n%s\\n' "You can now run \\"brew remove reduce-static\\"."
     EOS
     chmod 0755, bin/"package-reduce.sh"
@@ -414,7 +415,7 @@ class ReduceStatic < Formula
       The static REDUCE build has completed successfully!
 
       To create a package for binary redistribution, execute:
-          #{bin}/package-reduce.sh
+        "#{bin}/package-reduce.sh"
     EOS
   end
 
