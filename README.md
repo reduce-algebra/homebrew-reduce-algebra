@@ -107,8 +107,9 @@ Successfully created Reduce_6547-x86_64-mac_13_ventura-darwin22.3.0.dmg
   for the oldest CPU supported by the OS you are running to maximize
   portability.
 * Append the argument `--bottle-arch=TARGET` to the `brew install` command to
-  override this behavior. Use `clang -xc -march=help - < /dev/null 2>&1` to
-  print a list of valid targets.
+  override this behavior.
+* Use `clang -xc -march=help - < /dev/null 2>&1` to print a list of valid
+  targets.
 
 ## External Links
 
