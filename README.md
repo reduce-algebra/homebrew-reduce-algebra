@@ -106,9 +106,9 @@ Successfully created Reduce_6547-x86_64-mac_13_ventura-darwin22.3.0.dmg
 * The `--build-bottle` invocation ensures that binary packages are compiled
   for the oldest CPU supported by the OS you are running to maximize
   portability.
-* You may append the argument `--bottle-arch=TARGET` to the `brew install`
-  command will override this behavior.
-* `clang -xc -march=help - < /dev/null 2>&1` displays a list of valid targets.
+* Append the argument `--bottle-arch=TARGET` to the `brew install` command to
+  override this behavior. Use `clang -xc -march=help - < /dev/null 2>&1` to
+  print a list of valid targets.
 
 ## External Links
 
