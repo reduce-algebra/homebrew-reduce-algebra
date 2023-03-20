@@ -45,9 +45,9 @@ class ReduceStatic < Formula
   depends_on "libxrandr"   => :build
   depends_on "libxrender"  => :build
   depends_on "make"        => :build
-  depends_on "ncurses"     => :build
+  depends_on "ncurses"     => :build # for current ncursesw
   depends_on "perl"        => :build
-  depends_on "subversion"  => :build
+  depends_on "subversion"  => :build # for svnversion
   depends_on "texlive"     => :build
   depends_on "zlib"        => :build
   depends_on :macos

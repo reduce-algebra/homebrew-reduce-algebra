@@ -33,7 +33,7 @@ class Reduce < Formula
   depends_on "libtool"     => :build
   depends_on "make"        => :build
   depends_on "perl"        => :build
-  depends_on "subversion"  => :build
+  depends_on "subversion"  => :build # for svnversion
   depends_on "texlive"     => :build
 
   depends_on "brotli"
@@ -53,12 +53,12 @@ class Reduce < Formula
   depends_on "libxi"
   depends_on "libxrandr"
   depends_on "libxrender"
+  depends_on "ncurses" # for current ncursesw
   depends_on :macos
 
   uses_from_macos "bzip2"
   uses_from_macos "expat"
   uses_from_macos "groff"
-  uses_from_macos "ncurses"
   uses_from_macos "zlib"
 
   on_macos do
@@ -92,7 +92,7 @@ class Reduce < Formula
       ENV.prepend_path "PATH", Formula["gnu-time"].opt_libexec/"gnubin"
     end
 
-    # Configuration: Rewrite CSL hard-coded paths to use system-provided libraries
+    # Configuration: Rewrite CSL hard-coded paths to use dynamic provided libraries
     inreplace "csl/cslbase/configure.ac", "$LL/libbz2.a", "-lbz2"
     inreplace "csl/cslbase/configure.ac", "$LL/libcurses.a", "-lncurses"
     inreplace "csl/cslbase/configure.ac", "$LL/libexpat.a", "-lexpat"
