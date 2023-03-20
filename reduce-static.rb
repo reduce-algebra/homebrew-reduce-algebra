@@ -399,7 +399,7 @@ class ReduceStatic < Formula
       hdiutil create "${D_TARGET:?}/${R_PACKAGE:?}.tdmg" \\
         -ov -volname "${R_PACKAGE:?}" -fs HFS+ -srcfolder "${R_TARGET:?}"
       hdiutil convert "${D_TARGET:?}/${R_PACKAGE:?}.tdmg.dmg" \\
-        -format UDZO -o "${D_TARGET:?}/${R_PACKAGE:?}"
+        -format UDBZ -o "${D_TARGET:?}/${R_PACKAGE:?}"
       rm -f "${D_TARGET:?}/${R_PACKAGE:?}.tdmg.dmg" > /dev/null 2>&1
       mv -f "${D_TARGET:?}/${R_PACKAGE:?}.dmg" "${HOME:?}"
       rm -rf "${R_TARGET:?}" "${D_TARGET:?}" > /dev/null 2>&1
