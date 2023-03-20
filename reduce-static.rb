@@ -367,46 +367,53 @@ class ReduceStatic < Formula
     system "sh", "-c",
       "find #{prefix} -type f -regex '.*png$' -print0 | xargs -L1 -0 -P0$(getconf _NPROCESSORS_ONLN) advpng -z4||true"
 
-    # Verification: Collect information about libraries using otool
+    # [STATIC ONLY] Verification: Collect information about libraries using otool
     system "sh", "-c", "find #{prefix}|xargs -n1 file|grep 'Mach-O'|cut -d':' -f1|xargs -n1 otool -L|tee .libs"
 
-    # Verification: Check that we actually built everything statically
+    # [STATIC ONLY] Verification: Check that we actually built everything statically
     system "sh", "-c", "grep -Ev '(libSystem|Library/Frameworks|libc+)' .libs|grep -q dylib && { exit 1; }; exit 0"
+
+    # [STATIC ONLY] Install the upstream REDUCE config.guess and findhost.sh scripts
+    bin.install "config.guess"
+    bin.install "scripts/findhost.sh"
+
+    # [STATIC ONLY] Create `package-reduce.sh` which creates a redistribution kit using the upstream layout
+    (bin/"package-reduce.sh").write <<~EOS
+      #!/usr/bin/env sh
+      set -eu
+      R_PACKAGE="Reduce_#{version}-$(#{bin}/findhost.sh $(#{bin}/config.guess))"
+      R_TARGET="$(mktemp -d)" || { printf '%s\\n' "Error: mktemp failed."; exit 1; }
+      test -d "${R_TARGET:?}" || { printf '%s\\n' "Error: No mktemp dir."; exit 1; }
+      D_TARGET="$(mktemp -d)" || { printf '%s\\n' "Error: mktemp failed."; exit 1; }
+      test -d "${D_TARGET:?}" || { printf '%s\\n' "Error: No mktemp dir."; exit 1; }
+      mkdir -p "${R_TARGET:?}/extras"
+      printf '%s\\n' "Packaging ${R_PACKAGE:?} ..."
+      cp -pR "#{libexec}/csl" "${R_TARGET:?}"
+      cp -pR "#{libexec}/psl" "${R_TARGET:?}"
+      cp -pR "#{share}/*" "${R_TARGET:?}/extras/"
+      cp -pR "#{bin}/breduce" "${R_TARGET:?}/extras/contrib/"
+      cp -pR "#{bin}/casefold" "${R_TARGET:?}/extras/casefold/"
+      mv "${R_TARGET:?}/extras/doc/reduce-static/*" "${R_TARGET:?}/extras/doc"
+      rmdir "${R_TARGET:?}/extras/doc/reduce-static"
+      hdiutil create "${D_TARGET:?}/${R_PACKAGE:?}.tdmg" \\
+        -ov -volname "${R_PACKAGE:?}" -fs HFS+ -srcfolder "${R_TARGET:?}"
+      hdiutil convert "${D_TARGET:?}/${R_PACKAGE:?}.tdmg" \\
+        -format UDZO -o "${D_TARGET:?}/${R_PACKAGE:?}.dmg"
+      rm -f "${D_TARGET:?}/${R_PACKAGE:?}.tdmg"
+      rm -rf "${R_TARGET:?}"
+      test -f "${D_TARGET:?}/${R_PACKAGE:?}.dmg"" &&
+        printf '%s\\n' "Successfully created ${D_TARGET:?}/${R_PACKAGE:?}.dmg"
+      printf '\\n%s\\n' "You can now run \"brew remove reduce-static\"."
+    EOS
+    chmod 0755, bin/"package-reduce.sh"
   end
 
   def caveats
     <<~EOS
-      A GUI for REDUCE has been installed, requiring the X Window System.
-        XQuartz is a freely available version of the X Window System for
-        macOS available as a Homebrew Cask.  To install the XQuartz Cask:
-          brew install --cask xquartz
+      The static REDUCE build has completed successfully!
 
-      A GNU TeXmacs plugin has been installed.
-        To enable this plugin for your user, execute from a shell prompt:
-          mkdir -p "$HOME/.TeXmacs/plugins" && \\
-          rm -f "$HOME/.TeXmacs/plugins/reduce" && \\
-          ln -s "#{share}/texmacs/reduce" "$HOME/.TeXmacs/plugins"
-
-      REDUCE IDE, a GNU Emacs package providing an integrated development
-        environment for REDUCE consisting of major modes for editing REDUCE
-        code and for running REDUCE in an Emacs window has been installed.
-        To enable this package for your user, execute from within GNU Emacs:
-          package-install-file "#{share}/emacs/reduce-mode.el"
-          package-install-file "#{share}/emacs/reduce-run.el"
-
-      REDUCE includes support for executing the "gnuplot" program for the
-        interactive display of curves and surfaces or for the production of
-        pictures on paper.  To install the "gnuplot" package using Homebrew:
-          brew install gnuplot
-
-      REDUCE manuals and reference documentation have been installed.
-        To access this documentation, browse to the directory:
-          "#{doc}"
-
-      REDUCE documentation in HTML format has been installed.
-        To make REDUCE aware of the HTML documentation, add the following
-        line to "$HOME/.profile" (or equivalent shell configuration file):
-          REDUCE_HELP="#{doc}/html"
+      To create a package for binary redistribution, execute:
+          #{bin}/package-reduce.sh
     EOS
   end
 
