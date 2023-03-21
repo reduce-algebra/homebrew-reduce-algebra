@@ -95,6 +95,8 @@
   specified to build from the most recent Subversion commit.
   []()
   &nbsp;
+  []()
+  &nbsp;
   ```sh
   brew tap reduce-algebra/reduce-algebra
   brew install reduce-static --only-dependencies --verbose
