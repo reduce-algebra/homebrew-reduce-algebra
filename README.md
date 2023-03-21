@@ -94,9 +94,13 @@
 * The stable version is built by default.  The `--HEAD` argument may be
   specified to build from the most recent Subversion commit.
   []()
+
   &nbsp;
+
   []()
+
   &nbsp;
+
   ```sh
   brew tap reduce-algebra/reduce-algebra
   brew install reduce-static --only-dependencies --verbose
