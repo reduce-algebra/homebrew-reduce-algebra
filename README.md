@@ -65,7 +65,7 @@
   **2023-03-08**.
   []()
   &nbsp;
-
+  []()
   ```sh
   brew tap reduce-algebra/reduce-algebra
   brew install reduce --verbose
@@ -81,7 +81,7 @@
   **2023-03-11**.
   []()
   &nbsp;
-
+  []()
   ```sh
   brew tap reduce-algebra/reduce-algebra
   brew install reduce-current --verbose
@@ -97,7 +97,7 @@
   specified to build from the most recent Subversion commit.
   []()
   &nbsp;
-
+  []()
   ```sh
   brew tap reduce-algebra/reduce-algebra
   brew install reduce-static --only-dependencies --verbose
