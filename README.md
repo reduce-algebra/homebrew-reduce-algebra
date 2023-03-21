@@ -87,12 +87,10 @@
 
 ## Distribution Builder
 
-* The **distribution builder** (*`reduce-static`*) is a special-purpose formula
-  to help package maintainers build distributable binary packages.
-* These packages are *statically linked* so they work without external
-  dependencies and do not require Homebrew to use.
-* The stable version is built by default.  The `--HEAD` argument may be
-  specified to build from the most recent Subversion commit.
+* **`reduce-static`** is a special-purpose formula to assist package
+  maintainers building redistributable binary packages.
+* The resulting packages **do not** require Homebrew or other external
+  dependencies.
   \
   &nbsp;
   ```sh
