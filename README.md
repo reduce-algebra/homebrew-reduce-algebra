@@ -96,6 +96,7 @@
   []()
   &nbsp;
 
+  Usage:
   ```sh
   brew tap reduce-algebra/reduce-algebra
   brew install reduce-static --only-dependencies --verbose
