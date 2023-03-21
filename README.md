@@ -66,6 +66,7 @@
   []()
   &nbsp;
   []()
+  &nbsp;
   ```sh
   brew tap reduce-algebra/reduce-algebra
   brew install reduce --verbose
@@ -82,6 +83,7 @@
   []()
   &nbsp;
   []()
+  &nbsp;
   ```sh
   brew tap reduce-algebra/reduce-algebra
   brew install reduce-current --verbose
@@ -98,6 +100,7 @@
   []()
   &nbsp;
   []()
+  &nbsp;
   ```sh
   brew tap reduce-algebra/reduce-algebra
   brew install reduce-static --only-dependencies --verbose
