@@ -97,7 +97,7 @@
   dependencies and do not require Homebrew to use.
 * The stable version is built by default.  The `--HEAD` argument may be
   specified to build from the most recent Subversion commit.
-  []()&nbsp;
+  \
   &nbsp;
   []()&nbsp;
   &nbsp;
