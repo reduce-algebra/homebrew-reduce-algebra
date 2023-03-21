@@ -63,11 +63,12 @@
 []()
 * The most recent **stable** *`reduce`* package is revision **6547**, released
   **2023-03-08**.
-
-```sh
-brew tap reduce-algebra/reduce-algebra
-brew install reduce --verbose
-```
+[]()
+* Usage:
+  ```sh
+  brew tap reduce-algebra/reduce-algebra
+  brew install reduce --verbose
+  ```
 
 ## Current Package
 
@@ -77,30 +78,29 @@ brew install reduce --verbose
 []()
 * The most recent *`reduce-current`* package is revision **6550**, updated
   **2023-03-11**.
-
-```sh
-brew tap reduce-algebra/reduce-algebra
-brew install reduce-current --verbose
-```
+[]()
+* Usage:
+  ```sh
+  brew tap reduce-algebra/reduce-algebra
+  brew install reduce-current --verbose
+  ```
 
 ## Distribution Builder
 
-* The **distribution builder** is a special formula (*`reduce-static`*) used
-  to build a binary distribution package.
-* The binary distribution packages are *statically linked* so they work
-  without external dependencies and do not require Homebrew to run.
-* The stable version is built by default.  Use the `--HEAD` argument to
-  the last `brew install` command to build the most recent Subversion commit.
-* The final output file will be created in your `${HOME}` directory.
-
-```sh
-$ brew tap reduce-algebra/reduce-algebra
-$ brew install reduce-static --only-dependencies --verbose
-$ brew install reduce-static --build-bottle --verbose
-$ package-reduce.sh
-
-Successfully created Reduce_6547-x86_64-mac_13_ventura-darwin22.3.0.dmg
-```
+* The **distribution builder** (*`reduce-static`*) is a special-purpose formula
+  to help package maintainers build distributable binary packages.
+* These packages are *statically linked* so they work without external
+  dependencies and do not require Homebrew to use.
+* The stable version is built by default.  The `--HEAD` argument may be
+  specified to build from the most recent Subversion commit.
+[]()
+* Usage:
+  ```sh
+  brew tap reduce-algebra/reduce-algebra
+  brew install reduce-static --only-dependencies --verbose
+  brew install reduce-static --build-bottle --verbose
+  package-reduce.sh
+  ```
 
 ## External Links
 
