@@ -63,8 +63,10 @@
 []()
 * The most recent **stable** *`reduce`* package is revision **6547**, released
   **2023-03-08**.
-[]()
-* Usage:
+  []()
+  &nbsp;
+
+  &nbsp;Usage:
   ```sh
   brew tap reduce-algebra/reduce-algebra
   brew install reduce --verbose
@@ -78,8 +80,10 @@
 []()
 * The most recent *`reduce-current`* package is revision **6550**, updated
   **2023-03-11**.
-[]()
-* Usage:
+  []()
+  &nbsp;
+
+  &nbsp;Usage:
   ```sh
   brew tap reduce-algebra/reduce-algebra
   brew install reduce-current --verbose
@@ -96,7 +100,7 @@
   []()
   &nbsp;
 
-  Usage:
+  &nbsp;Usage:
   ```sh
   brew tap reduce-algebra/reduce-algebra
   brew install reduce-static --only-dependencies --verbose
