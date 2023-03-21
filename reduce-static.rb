@@ -78,6 +78,9 @@ class ReduceStatic < Formula
   conflicts_with "reduce-current", because: "both install the same binaries"
 
   def install
+    # Configuration: Restrict to basic and compatible optimizations
+    ENV["HOMEBREW_OPTFLAGS"] = "-march=#{Hardware.oldest_cpu}" unless build.bottle?
+
     # Configuration: Use `gnubin` for GNU sed/tar/time on macOS
     if OS.mac?
       ENV.prepend_path "PATH", Formula["gnu-sed"].opt_libexec/"gnubin"
