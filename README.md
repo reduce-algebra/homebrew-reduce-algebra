@@ -90,30 +90,20 @@ brew install reduce-current --verbose
 * The binary distribution packages are *statically linked* so they work
   without external dependencies and do not require Homebrew to run.
 * The stable version is built by default.  Use the `--HEAD` argument to
-  the `brew install` command to build the most recent Subversion commit.
+  the last `brew install` command to build the most recent Subversion commit.
+* The final output file will be created in your `${HOME}` directory.
 
 ```sh
 $ brew tap reduce-algebra/reduce-algebra
+$ brew install reduce-static --build-bottle --only-dependencies --verbose
 $ brew install reduce-static --build-bottle --verbose
 $ package-reduce.sh
 
 Successfully created Reduce_6547-x86_64-mac_13_ventura-darwin22.3.0.dmg
 ```
 
-### Distribution Builder Notes
-
-* The output file will be created in your `$HOME` directory.
-* The `--build-bottle` invocation ensures that binary packages are compiled
-  for the oldest CPU supported by the OS you are running to maximize
-  portability.
-* Append the argument `--bottle-arch=TARGET` to the `brew install` command to
-  override this behavior.
-* Use `clang -xc -march=help - < /dev/null 2>&1` to print a list of valid
-  targets.
-
 ## External Links
 
 * [REDUCE Computer Algebra System](https://reduce-algebra.sourceforge.io/)
-* [REDUCE GitHub Organization](https://github.com/reduce-algebra/)
-* [localbrew](https://github.com/johnsonjh/localbrew) - A convenience script
-  for managing `virtualenv`-like Homebrew environments.
+* [localbrew](https://github.com/johnsonjh/localbrew) - `virtualenv`-like
+  Homebrew environments.
