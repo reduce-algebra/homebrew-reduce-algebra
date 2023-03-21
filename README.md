@@ -95,7 +95,7 @@ brew install reduce-current --verbose
 
 ```sh
 $ brew tap reduce-algebra/reduce-algebra
-$ brew install reduce-static --build-bottle --only-dependencies --verbose
+$ brew install reduce-static --only-dependencies --verbose
 $ brew install reduce-static --build-bottle --verbose
 $ package-reduce.sh
 
