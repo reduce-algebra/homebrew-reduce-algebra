@@ -63,9 +63,7 @@
 []()
 * The most recent **stable** *`reduce`* package is revision **6547**, released
   **2023-03-08**.
-  []()
-  &nbsp;
-  []()
+  \
   &nbsp;
   ```sh
   brew tap reduce-algebra/reduce-algebra
@@ -80,9 +78,7 @@
 []()
 * The most recent *`reduce-current`* package is revision **6550**, updated
   **2023-03-11**.
-  []()
-  &nbsp;
-  []()
+  \
   &nbsp;
   ```sh
   brew tap reduce-algebra/reduce-algebra
@@ -98,6 +94,7 @@
 * The stable version is built by default.  The `--HEAD` argument may be
   specified to build from the most recent Subversion commit.
   \
+  &nbsp;
   ```sh
   brew tap reduce-algebra/reduce-algebra
   brew install reduce-static --only-dependencies --verbose
