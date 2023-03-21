@@ -101,9 +101,12 @@
   brew install reduce-static --build-bottle --verbose
   package-reduce.sh
   ```
+  []()
+* See the [Package Building Wiki](https://github.com/reduce-algebra/homebrew-reduce-algebra/wiki/Package-Building)
+  for more more details.
 
 ## External Links
 
 * [REDUCE Computer Algebra System](https://reduce-algebra.sourceforge.io/)
 * [localbrew](https://github.com/johnsonjh/localbrew) - `virtualenv`-like
-  Homebrew environments.
+  environments for Homebrew
