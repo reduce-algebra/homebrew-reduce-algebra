@@ -101,7 +101,7 @@
   ```
   []()
 * See the [Package Building Wiki](https://github.com/reduce-algebra/homebrew-reduce-algebra/wiki/Package-Building)
-  for more more details.
+  for more more details and available packages.
 
 ## External Links
 
