@@ -29,9 +29,14 @@
 <!--                                                                        -->
 # REDUCE
 
-* [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for
-  the [**REDUCE**](https://reduce-algebra.sourceforge.io/) portable
-  general-purpose computer algebra system.
+This repository provides:
+* A [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) providing
+  formulas to easily install the [**REDUCE**](https://reduce-algebra.sourceforge.io/)
+  portable general-purpose computer algebra system for macOS.
+  
+* [Binary REDUCE packages](https://github.com/reduce-algebra/homebrew-reduce-algebra/wiki/Package-Building) for macOS, built using these formulas. These
+  packages are self-contained and **do not** require Homebrew or other external
+  dependenices.
 
 ## Table of Contents
 
@@ -87,19 +92,10 @@
 
 ## Distribution Builder
 
-* **`reduce-static`** is a special-purpose formula to assist package
-  maintainers building redistributable binary packages.
+* **`reduce-static`** is a special-purpose formula intended for distribution
+  maintainers and others producing redistributable binary packages.
 * The resulting packages **do not** require Homebrew or other external
   dependencies.
-  \
-  &nbsp;
-  ```sh
-  brew tap reduce-algebra/reduce-algebra
-  brew install reduce-static --only-dependencies --verbose
-  brew install reduce-static --build-bottle --verbose
-  package-reduce.sh
-  ```
-  []()
 * See the [Package Building Wiki](https://github.com/reduce-algebra/homebrew-reduce-algebra/wiki/Package-Building)
   for more more details and available packages.
 
