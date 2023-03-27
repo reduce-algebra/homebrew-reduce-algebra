@@ -31,12 +31,13 @@
 
 This repository provides:
 * A [Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) providing
-  formulas to easily install the [**REDUCE**](https://reduce-algebra.sourceforge.io/)
+  formulas so users may easily install the
+  [**REDUCE**](https://reduce-algebra.sourceforge.io/)
   portable general-purpose computer algebra system for macOS.
   
-* [Binary REDUCE packages](https://github.com/reduce-algebra/homebrew-reduce-algebra/wiki/Package-Building) for macOS, built using these formulas. These
-  packages are self-contained and **do not** require Homebrew or other external
-  dependenices.
+* [Binary REDUCE packages](https://github.com/reduce-algebra/homebrew-reduce-algebra/wiki/Package-Building)
+  for macOS, built using these formulas. These packages are self-contained
+  and **do not** require Homebrew or other external dependenices.
 
 ## Table of Contents
 
@@ -57,8 +58,8 @@ This repository provides:
   programming language. **REDUCE** has a long and distinguished place in the
   history of computer algebra systems.
 
-* Only macOS is supported at this time.  Linux support is planned for a
-  future update.
+* Only macOS is supported by the tap at this time.
+  Linux support is planned for a future update.
 
 ## Stable Packge
 
