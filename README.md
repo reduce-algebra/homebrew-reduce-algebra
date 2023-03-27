@@ -93,12 +93,12 @@ This repository provides:
 
 ## Distribution Builder
 
-* **`reduce-static`** is a special-purpose formula intended for distribution
-  maintainers and others producing redistributable binary packages.
-* The resulting packages **do not** require Homebrew or other external
-  dependencies.
+* We also provide **`reduce-static`**, a special-purpose formula intended
+  for distribution maintainers and others producing redistributable binary
+  packages.
+* These packages **do not** require Homebrew or other external dependencies.
 * See the [Package Building Wiki](https://github.com/reduce-algebra/homebrew-reduce-algebra/wiki/Package-Building)
-  for more more details and available packages.
+  page for available packages and more details.
 
 ## External Links
 
