@@ -2,20 +2,14 @@ class ReduceCurrent < Formula
   # vim: set ft=ruby ts=2 sw=2 tw=0 expandtab colorcolumn=118:
   desc "Portable general-purpose interactive computer algebra system (tracking SVN)"
   homepage "https://reduce-algebra.sourceforge.io"
-  url "https://svn.code.sf.net/p/reduce-algebra/code/trunk", revision: "6550"
-  version "6550"
+  url "https://svn.code.sf.net/p/reduce-algebra/code/trunk", revision: "6553"
+  version "6553"
   # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
   revision 8
 
   # The following copyright applies to the Homebrew formula:
   # Copyright (c) 2009-present, Homebrew contributors
-
-  bottle do
-    rebuild 1
-    root_url "https://github.com/reduce-algebra/homebrew-reduce-algebra/releases/download/reduce-6550"
-    sha256 cellar: :any, ventura: "2a68d0110371d690f3d9eb14789ce0acb86e6519ca0b89ac7f2e3761358fc932"
-  end
 
   livecheck do
     url "http://svn.code.sf.net/p/reduce-algebra/code/trunk/"

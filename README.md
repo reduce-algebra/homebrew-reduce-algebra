@@ -76,8 +76,8 @@
   [Subversion](https://sourceforge.net/p/reduce-algebra/code/commit_browser)
   repository checkout.
 []()
-* The most recent *`reduce-current`* package is revision **6550**, updated
-  **2023-03-11**.
+* The most recent *`reduce-current`* package is revision **6553**, updated
+  **2023-04-25**.
   \
   &nbsp;
   ```sh
