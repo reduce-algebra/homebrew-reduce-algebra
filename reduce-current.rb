@@ -11,6 +11,12 @@ class ReduceCurrent < Formula
   # The following copyright applies to the Homebrew formula:
   # Copyright (c) 2009-present, Homebrew contributors
 
+  bottle do
+    rebuild 1
+    root_url "https://github.com/reduce-algebra/homebrew-reduce-algebra/releases/download/reduce-current-6553"
+    sha256 cellar: :any, ventura: "5b068c88da73c3c613190f9feaf4971c11faad585258d26781340b9d38665240"
+  end
+
   livecheck do
     url "http://svn.code.sf.net/p/reduce-algebra/code/trunk/"
     regex(/Revision ?(\d+):/i)
