@@ -2,8 +2,8 @@ class ReduceCurrent < Formula
   # vim: set ft=ruby ts=2 sw=2 tw=0 expandtab colorcolumn=118:
   desc "Portable general-purpose interactive computer algebra system (tracking SVN)"
   homepage "https://reduce-algebra.sourceforge.io"
-  url "https://svn.code.sf.net/p/reduce-algebra/code/trunk", revision: "6553"
-  version "6553"
+  url "https://svn.code.sf.net/p/reduce-algebra/code/trunk", revision: "6555"
+  version "6555"
   # SPDX-License-Identifier: BSD-2-Clause
   license "BSD-2-Clause"
   revision 8
