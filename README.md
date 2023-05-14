@@ -103,5 +103,5 @@ This repository provides:
 ## External Links
 
 * [REDUCE Computer Algebra System](https://reduce-algebra.sourceforge.io/)
-* [localbrew](https://github.com/johnsonjh/localbrew) - `virtualenv`-like
+* [Localbrew](https://github.com/johnsonjh/localbrew) - `virtualenv`-like
   environments for Homebrew
