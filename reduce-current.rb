@@ -14,6 +14,7 @@ class ReduceCurrent < Formula
   bottle do
     rebuild 3
     root_url "https://github.com/reduce-algebra/homebrew-reduce-algebra/releases/download/reduce-current-6558"
+      sha256 cellar: :any, high_sierra: "009ad9c1434a1a411364a5c50e9bee858a6ff0c98f26b7a3e8a5d5ba84388897"
       sha256 cellar: :any, ventura: "81b5feb3675a05e019ca46fa5a473e202b34d16122f7ce54b1229e8b5f05c65a"
   end
 
