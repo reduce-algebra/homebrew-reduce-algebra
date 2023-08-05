@@ -93,7 +93,7 @@ class ReduceCurrent < Formula
     # Configuration: Avoid configuring or building the REDUCE-bundled libffi
     inreplace "configure", "$SHELL $abssrcdir/libraries/libffi/configure ", "true "
     inreplace "configure.ac", "$SHELL $abssrcdir/libraries/libffi/configure ", "true "
-    inreplace "csl/cslbase/Makefile.am", "-+$(TRACE)@$(MAKE) -C ../libffi install", "@true"
+    inreplace "csl/cslbase/Makefile.am", "-$(TRACE)@$(MAKE) -C ../libffi install", "@true"
     inreplace "csl/cslbase/Makefile.in", "$(TRACE)@cd ../libffi && $(MAKE) install", "@true"
 
     # Configuration: Rewrite CSL hard-coded paths to use Homebrew-provided libffi
